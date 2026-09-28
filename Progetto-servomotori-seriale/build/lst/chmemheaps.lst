@@ -1,0 +1,5793 @@
+ARM GAS  C:\Users\Utente\AppData\Local\Temp\cc5VhcGM.s 			page 1
+
+
+   1              		.cpu cortex-m4
+   2              		.arch armv7e-m
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 2
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.file	"chmemheaps.c"
+  14              		.file 1 "c:\\chibistudio\\tools\\gnu tools arm embedded\\11.3 2022.08\\lib\\gcc\\arm-none-eabi\\11
+  15              		.file 2 "c:\\chibistudio\\tools\\gnu tools arm embedded\\11.3 2022.08\\arm-none-eabi\\include\\mac
+  16              		.file 3 "c:\\chibistudio\\tools\\gnu tools arm embedded\\11.3 2022.08\\arm-none-eabi\\include\\sys
+  17              		.file 4 "../../chibios2111/os/common/ports/ARM-common/chtypes.h"
+  18              		.file 5 "../../chibios2111/os/rt/include/chearly.h"
+  19              		.file 6 "../../chibios2111/os/rt/include/chobjects.h"
+  20              		.file 7 "../../chibios2111/os/rt/include/chrfcu.h"
+  21              		.file 8 "../../chibios2111/os/rt/include/chdebug.h"
+  22              		.file 9 "../../chibios2111/os/rt/include/chtime.h"
+  23              		.file 10 "../../chibios2111/os/rt/include/chlists.h"
+  24              		.file 11 "../../chibios2111/os/common/ports/ARMv7-M-ALT/chcore.h"
+  25              		.file 12 "../../chibios2111/os/rt/include/chsem.h"
+  26              		.file 13 "../../chibios2111/os/rt/include/chmtx.h"
+  27              		.file 14 "../../chibios2111/os/oslib/include/chmemcore.h"
+  28              		.file 15 "../../chibios2111/os/oslib/include/chmemheaps.h"
+  29              		.file 16 "../../chibios2111/os/oslib/src/chmemheaps.c"
+  30              		.section	.gnu.debuglto_.debug_info,"e",%progbits
+  31              	.Ldebug_info0:
+  32              		.hidden	chmemheaps.c.8e07c38e
+  33              		.weak	chmemheaps.c.8e07c38e
+  34              	chmemheaps.c.8e07c38e:
+  35 0000 CE0A0000 		.4byte	0xace
+  36 0004 0500     		.2byte	0x5
+  37 0006 01       		.byte	0x1
+  38 0007 04       		.byte	0x4
+  39 0008 00000000 		.4byte	.Ldebug_abbrev0
+  40 000c 1D       		.uleb128 0x1d
+  41 000d 81020000 		.4byte	.LASF142
+  42 0011 1D       		.byte	0x1d
+  43 0012 D7010000 		.4byte	.LASF143
+  44 0016 00000000 		.4byte	.LASF144
+  45 001a 00000000 		.4byte	.Ldebug_line0
+  46 001e 1E       		.uleb128 0x1e
+  47 001f 04       		.byte	0x4
+  48 0020 05       		.byte	0x5
+  49 0021 696E7400 		.ascii	"int\000"
+  50 0025 01       		.uleb128 0x1
+  51 0026 40000000 		.4byte	.LASF4
+  52 002a 01       		.byte	0x1
+  53 002b D1       		.byte	0xd1
+  54 002c 17       		.byte	0x17
+  55 002d 31000000 		.4byte	0x31
+  56 0031 06       		.uleb128 0x6
+  57 0032 04       		.byte	0x4
+ARM GAS  C:\Users\Utente\AppData\Local\Temp\cc5VhcGM.s 			page 2
+
+
+  58 0033 07       		.byte	0x7
+  59 0034 3D020000 		.4byte	.LASF0
+  60 0038 06       		.uleb128 0x6
+  61 0039 08       		.byte	0x8
+  62 003a 05       		.byte	0x5
+  63 003b 8F010000 		.4byte	.LASF1
+  64 003f 06       		.uleb128 0x6
+  65 0040 08       		.byte	0x8
+  66 0041 04       		.byte	0x4
+  67 0042 23040000 		.4byte	.LASF2
+  68 0046 06       		.uleb128 0x6
+  69 0047 01       		.byte	0x1
+  70 0048 06       		.byte	0x6
+  71 0049 1C010000 		.4byte	.LASF3
+  72 004d 01       		.uleb128 0x1
+  73 004e 62000000 		.4byte	.LASF5
+  74 0052 02       		.byte	0x2
+  75 0053 2B       		.byte	0x2b
+  76 0054 18       		.byte	0x18
+  77 0055 59000000 		.4byte	0x59
+  78 0059 06       		.uleb128 0x6
+  79 005a 01       		.byte	0x1
+  80 005b 08       		.byte	0x8
+  81 005c BD040000 		.4byte	.LASF6
+  82 0060 06       		.uleb128 0x6
+  83 0061 02       		.byte	0x2
+  84 0062 05       		.byte	0x5
+  85 0063 F1040000 		.4byte	.LASF7
+  86 0067 06       		.uleb128 0x6
+  87 0068 02       		.byte	0x2
+  88 0069 07       		.byte	0x7
+  89 006a 19050000 		.4byte	.LASF8
+  90 006e 01       		.uleb128 0x1
+  91 006f 9D030000 		.4byte	.LASF9
+  92 0073 02       		.byte	0x2
+  93 0074 4D       		.byte	0x4d
+  94 0075 18       		.byte	0x18
+  95 0076 7A000000 		.4byte	0x7a
+  96 007a 06       		.uleb128 0x6
+  97 007b 04       		.byte	0x4
+  98 007c 05       		.byte	0x5
+  99 007d 5E010000 		.4byte	.LASF10
+ 100 0081 01       		.uleb128 0x1
+ 101 0082 C7010000 		.4byte	.LASF11
+ 102 0086 02       		.byte	0x2
+ 103 0087 4F       		.byte	0x4f
+ 104 0088 19       		.byte	0x19
+ 105 0089 8D000000 		.4byte	0x8d
+ 106 008d 06       		.uleb128 0x6
+ 107 008e 04       		.byte	0x4
+ 108 008f 07       		.byte	0x7
+ 109 0090 87050000 		.4byte	.LASF12
+ 110 0094 01       		.uleb128 0x1
+ 111 0095 75040000 		.4byte	.LASF13
+ 112 0099 02       		.byte	0x2
+ 113 009a 69       		.byte	0x69
+ 114 009b 19       		.byte	0x19
+ARM GAS  C:\Users\Utente\AppData\Local\Temp\cc5VhcGM.s 			page 3
+
+
+ 115 009c A0000000 		.4byte	0xa0
+ 116 00a0 06       		.uleb128 0x6
+ 117 00a1 08       		.byte	0x8
+ 118 00a2 07       		.byte	0x7
+ 119 00a3 B7000000 		.4byte	.LASF14
+ 120 00a7 01       		.uleb128 0x1
+ 121 00a8 A8060000 		.4byte	.LASF15
+ 122 00ac 03       		.byte	0x3
+ 123 00ad 18       		.byte	0x18
+ 124 00ae 13       		.byte	0x13
+ 125 00af 4D000000 		.4byte	0x4d
+ 126 00b3 01       		.uleb128 0x1
+ 127 00b4 B5040000 		.4byte	.LASF16
+ 128 00b8 03       		.byte	0x3
+ 129 00b9 2C       		.byte	0x2c
+ 130 00ba 13       		.byte	0x13
+ 131 00bb 6E000000 		.4byte	0x6e
+ 132 00bf 01       		.uleb128 0x1
+ 133 00c0 52050000 		.4byte	.LASF17
+ 134 00c4 03       		.byte	0x3
+ 135 00c5 30       		.byte	0x30
+ 136 00c6 14       		.byte	0x14
+ 137 00c7 81000000 		.4byte	0x81
+ 138 00cb 01       		.uleb128 0x1
+ 139 00cc 59000000 		.4byte	.LASF18
+ 140 00d0 03       		.byte	0x3
+ 141 00d1 3C       		.byte	0x3c
+ 142 00d2 14       		.byte	0x14
+ 143 00d3 94000000 		.4byte	0x94
+ 144 00d7 19       		.uleb128 0x19
+ 145 00d8 CB000000 		.4byte	0xcb
+ 146 00dc 01       		.uleb128 0x1
+ 147 00dd 67050000 		.4byte	.LASF19
+ 148 00e1 04       		.byte	0x4
+ 149 00e2 48       		.byte	0x48
+ 150 00e3 1D       		.byte	0x1d
+ 151 00e4 CB000000 		.4byte	0xcb
+ 152 00e8 01       		.uleb128 0x1
+ 153 00e9 AE030000 		.4byte	.LASF20
+ 154 00ed 05       		.byte	0x5
+ 155 00ee 50       		.byte	0x50
+ 156 00ef 19       		.byte	0x19
+ 157 00f0 DC000000 		.4byte	0xdc
+ 158 00f4 01       		.uleb128 0x1
+ 159 00f5 73030000 		.4byte	.LASF21
+ 160 00f9 05       		.byte	0x5
+ 161 00fa 53       		.byte	0x53
+ 162 00fb 19       		.byte	0x19
+ 163 00fc A7000000 		.4byte	0xa7
+ 164 0100 01       		.uleb128 0x1
+ 165 0101 67010000 		.4byte	.LASF22
+ 166 0105 05       		.byte	0x5
+ 167 0106 54       		.byte	0x54
+ 168 0107 19       		.byte	0x19
+ 169 0108 A7000000 		.4byte	0xa7
+ 170 010c 01       		.uleb128 0x1
+ 171 010d 8F040000 		.4byte	.LASF23
+ARM GAS  C:\Users\Utente\AppData\Local\Temp\cc5VhcGM.s 			page 4
+
+
+ 172 0111 05       		.byte	0x5
+ 173 0112 55       		.byte	0x55
+ 174 0113 19       		.byte	0x19
+ 175 0114 A7000000 		.4byte	0xa7
+ 176 0118 01       		.uleb128 0x1
+ 177 0119 97040000 		.4byte	.LASF24
+ 178 011d 05       		.byte	0x5
+ 179 011e 57       		.byte	0x57
+ 180 011f 19       		.byte	0x19
+ 181 0120 BF000000 		.4byte	0xbf
+ 182 0124 01       		.uleb128 0x1
+ 183 0125 5D030000 		.4byte	.LASF25
+ 184 0129 05       		.byte	0x5
+ 185 012a 58       		.byte	0x58
+ 186 012b 19       		.byte	0x19
+ 187 012c B3000000 		.4byte	0xb3
+ 188 0130 01       		.uleb128 0x1
+ 189 0131 91030000 		.4byte	.LASF26
+ 190 0135 05       		.byte	0x5
+ 191 0136 5A       		.byte	0x5a
+ 192 0137 19       		.byte	0x19
+ 193 0138 BF000000 		.4byte	0xbf
+ 194 013c 01       		.uleb128 0x1
+ 195 013d 37020000 		.4byte	.LASF27
+ 196 0141 05       		.byte	0x5
+ 197 0142 5C       		.byte	0x5c
+ 198 0143 19       		.byte	0x19
+ 199 0144 B3000000 		.4byte	0xb3
+ 200 0148 01       		.uleb128 0x1
+ 201 0149 85040000 		.4byte	.LASF28
+ 202 014d 05       		.byte	0x5
+ 203 014e 80       		.byte	0x80
+ 204 014f 12       		.byte	0x12
+ 205 0150 31000000 		.4byte	0x31
+ 206 0154 01       		.uleb128 0x1
+ 207 0155 B9050000 		.4byte	.LASF29
+ 208 0159 05       		.byte	0x5
+ 209 015a 85       		.byte	0x85
+ 210 015b 1A       		.byte	0x1a
+ 211 015c 60010000 		.4byte	0x160
+ 212 0160 07       		.uleb128 0x7
+ 213 0161 53030000 		.4byte	.LASF44
+ 214 0165 70       		.byte	0x70
+ 215 0166 06       		.byte	0x6
+ 216 0167 9C       		.byte	0x9c
+ 217 0168 08       		.byte	0x8
+ 218 0169 43020000 		.4byte	0x243
+ 219 016d 0F       		.uleb128 0xf
+ 220 016e 68647200 		.ascii	"hdr\000"
+ 221 0172 06       		.byte	0x6
+ 222 0173 AD       		.byte	0xad
+ 223 0174 05       		.byte	0x5
+ 224 0175 05060000 		.4byte	0x605
+ 225 0179 00       		.byte	0
+ 226 017a 0F       		.uleb128 0xf
+ 227 017b 63747800 		.ascii	"ctx\000"
+ 228 017f 06       		.byte	0x6
+ARM GAS  C:\Users\Utente\AppData\Local\Temp\cc5VhcGM.s 			page 5
+
+
+ 229 0180 B1       		.byte	0xb1
+ 230 0181 21       		.byte	0x21
+ 231 0182 56050000 		.4byte	0x556
+ 232 0186 0C       		.byte	0xc
+ 233 0187 02       		.uleb128 0x2
+ 234 0188 5E020000 		.4byte	.LASF30
+ 235 018c 06       		.byte	0x6
+ 236 018d B6       		.byte	0xb6
+ 237 018e 21       		.byte	0x21
+ 238 018f 82030000 		.4byte	0x382
+ 239 0193 38       		.byte	0x38
+ 240 0194 02       		.uleb128 0x2
+ 241 0195 77050000 		.4byte	.LASF31
+ 242 0199 06       		.byte	0x6
+ 243 019a BB       		.byte	0xbb
+ 244 019b 22       		.byte	0x22
+ 245 019c 05070000 		.4byte	0x705
+ 246 01a0 40       		.byte	0x40
+ 247 01a1 02       		.uleb128 0x2
+ 248 01a2 70020000 		.4byte	.LASF32
+ 249 01a6 06       		.byte	0x6
+ 250 01a7 C0       		.byte	0xc0
+ 251 01a8 22       		.byte	0x22
+ 252 01a9 1C030000 		.4byte	0x31c
+ 253 01ad 44       		.byte	0x44
+ 254 01ae 02       		.uleb128 0x2
+ 255 01af 99050000 		.4byte	.LASF33
+ 256 01b3 06       		.byte	0x6
+ 257 01b4 C9       		.byte	0xc9
+ 258 01b5 22       		.byte	0x22
+ 259 01b6 85050000 		.4byte	0x585
+ 260 01ba 48       		.byte	0x48
+ 261 01bb 02       		.uleb128 0x2
+ 262 01bc 58010000 		.4byte	.LASF34
+ 263 01c0 06       		.byte	0x6
+ 264 01c1 CE       		.byte	0xce
+ 265 01c2 21       		.byte	0x21
+ 266 01c3 00010000 		.4byte	0x100
+ 267 01c7 4C       		.byte	0x4c
+ 268 01c8 02       		.uleb128 0x2
+ 269 01c9 B0060000 		.4byte	.LASF35
+ 270 01cd 06       		.byte	0x6
+ 271 01ce D2       		.byte	0xd2
+ 272 01cf 21       		.byte	0x21
+ 273 01d0 F4000000 		.4byte	0xf4
+ 274 01d4 4D       		.byte	0x4d
+ 275 01d5 02       		.uleb128 0x2
+ 276 01d6 0B010000 		.4byte	.LASF36
+ 277 01da 06       		.byte	0x6
+ 278 01db D7       		.byte	0xd7
+ 279 01dc 21       		.byte	0x21
+ 280 01dd 0C010000 		.4byte	0x10c
+ 281 01e1 4E       		.byte	0x4e
+ 282 01e2 05       		.uleb128 0x5
+ 283 01e3 7500     		.ascii	"u\000"
+ 284 01e5 06       		.byte	0x6
+ 285 01e6 2801     		.2byte	0x128
+ARM GAS  C:\Users\Utente\AppData\Local\Temp\cc5VhcGM.s 			page 6
+
+
+ 286 01e8 21       		.byte	0x21
+ 287 01e9 31060000 		.4byte	0x631
+ 288 01ed 50       		.byte	0x50
+ 289 01ee 03       		.uleb128 0x3
+ 290 01ef 03020000 		.4byte	.LASF37
+ 291 01f3 06       		.byte	0x6
+ 292 01f4 2D01     		.2byte	0x12d
+ 293 01f6 21       		.byte	0x21
+ 294 01f7 56030000 		.4byte	0x356
+ 295 01fb 54       		.byte	0x54
+ 296 01fc 03       		.uleb128 0x3
+ 297 01fd 4F010000 		.4byte	.LASF38
+ 298 0201 06       		.byte	0x6
+ 299 0202 3301     		.2byte	0x133
+ 300 0204 21       		.byte	0x21
+ 301 0205 82030000 		.4byte	0x382
+ 302 0209 58       		.byte	0x58
+ 303 020a 03       		.uleb128 0x3
+ 304 020b 63030000 		.4byte	.LASF39
+ 305 020f 06       		.byte	0x6
+ 306 0210 3901     		.2byte	0x139
+ 307 0212 21       		.byte	0x21
+ 308 0213 30010000 		.4byte	0x130
+ 309 0217 60       		.byte	0x60
+ 310 0218 03       		.uleb128 0x3
+ 311 0219 D1060000 		.4byte	.LASF40
+ 312 021d 06       		.byte	0x6
+ 313 021e 4001     		.2byte	0x140
+ 314 0220 22       		.byte	0x22
+ 315 0221 00070000 		.4byte	0x700
+ 316 0225 64       		.byte	0x64
+ 317 0226 03       		.uleb128 0x3
+ 318 0227 E4030000 		.4byte	.LASF41
+ 319 022b 06       		.byte	0x6
+ 320 022c 4401     		.2byte	0x144
+ 321 022e 21       		.byte	0x21
+ 322 022f 18010000 		.4byte	0x118
+ 323 0233 68       		.byte	0x68
+ 324 0234 03       		.uleb128 0x3
+ 325 0235 7B020000 		.4byte	.LASF42
+ 326 0239 06       		.byte	0x6
+ 327 023a 4B01     		.2byte	0x14b
+ 328 023c 22       		.byte	0x22
+ 329 023d 8A050000 		.4byte	0x58a
+ 330 0241 6C       		.byte	0x6c
+ 331 0242 00       		.byte	0
+ 332 0243 01       		.uleb128 0x1
+ 333 0244 24060000 		.4byte	.LASF43
+ 334 0248 05       		.byte	0x5
+ 335 0249 8A       		.byte	0x8a
+ 336 024a 1F       		.byte	0x1f
+ 337 024b 4F020000 		.4byte	0x24f
+ 338 024f 0A       		.uleb128 0xa
+ 339 0250 15060000 		.4byte	.LASF45
+ 340 0254 B0       		.byte	0xb0
+ 341 0255 06       		.byte	0x6
+ 342 0256 8A01     		.2byte	0x18a
+ARM GAS  C:\Users\Utente\AppData\Local\Temp\cc5VhcGM.s 			page 7
+
+
+ 343 0258 08       		.byte	0x8
+ 344 0259 CE020000 		.4byte	0x2ce
+ 345 025d 03       		.uleb128 0x3
+ 346 025e A2060000 		.4byte	.LASF46
+ 347 0262 06       		.byte	0x6
+ 348 0263 8E01     		.2byte	0x18e
+ 349 0265 21       		.byte	0x21
+ 350 0266 35070000 		.4byte	0x735
+ 351 026a 00       		.byte	0
+ 352 026b 03       		.uleb128 0x3
+ 353 026c 48010000 		.4byte	.LASF47
+ 354 0270 06       		.byte	0x6
+ 355 0271 9201     		.2byte	0x192
+ 356 0273 21       		.byte	0x21
+ 357 0274 C1050000 		.4byte	0x5c1
+ 358 0278 10       		.byte	0x10
+ 359 0279 03       		.uleb128 0x3
+ 360 027a 32060000 		.4byte	.LASF48
+ 361 027e 06       		.byte	0x6
+ 362 027f 9901     		.2byte	0x199
+ 363 0281 21       		.byte	0x21
+ 364 0282 E8050000 		.4byte	0x5e8
+ 365 0286 28       		.byte	0x28
+ 366 0287 03       		.uleb128 0x3
+ 367 0288 9B000000 		.4byte	.LASF49
+ 368 028c 06       		.byte	0x6
+ 369 028d 9E01     		.2byte	0x19e
+ 370 028f 21       		.byte	0x21
+ 371 0290 48010000 		.4byte	0x148
+ 372 0294 30       		.byte	0x30
+ 373 0295 03       		.uleb128 0x3
+ 374 0296 3B000000 		.4byte	.LASF50
+ 375 029a 06       		.byte	0x6
+ 376 029b A401     		.2byte	0x1a4
+ 377 029d 21       		.byte	0x21
+ 378 029e F5020000 		.4byte	0x2f5
+ 379 02a2 34       		.byte	0x34
+ 380 02a3 03       		.uleb128 0x3
+ 381 02a4 B2050000 		.4byte	.LASF51
+ 382 02a8 06       		.byte	0x6
+ 383 02a9 A901     		.2byte	0x1a9
+ 384 02ab 22       		.byte	0x22
+ 385 02ac A5070000 		.4byte	0x7a5
+ 386 02b0 38       		.byte	0x38
+ 387 02b1 03       		.uleb128 0x3
+ 388 02b2 D7000000 		.4byte	.LASF52
+ 389 02b6 06       		.byte	0x6
+ 390 02b7 AD01     		.2byte	0x1ad
+ 391 02b9 21       		.byte	0x21
+ 392 02ba 54010000 		.4byte	0x154
+ 393 02be 3C       		.byte	0x3c
+ 394 02bf 05       		.uleb128 0x5
+ 395 02c0 64626700 		.ascii	"dbg\000"
+ 396 02c4 06       		.byte	0x6
+ 397 02c5 B101     		.2byte	0x1b1
+ 398 02c7 21       		.byte	0x21
+ 399 02c8 32030000 		.4byte	0x332
+ARM GAS  C:\Users\Utente\AppData\Local\Temp\cc5VhcGM.s 			page 8
+
+
+ 400 02cc AC       		.byte	0xac
+ 401 02cd 00       		.byte	0
+ 402 02ce 01       		.uleb128 0x1
+ 403 02cf ED030000 		.4byte	.LASF53
+ 404 02d3 07       		.byte	0x7
+ 405 02d4 3F       		.byte	0x3f
+ 406 02d5 12       		.byte	0x12
+ 407 02d6 BF000000 		.4byte	0xbf
+ 408 02da 07       		.uleb128 0x7
+ 409 02db 70010000 		.4byte	.LASF54
+ 410 02df 04       		.byte	0x4
+ 411 02e0 07       		.byte	0x7
+ 412 02e1 44       		.byte	0x44
+ 413 02e2 10       		.byte	0x10
+ 414 02e3 F5020000 		.4byte	0x2f5
+ 415 02e7 02       		.uleb128 0x2
+ 416 02e8 D2010000 		.4byte	.LASF55
+ 417 02ec 07       		.byte	0x7
+ 418 02ed 48       		.byte	0x48
+ 419 02ee 21       		.byte	0x21
+ 420 02ef CE020000 		.4byte	0x2ce
+ 421 02f3 00       		.byte	0
+ 422 02f4 00       		.byte	0
+ 423 02f5 01       		.uleb128 0x1
+ 424 02f6 EA040000 		.4byte	.LASF56
+ 425 02fa 07       		.byte	0x7
+ 426 02fb 49       		.byte	0x49
+ 427 02fc 03       		.byte	0x3
+ 428 02fd DA020000 		.4byte	0x2da
+ 429 0301 07       		.uleb128 0x7
+ 430 0302 9F040000 		.4byte	.LASF57
+ 431 0306 04       		.byte	0x4
+ 432 0307 08       		.byte	0x8
+ 433 0308 3E       		.byte	0x3e
+ 434 0309 10       		.byte	0x10
+ 435 030a 1C030000 		.4byte	0x31c
+ 436 030e 02       		.uleb128 0x2
+ 437 030f 04060000 		.4byte	.LASF58
+ 438 0313 08       		.byte	0x8
+ 439 0314 46       		.byte	0x46
+ 440 0315 24       		.byte	0x24
+ 441 0316 21030000 		.4byte	0x321
+ 442 031a 00       		.byte	0
+ 443 031b 00       		.byte	0
+ 444 031c 04       		.uleb128 0x4
+ 445 031d 2D030000 		.4byte	0x32d
+ 446 0321 19       		.uleb128 0x19
+ 447 0322 1C030000 		.4byte	0x31c
+ 448 0326 06       		.uleb128 0x6
+ 449 0327 01       		.byte	0x1
+ 450 0328 08       		.byte	0x8
+ 451 0329 AD050000 		.4byte	.LASF59
+ 452 032d 0D       		.uleb128 0xd
+ 453 032e 26030000 		.4byte	0x326
+ 454 0332 01       		.uleb128 0x1
+ 455 0333 83000000 		.4byte	.LASF60
+ 456 0337 08       		.byte	0x8
+ARM GAS  C:\Users\Utente\AppData\Local\Temp\cc5VhcGM.s 			page 9
+
+
+ 457 0338 51       		.byte	0x51
+ 458 0339 03       		.byte	0x3
+ 459 033a 01030000 		.4byte	0x301
+ 460 033e 01       		.uleb128 0x1
+ 461 033f D5050000 		.4byte	.LASF61
+ 462 0343 09       		.byte	0x9
+ 463 0344 6D       		.byte	0x6d
+ 464 0345 12       		.byte	0x12
+ 465 0346 BF000000 		.4byte	0xbf
+ 466 034a 01       		.uleb128 0x1
+ 467 034b 29020000 		.4byte	.LASF62
+ 468 034f 09       		.byte	0x9
+ 469 0350 79       		.byte	0x79
+ 470 0351 12       		.byte	0x12
+ 471 0352 BF000000 		.4byte	0xbf
+ 472 0356 01       		.uleb128 0x1
+ 473 0357 49030000 		.4byte	.LASF63
+ 474 035b 0A       		.byte	0xa
+ 475 035c 32       		.byte	0x32
+ 476 035d 18       		.byte	0x18
+ 477 035e 62030000 		.4byte	0x362
+ 478 0362 07       		.uleb128 0x7
+ 479 0363 7B030000 		.4byte	.LASF64
+ 480 0367 04       		.byte	0x4
+ 481 0368 0A       		.byte	0xa
+ 482 0369 38       		.byte	0x38
+ 483 036a 08       		.byte	0x8
+ 484 036b 7D030000 		.4byte	0x37d
+ 485 036f 02       		.uleb128 0x2
+ 486 0370 47000000 		.4byte	.LASF65
+ 487 0374 0A       		.byte	0xa
+ 488 0375 39       		.byte	0x39
+ 489 0376 1A       		.byte	0x1a
+ 490 0377 7D030000 		.4byte	0x37d
+ 491 037b 00       		.byte	0
+ 492 037c 00       		.byte	0
+ 493 037d 04       		.uleb128 0x4
+ 494 037e 56030000 		.4byte	0x356
+ 495 0382 01       		.uleb128 0x1
+ 496 0383 65020000 		.4byte	.LASF66
+ 497 0387 0A       		.byte	0xa
+ 498 0388 3F       		.byte	0x3f
+ 499 0389 19       		.byte	0x19
+ 500 038a 8E030000 		.4byte	0x38e
+ 501 038e 07       		.uleb128 0x7
+ 502 038f 86010000 		.4byte	.LASF67
+ 503 0393 08       		.byte	0x8
+ 504 0394 0A       		.byte	0xa
+ 505 0395 45       		.byte	0x45
+ 506 0396 08       		.byte	0x8
+ 507 0397 B6030000 		.4byte	0x3b6
+ 508 039b 02       		.uleb128 0x2
+ 509 039c 47000000 		.4byte	.LASF65
+ 510 03a0 0A       		.byte	0xa
+ 511 03a1 46       		.byte	0x46
+ 512 03a2 1A       		.byte	0x1a
+ 513 03a3 B6030000 		.4byte	0x3b6
+ARM GAS  C:\Users\Utente\AppData\Local\Temp\cc5VhcGM.s 			page 10
+
+
+ 514 03a7 00       		.byte	0
+ 515 03a8 02       		.uleb128 0x2
+ 516 03a9 6C000000 		.4byte	.LASF68
+ 517 03ad 0A       		.byte	0xa
+ 518 03ae 47       		.byte	0x47
+ 519 03af 1A       		.byte	0x1a
+ 520 03b0 B6030000 		.4byte	0x3b6
+ 521 03b4 04       		.byte	0x4
+ 522 03b5 00       		.byte	0
+ 523 03b6 04       		.uleb128 0x4
+ 524 03b7 82030000 		.4byte	0x382
+ 525 03bb 01       		.uleb128 0x1
+ 526 03bc A3000000 		.4byte	.LASF69
+ 527 03c0 0A       		.byte	0xa
+ 528 03c1 4E       		.byte	0x4e
+ 529 03c2 22       		.byte	0x22
+ 530 03c3 C7030000 		.4byte	0x3c7
+ 531 03c7 07       		.uleb128 0x7
+ 532 03c8 3A060000 		.4byte	.LASF70
+ 533 03cc 0C       		.byte	0xc
+ 534 03cd 0A       		.byte	0xa
+ 535 03ce 55       		.byte	0x55
+ 536 03cf 08       		.byte	0x8
+ 537 03d0 FC030000 		.4byte	0x3fc
+ 538 03d4 02       		.uleb128 0x2
+ 539 03d5 47000000 		.4byte	.LASF65
+ 540 03d9 0A       		.byte	0xa
+ 541 03da 56       		.byte	0x56
+ 542 03db 1A       		.byte	0x1a
+ 543 03dc FC030000 		.4byte	0x3fc
+ 544 03e0 00       		.byte	0
+ 545 03e1 02       		.uleb128 0x2
+ 546 03e2 6C000000 		.4byte	.LASF68
+ 547 03e6 0A       		.byte	0xa
+ 548 03e7 57       		.byte	0x57
+ 549 03e8 1A       		.byte	0x1a
+ 550 03e9 FC030000 		.4byte	0x3fc
+ 551 03ed 04       		.byte	0x4
+ 552 03ee 02       		.uleb128 0x2
+ 553 03ef 68040000 		.4byte	.LASF71
+ 554 03f3 0A       		.byte	0xa
+ 555 03f4 58       		.byte	0x58
+ 556 03f5 19       		.byte	0x19
+ 557 03f6 18010000 		.4byte	0x118
+ 558 03fa 08       		.byte	0x8
+ 559 03fb 00       		.byte	0
+ 560 03fc 04       		.uleb128 0x4
+ 561 03fd BB030000 		.4byte	0x3bb
+ 562 0401 01       		.uleb128 0x1
+ 563 0402 AB010000 		.4byte	.LASF72
+ 564 0406 0A       		.byte	0xa
+ 565 0407 5F       		.byte	0x5f
+ 566 0408 1E       		.byte	0x1e
+ 567 0409 0D040000 		.4byte	0x40d
+ 568 040d 07       		.uleb128 0x7
+ 569 040e 2F010000 		.4byte	.LASF73
+ 570 0412 0C       		.byte	0xc
+ARM GAS  C:\Users\Utente\AppData\Local\Temp\cc5VhcGM.s 			page 11
+
+
+ 571 0413 0A       		.byte	0xa
+ 572 0414 64       		.byte	0x64
+ 573 0415 08       		.byte	0x8
+ 574 0416 42040000 		.4byte	0x442
+ 575 041a 02       		.uleb128 0x2
+ 576 041b 47000000 		.4byte	.LASF65
+ 577 041f 0A       		.byte	0xa
+ 578 0420 65       		.byte	0x65
+ 579 0421 1A       		.byte	0x1a
+ 580 0422 42040000 		.4byte	0x442
+ 581 0426 00       		.byte	0
+ 582 0427 02       		.uleb128 0x2
+ 583 0428 6C000000 		.4byte	.LASF68
+ 584 042c 0A       		.byte	0xa
+ 585 042d 66       		.byte	0x66
+ 586 042e 1A       		.byte	0x1a
+ 587 042f 42040000 		.4byte	0x442
+ 588 0433 04       		.byte	0x4
+ 589 0434 02       		.uleb128 0x2
+ 590 0435 4C000000 		.4byte	.LASF74
+ 591 0439 0A       		.byte	0xa
+ 592 043a 67       		.byte	0x67
+ 593 043b 19       		.byte	0x19
+ 594 043c 4A030000 		.4byte	0x34a
+ 595 0440 08       		.byte	0x8
+ 596 0441 00       		.byte	0
+ 597 0442 04       		.uleb128 0x4
+ 598 0443 01040000 		.4byte	0x401
+ 599 0447 0A       		.uleb128 0xa
+ 600 0448 5C040000 		.4byte	.LASF75
+ 601 044c 20       		.byte	0x20
+ 602 044d 0B       		.byte	0xb
+ 603 044e 9301     		.2byte	0x193
+ 604 0450 08       		.byte	0x8
+ 605 0451 C1040000 		.4byte	0x4c1
+ 606 0455 05       		.uleb128 0x5
+ 607 0456 723000   		.ascii	"r0\000"
+ 608 0459 0B       		.byte	0xb
+ 609 045a 9401     		.2byte	0x194
+ 610 045c 19       		.byte	0x19
+ 611 045d BF000000 		.4byte	0xbf
+ 612 0461 00       		.byte	0
+ 613 0462 05       		.uleb128 0x5
+ 614 0463 723100   		.ascii	"r1\000"
+ 615 0466 0B       		.byte	0xb
+ 616 0467 9501     		.2byte	0x195
+ 617 0469 19       		.byte	0x19
+ 618 046a BF000000 		.4byte	0xbf
+ 619 046e 04       		.byte	0x4
+ 620 046f 05       		.uleb128 0x5
+ 621 0470 723200   		.ascii	"r2\000"
+ 622 0473 0B       		.byte	0xb
+ 623 0474 9601     		.2byte	0x196
+ 624 0476 19       		.byte	0x19
+ 625 0477 BF000000 		.4byte	0xbf
+ 626 047b 08       		.byte	0x8
+ 627 047c 05       		.uleb128 0x5
+ARM GAS  C:\Users\Utente\AppData\Local\Temp\cc5VhcGM.s 			page 12
+
+
+ 628 047d 723300   		.ascii	"r3\000"
+ 629 0480 0B       		.byte	0xb
+ 630 0481 9701     		.2byte	0x197
+ 631 0483 19       		.byte	0x19
+ 632 0484 BF000000 		.4byte	0xbf
+ 633 0488 0C       		.byte	0xc
+ 634 0489 05       		.uleb128 0x5
+ 635 048a 72313200 		.ascii	"r12\000"
+ 636 048e 0B       		.byte	0xb
+ 637 048f 9801     		.2byte	0x198
+ 638 0491 19       		.byte	0x19
+ 639 0492 BF000000 		.4byte	0xbf
+ 640 0496 10       		.byte	0x10
+ 641 0497 03       		.uleb128 0x3
+ 642 0498 4A020000 		.4byte	.LASF76
+ 643 049c 0B       		.byte	0xb
+ 644 049d 9901     		.2byte	0x199
+ 645 049f 19       		.byte	0x19
+ 646 04a0 BF000000 		.4byte	0xbf
+ 647 04a4 14       		.byte	0x14
+ 648 04a5 05       		.uleb128 0x5
+ 649 04a6 706300   		.ascii	"pc\000"
+ 650 04a9 0B       		.byte	0xb
+ 651 04aa 9A01     		.2byte	0x19a
+ 652 04ac 19       		.byte	0x19
+ 653 04ad BF000000 		.4byte	0xbf
+ 654 04b1 18       		.byte	0x18
+ 655 04b2 03       		.uleb128 0x3
+ 656 04b3 04050000 		.4byte	.LASF77
+ 657 04b7 0B       		.byte	0xb
+ 658 04b8 9B01     		.2byte	0x19b
+ 659 04ba 19       		.byte	0x19
+ 660 04bb BF000000 		.4byte	0xbf
+ 661 04bf 1C       		.byte	0x1c
+ 662 04c0 00       		.byte	0
+ 663 04c1 0A       		.uleb128 0xa
+ 664 04c2 71000000 		.4byte	.LASF78
+ 665 04c6 28       		.byte	0x28
+ 666 04c7 0B       		.byte	0xb
+ 667 04c8 B701     		.2byte	0x1b7
+ 668 04ca 08       		.byte	0x8
+ 669 04cb 56050000 		.4byte	0x556
+ 670 04cf 03       		.uleb128 0x3
+ 671 04d0 41030000 		.4byte	.LASF79
+ 672 04d4 0B       		.byte	0xb
+ 673 04d5 B801     		.2byte	0x1b8
+ 674 04d7 19       		.byte	0x19
+ 675 04d8 BF000000 		.4byte	0xbf
+ 676 04dc 00       		.byte	0
+ 677 04dd 05       		.uleb128 0x5
+ 678 04de 723400   		.ascii	"r4\000"
+ 679 04e1 0B       		.byte	0xb
+ 680 04e2 B901     		.2byte	0x1b9
+ 681 04e4 19       		.byte	0x19
+ 682 04e5 BF000000 		.4byte	0xbf
+ 683 04e9 04       		.byte	0x4
+ 684 04ea 05       		.uleb128 0x5
+ARM GAS  C:\Users\Utente\AppData\Local\Temp\cc5VhcGM.s 			page 13
+
+
+ 685 04eb 723500   		.ascii	"r5\000"
+ 686 04ee 0B       		.byte	0xb
+ 687 04ef BA01     		.2byte	0x1ba
+ 688 04f1 19       		.byte	0x19
+ 689 04f2 BF000000 		.4byte	0xbf
+ 690 04f6 08       		.byte	0x8
+ 691 04f7 05       		.uleb128 0x5
+ 692 04f8 723600   		.ascii	"r6\000"
+ 693 04fb 0B       		.byte	0xb
+ 694 04fc BB01     		.2byte	0x1bb
+ 695 04fe 19       		.byte	0x19
+ 696 04ff BF000000 		.4byte	0xbf
+ 697 0503 0C       		.byte	0xc
+ 698 0504 05       		.uleb128 0x5
+ 699 0505 723700   		.ascii	"r7\000"
+ 700 0508 0B       		.byte	0xb
+ 701 0509 BC01     		.2byte	0x1bc
+ 702 050b 19       		.byte	0x19
+ 703 050c BF000000 		.4byte	0xbf
+ 704 0510 10       		.byte	0x10
+ 705 0511 05       		.uleb128 0x5
+ 706 0512 723800   		.ascii	"r8\000"
+ 707 0515 0B       		.byte	0xb
+ 708 0516 BD01     		.2byte	0x1bd
+ 709 0518 19       		.byte	0x19
+ 710 0519 BF000000 		.4byte	0xbf
+ 711 051d 14       		.byte	0x14
+ 712 051e 05       		.uleb128 0x5
+ 713 051f 723900   		.ascii	"r9\000"
+ 714 0522 0B       		.byte	0xb
+ 715 0523 BE01     		.2byte	0x1be
+ 716 0525 19       		.byte	0x19
+ 717 0526 BF000000 		.4byte	0xbf
+ 718 052a 18       		.byte	0x18
+ 719 052b 05       		.uleb128 0x5
+ 720 052c 72313000 		.ascii	"r10\000"
+ 721 0530 0B       		.byte	0xb
+ 722 0531 BF01     		.2byte	0x1bf
+ 723 0533 19       		.byte	0x19
+ 724 0534 BF000000 		.4byte	0xbf
+ 725 0538 1C       		.byte	0x1c
+ 726 0539 05       		.uleb128 0x5
+ 727 053a 72313100 		.ascii	"r11\000"
+ 728 053e 0B       		.byte	0xb
+ 729 053f C001     		.2byte	0x1c0
+ 730 0541 19       		.byte	0x19
+ 731 0542 BF000000 		.4byte	0xbf
+ 732 0546 20       		.byte	0x20
+ 733 0547 03       		.uleb128 0x3
+ 734 0548 A7030000 		.4byte	.LASF80
+ 735 054c 0B       		.byte	0xb
+ 736 054d C401     		.2byte	0x1c4
+ 737 054f 19       		.byte	0x19
+ 738 0550 BF000000 		.4byte	0xbf
+ 739 0554 24       		.byte	0x24
+ 740 0555 00       		.byte	0
+ 741 0556 0A       		.uleb128 0xa
+ARM GAS  C:\Users\Utente\AppData\Local\Temp\cc5VhcGM.s 			page 14
+
+
+ 742 0557 4F040000 		.4byte	.LASF81
+ 743 055b 2C       		.byte	0x2c
+ 744 055c 0B       		.byte	0xb
+ 745 055d DF01     		.2byte	0x1df
+ 746 055f 08       		.byte	0x8
+ 747 0560 80050000 		.4byte	0x580
+ 748 0564 05       		.uleb128 0x5
+ 749 0565 737000   		.ascii	"sp\000"
+ 750 0568 0B       		.byte	0xb
+ 751 0569 E001     		.2byte	0x1e0
+ 752 056b 1A       		.byte	0x1a
+ 753 056c 80050000 		.4byte	0x580
+ 754 0570 00       		.byte	0
+ 755 0571 03       		.uleb128 0x3
+ 756 0572 7D050000 		.4byte	.LASF82
+ 757 0576 0B       		.byte	0xb
+ 758 0577 E101     		.2byte	0x1e1
+ 759 0579 19       		.byte	0x19
+ 760 057a C1040000 		.4byte	0x4c1
+ 761 057e 04       		.byte	0x4
+ 762 057f 00       		.byte	0
+ 763 0580 04       		.uleb128 0x4
+ 764 0581 47040000 		.4byte	0x447
+ 765 0585 04       		.uleb128 0x4
+ 766 0586 E8000000 		.4byte	0xe8
+ 767 058a 1F       		.uleb128 0x1f
+ 768 058b 04       		.byte	0x4
+ 769 058c 07       		.uleb128 0x7
+ 770 058d 0C040000 		.4byte	.LASF83
+ 771 0591 18       		.byte	0x18
+ 772 0592 06       		.byte	0x6
+ 773 0593 64       		.byte	0x64
+ 774 0594 10       		.byte	0x10
+ 775 0595 C1050000 		.4byte	0x5c1
+ 776 0599 02       		.uleb128 0x2
+ 777 059a CF050000 		.4byte	.LASF84
+ 778 059e 06       		.byte	0x6
+ 779 059f 68       		.byte	0x68
+ 780 05a0 21       		.byte	0x21
+ 781 05a1 01040000 		.4byte	0x401
+ 782 05a5 00       		.byte	0
+ 783 05a6 02       		.uleb128 0x2
+ 784 05a7 FB040000 		.4byte	.LASF85
+ 785 05ab 06       		.byte	0x6
+ 786 05ac 73       		.byte	0x73
+ 787 05ad 21       		.byte	0x21
+ 788 05ae 3E030000 		.4byte	0x33e
+ 789 05b2 0C       		.byte	0xc
+ 790 05b3 02       		.uleb128 0x2
+ 791 05b4 DA030000 		.4byte	.LASF86
+ 792 05b8 06       		.byte	0x6
+ 793 05b9 79       		.byte	0x79
+ 794 05ba 21       		.byte	0x21
+ 795 05bb D7000000 		.4byte	0xd7
+ 796 05bf 10       		.byte	0x10
+ 797 05c0 00       		.byte	0
+ 798 05c1 01       		.uleb128 0x1
+ARM GAS  C:\Users\Utente\AppData\Local\Temp\cc5VhcGM.s 			page 15
+
+
+ 799 05c2 EA000000 		.4byte	.LASF87
+ 800 05c6 06       		.byte	0x6
+ 801 05c7 7B       		.byte	0x7b
+ 802 05c8 03       		.byte	0x3
+ 803 05c9 8C050000 		.4byte	0x58c
+ 804 05cd 07       		.uleb128 0x7
+ 805 05ce BB010000 		.4byte	.LASF88
+ 806 05d2 08       		.byte	0x8
+ 807 05d3 06       		.byte	0x6
+ 808 05d4 80       		.byte	0x80
+ 809 05d5 10       		.byte	0x10
+ 810 05d6 E8050000 		.4byte	0x5e8
+ 811 05da 02       		.uleb128 0x2
+ 812 05db 75020000 		.4byte	.LASF89
+ 813 05df 06       		.byte	0x6
+ 814 05e0 84       		.byte	0x84
+ 815 05e1 21       		.byte	0x21
+ 816 05e2 82030000 		.4byte	0x382
+ 817 05e6 00       		.byte	0
+ 818 05e7 00       		.byte	0
+ 819 05e8 01       		.uleb128 0x1
+ 820 05e9 40050000 		.4byte	.LASF90
+ 821 05ed 06       		.byte	0x6
+ 822 05ee 85       		.byte	0x85
+ 823 05ef 03       		.byte	0x3
+ 824 05f0 CD050000 		.4byte	0x5cd
+ 825 05f4 01       		.uleb128 0x1
+ 826 05f5 F9030000 		.4byte	.LASF91
+ 827 05f9 06       		.byte	0x6
+ 828 05fa 8A       		.byte	0x8a
+ 829 05fb 14       		.byte	0x14
+ 830 05fc 00060000 		.4byte	0x600
+ 831 0600 04       		.uleb128 0x4
+ 832 0601 54010000 		.4byte	0x154
+ 833 0605 1A       		.uleb128 0x1a
+ 834 0606 0C       		.byte	0xc
+ 835 0607 A0       		.byte	0xa0
+ 836 0608 31060000 		.4byte	0x631
+ 837 060c 09       		.uleb128 0x9
+ 838 060d BD060000 		.4byte	.LASF92
+ 839 0611 06       		.byte	0x6
+ 840 0612 A4       		.byte	0xa4
+ 841 0613 21       		.byte	0x21
+ 842 0614 56030000 		.4byte	0x356
+ 843 0618 09       		.uleb128 0x9
+ 844 0619 75020000 		.4byte	.LASF89
+ 845 061d 06       		.byte	0x6
+ 846 061e A8       		.byte	0xa8
+ 847 061f 21       		.byte	0x21
+ 848 0620 82030000 		.4byte	0x382
+ 849 0624 09       		.uleb128 0x9
+ 850 0625 0E060000 		.4byte	.LASF93
+ 851 0629 06       		.byte	0x6
+ 852 062a AC       		.byte	0xac
+ 853 062b 21       		.byte	0x21
+ 854 062c BB030000 		.4byte	0x3bb
+ 855 0630 00       		.byte	0
+ARM GAS  C:\Users\Utente\AppData\Local\Temp\cc5VhcGM.s 			page 16
+
+
+ 856 0631 1A       		.uleb128 0x1a
+ 857 0632 04       		.byte	0x4
+ 858 0633 EB       		.byte	0xeb
+ 859 0634 99060000 		.4byte	0x699
+ 860 0638 09       		.uleb128 0x9
+ 861 0639 52000000 		.4byte	.LASF94
+ 862 063d 06       		.byte	0x6
+ 863 063e F2       		.byte	0xf2
+ 864 063f 21       		.byte	0x21
+ 865 0640 24010000 		.4byte	0x124
+ 866 0644 09       		.uleb128 0x9
+ 867 0645 CE000000 		.4byte	.LASF95
+ 868 0649 06       		.byte	0x6
+ 869 064a F9       		.byte	0xf9
+ 870 064b 21       		.byte	0x21
+ 871 064c 24010000 		.4byte	0x124
+ 872 0650 0B       		.uleb128 0xb
+ 873 0651 B6060000 		.4byte	.LASF96
+ 874 0655 0001     		.2byte	0x100
+ 875 0657 22       		.byte	0x22
+ 876 0658 8A050000 		.4byte	0x58a
+ 877 065c 0B       		.uleb128 0xb
+ 878 065d 58020000 		.4byte	.LASF97
+ 879 0661 0701     		.2byte	0x107
+ 880 0663 22       		.byte	0x22
+ 881 0664 99060000 		.4byte	0x699
+ 882 0668 0B       		.uleb128 0xb
+ 883 0669 E2000000 		.4byte	.LASF98
+ 884 066d 0C01     		.2byte	0x10c
+ 885 066f 21       		.byte	0x21
+ 886 0670 24010000 		.4byte	0x124
+ 887 0674 0B       		.uleb128 0xb
+ 888 0675 51020000 		.4byte	.LASF99
+ 889 0679 1501     		.2byte	0x115
+ 890 067b 22       		.byte	0x22
+ 891 067c C6060000 		.4byte	0x6c6
+ 892 0680 0B       		.uleb128 0xb
+ 893 0681 FD050000 		.4byte	.LASF100
+ 894 0685 1E01     		.2byte	0x11e
+ 895 0687 22       		.byte	0x22
+ 896 0688 00070000 		.4byte	0x700
+ 897 068c 0B       		.uleb128 0xb
+ 898 068d 09050000 		.4byte	.LASF101
+ 899 0691 2601     		.2byte	0x126
+ 900 0693 21       		.byte	0x21
+ 901 0694 30010000 		.4byte	0x130
+ 902 0698 00       		.byte	0
+ 903 0699 04       		.uleb128 0x4
+ 904 069a F4050000 		.4byte	0x5f4
+ 905 069e 07       		.uleb128 0x7
+ 906 069f 33050000 		.4byte	.LASF102
+ 907 06a3 0C       		.byte	0xc
+ 908 06a4 0C       		.byte	0xc
+ 909 06a5 34       		.byte	0x34
+ 910 06a6 10       		.byte	0x10
+ 911 06a7 C6060000 		.4byte	0x6c6
+ 912 06ab 02       		.uleb128 0x2
+ARM GAS  C:\Users\Utente\AppData\Local\Temp\cc5VhcGM.s 			page 17
+
+
+ 913 06ac 75020000 		.4byte	.LASF89
+ 914 06b0 0C       		.byte	0xc
+ 915 06b1 35       		.byte	0x35
+ 916 06b2 19       		.byte	0x19
+ 917 06b3 82030000 		.4byte	0x382
+ 918 06b7 00       		.byte	0
+ 919 06b8 0F       		.uleb128 0xf
+ 920 06b9 636E7400 		.ascii	"cnt\000"
+ 921 06bd 0C       		.byte	0xc
+ 922 06be 37       		.byte	0x37
+ 923 06bf 19       		.byte	0x19
+ 924 06c0 3C010000 		.4byte	0x13c
+ 925 06c4 08       		.byte	0x8
+ 926 06c5 00       		.byte	0
+ 927 06c6 04       		.uleb128 0x4
+ 928 06c7 9E060000 		.4byte	0x69e
+ 929 06cb 07       		.uleb128 0x7
+ 930 06cc 99060000 		.4byte	.LASF103
+ 931 06d0 10       		.byte	0x10
+ 932 06d1 0D       		.byte	0xd
+ 933 06d2 39       		.byte	0x39
+ 934 06d3 08       		.byte	0x8
+ 935 06d4 00070000 		.4byte	0x700
+ 936 06d8 02       		.uleb128 0x2
+ 937 06d9 75020000 		.4byte	.LASF89
+ 938 06dd 0D       		.byte	0xd
+ 939 06de 3A       		.byte	0x3a
+ 940 06df 19       		.byte	0x19
+ 941 06e0 82030000 		.4byte	0x382
+ 942 06e4 00       		.byte	0
+ 943 06e5 02       		.uleb128 0x2
+ 944 06e6 77050000 		.4byte	.LASF31
+ 945 06ea 0D       		.byte	0xd
+ 946 06eb 3C       		.byte	0x3c
+ 947 06ec 1A       		.byte	0x1a
+ 948 06ed 00060000 		.4byte	0x600
+ 949 06f1 08       		.byte	0x8
+ 950 06f2 02       		.uleb128 0x2
+ 951 06f3 47000000 		.4byte	.LASF65
+ 952 06f7 0D       		.byte	0xd
+ 953 06f8 3E       		.byte	0x3e
+ 954 06f9 1A       		.byte	0x1a
+ 955 06fa B6070000 		.4byte	0x7b6
+ 956 06fe 0C       		.byte	0xc
+ 957 06ff 00       		.byte	0
+ 958 0700 04       		.uleb128 0x4
+ 959 0701 CB060000 		.4byte	0x6cb
+ 960 0705 04       		.uleb128 0x4
+ 961 0706 43020000 		.4byte	0x243
+ 962 070a 0A       		.uleb128 0xa
+ 963 070b 83030000 		.4byte	.LASF104
+ 964 070f 10       		.byte	0x10
+ 965 0710 06       		.byte	0x6
+ 966 0711 5C01     		.2byte	0x15c
+ 967 0713 10       		.byte	0x10
+ 968 0714 35070000 		.4byte	0x735
+ 969 0718 03       		.uleb128 0x3
+ARM GAS  C:\Users\Utente\AppData\Local\Temp\cc5VhcGM.s 			page 18
+
+
+ 970 0719 0E060000 		.4byte	.LASF93
+ 971 071d 06       		.byte	0x6
+ 972 071e 6101     		.2byte	0x161
+ 973 0720 21       		.byte	0x21
+ 974 0721 BB030000 		.4byte	0x3bb
+ 975 0725 00       		.byte	0
+ 976 0726 03       		.uleb128 0x3
+ 977 0727 6D040000 		.4byte	.LASF105
+ 978 072b 06       		.byte	0x6
+ 979 072c 6501     		.2byte	0x165
+ 980 072e 22       		.byte	0x22
+ 981 072f 00060000 		.4byte	0x600
+ 982 0733 0C       		.byte	0xc
+ 983 0734 00       		.byte	0
+ 984 0735 1B       		.uleb128 0x1b
+ 985 0736 77060000 		.4byte	.LASF106
+ 986 073a 6601     		.2byte	0x166
+ 987 073c 0A070000 		.4byte	0x70a
+ 988 0740 0A       		.uleb128 0xa
+ 989 0741 39040000 		.4byte	.LASF107
+ 990 0745 14       		.byte	0x14
+ 991 0746 06       		.byte	0x6
+ 992 0747 6B01     		.2byte	0x16b
+ 993 0749 10       		.byte	0x10
+ 994 074a 95070000 		.4byte	0x795
+ 995 074e 03       		.uleb128 0x3
+ 996 074f 70020000 		.4byte	.LASF32
+ 997 0753 06       		.byte	0x6
+ 998 0754 6F01     		.2byte	0x16f
+ 999 0756 22       		.byte	0x22
+ 1000 0757 1C030000 		.4byte	0x31c
+ 1001 075b 00       		.byte	0
+ 1002 075c 03       		.uleb128 0x3
+ 1003 075d 0B020000 		.4byte	.LASF108
+ 1004 0761 06       		.byte	0x6
+ 1005 0762 7501     		.2byte	0x175
+ 1006 0764 22       		.byte	0x22
+ 1007 0765 85050000 		.4byte	0x585
+ 1008 0769 04       		.byte	0x4
+ 1009 076a 03       		.uleb128 0x3
+ 1010 076b 5F060000 		.4byte	.LASF109
+ 1011 076f 06       		.byte	0x6
+ 1012 0770 7901     		.2byte	0x179
+ 1013 0772 22       		.byte	0x22
+ 1014 0773 85050000 		.4byte	0x585
+ 1015 0777 08       		.byte	0x8
+ 1016 0778 03       		.uleb128 0x3
+ 1017 0779 CA030000 		.4byte	.LASF110
+ 1018 077d 06       		.byte	0x6
+ 1019 077e 7F01     		.2byte	0x17f
+ 1020 0780 22       		.byte	0x22
+ 1021 0781 85050000 		.4byte	0x585
+ 1022 0785 0C       		.byte	0xc
+ 1023 0786 03       		.uleb128 0x3
+ 1024 0787 C2060000 		.4byte	.LASF111
+ 1025 078b 06       		.byte	0x6
+ 1026 078c 8301     		.2byte	0x183
+ARM GAS  C:\Users\Utente\AppData\Local\Temp\cc5VhcGM.s 			page 19
+
+
+ 1027 078e 22       		.byte	0x22
+ 1028 078f 85050000 		.4byte	0x585
+ 1029 0793 10       		.byte	0x10
+ 1030 0794 00       		.byte	0
+ 1031 0795 1B       		.uleb128 0x1b
+ 1032 0796 84060000 		.4byte	.LASF112
+ 1033 079a 8501     		.2byte	0x185
+ 1034 079c 40070000 		.4byte	0x740
+ 1035 07a0 0D       		.uleb128 0xd
+ 1036 07a1 95070000 		.4byte	0x795
+ 1037 07a5 04       		.uleb128 0x4
+ 1038 07a6 A0070000 		.4byte	0x7a0
+ 1039 07aa 01       		.uleb128 0x1
+ 1040 07ab 1B020000 		.4byte	.LASF113
+ 1041 07af 0D       		.byte	0xd
+ 1042 07b0 34       		.byte	0x34
+ 1043 07b1 19       		.byte	0x19
+ 1044 07b2 CB060000 		.4byte	0x6cb
+ 1045 07b6 04       		.uleb128 0x4
+ 1046 07b7 AA070000 		.4byte	0x7aa
+ 1047 07bb 06       		.uleb128 0x6
+ 1048 07bc 01       		.byte	0x1
+ 1049 07bd 02       		.byte	0x2
+ 1050 07be AF040000 		.4byte	.LASF114
+ 1051 07c2 01       		.uleb128 0x1
+ 1052 07c3 9D010000 		.4byte	.LASF115
+ 1053 07c7 0E       		.byte	0xe
+ 1054 07c8 4C       		.byte	0x4c
+ 1055 07c9 11       		.byte	0x11
+ 1056 07ca CE070000 		.4byte	0x7ce
+ 1057 07ce 04       		.uleb128 0x4
+ 1058 07cf D3070000 		.4byte	0x7d3
+ 1059 07d3 20       		.uleb128 0x20
+ 1060 07d4 8A050000 		.4byte	0x58a
+ 1061 07d8 EC070000 		.4byte	0x7ec
+ 1062 07dc 08       		.uleb128 0x8
+ 1063 07dd 25000000 		.4byte	0x25
+ 1064 07e1 08       		.uleb128 0x8
+ 1065 07e2 31000000 		.4byte	0x31
+ 1066 07e6 08       		.uleb128 0x8
+ 1067 07e7 25000000 		.4byte	0x25
+ 1068 07eb 00       		.byte	0
+ 1069 07ec 01       		.uleb128 0x1
+ 1070 07ed 78010000 		.4byte	.LASF116
+ 1071 07f1 0F       		.byte	0xf
+ 1072 07f2 48       		.byte	0x48
+ 1073 07f3 1C       		.byte	0x1c
+ 1074 07f4 F8070000 		.4byte	0x7f8
+ 1075 07f8 07       		.uleb128 0x7
+ 1076 07f9 E0060000 		.4byte	.LASF117
+ 1077 07fd 1C       		.byte	0x1c
+ 1078 07fe 0F       		.byte	0xf
+ 1079 07ff 60       		.byte	0x60
+ 1080 0800 08       		.byte	0x8
+ 1081 0801 2D080000 		.4byte	0x82d
+ 1082 0805 02       		.uleb128 0x2
+ 1083 0806 92000000 		.4byte	.LASF118
+ARM GAS  C:\Users\Utente\AppData\Local\Temp\cc5VhcGM.s 			page 20
+
+
+ 1084 080a 0F       		.byte	0xf
+ 1085 080b 61       		.byte	0x61
+ 1086 080c 19       		.byte	0x19
+ 1087 080d C2070000 		.4byte	0x7c2
+ 1088 0811 00       		.byte	0
+ 1089 0812 02       		.uleb128 0x2
+ 1090 0813 D9060000 		.4byte	.LASF119
+ 1091 0817 0F       		.byte	0xf
+ 1092 0818 63       		.byte	0x63
+ 1093 0819 19       		.byte	0x19
+ 1094 081a 2D080000 		.4byte	0x82d
+ 1095 081e 04       		.byte	0x4
+ 1096 081f 0F       		.uleb128 0xf
+ 1097 0820 6D747800 		.ascii	"mtx\000"
+ 1098 0824 0F       		.byte	0xf
+ 1099 0825 65       		.byte	0x65
+ 1100 0826 19       		.byte	0x19
+ 1101 0827 AA070000 		.4byte	0x7aa
+ 1102 082b 0C       		.byte	0xc
+ 1103 082c 00       		.byte	0
+ 1104 082d 01       		.uleb128 0x1
+ 1105 082e DF050000 		.4byte	.LASF120
+ 1106 0832 0F       		.byte	0xf
+ 1107 0833 4D       		.byte	0x4d
+ 1108 0834 1B       		.byte	0x1b
+ 1109 0835 39080000 		.4byte	0x839
+ 1110 0839 21       		.uleb128 0x21
+ 1111 083a CB040000 		.4byte	.LASF145
+ 1112 083e 08       		.byte	0x8
+ 1113 083f 0F       		.byte	0xf
+ 1114 0840 52       		.byte	0x52
+ 1115 0841 07       		.byte	0x7
+ 1116 0842 5F080000 		.4byte	0x85f
+ 1117 0846 09       		.uleb128 0x9
+ 1118 0847 06010000 		.4byte	.LASF121
+ 1119 084b 0F       		.byte	0xf
+ 1120 084c 56       		.byte	0x56
+ 1121 084d 05       		.byte	0x5
+ 1122 084e 5F080000 		.4byte	0x85f
+ 1123 0852 09       		.uleb128 0x9
+ 1124 0853 80040000 		.4byte	.LASF122
+ 1125 0857 0F       		.byte	0xf
+ 1126 0858 5A       		.byte	0x5a
+ 1127 0859 05       		.byte	0x5
+ 1128 085a 85080000 		.4byte	0x885
+ 1129 085e 00       		.byte	0
+ 1130 085f 1C       		.uleb128 0x1c
+ 1131 0860 53       		.byte	0x53
+ 1132 0861 80080000 		.4byte	0x880
+ 1133 0865 02       		.uleb128 0x2
+ 1134 0866 47000000 		.4byte	.LASF65
+ 1135 086a 0F       		.byte	0xf
+ 1136 086b 54       		.byte	0x54
+ 1137 086c 1A       		.byte	0x1a
+ 1138 086d 80080000 		.4byte	0x880
+ 1139 0871 00       		.byte	0
+ 1140 0872 02       		.uleb128 0x2
+ARM GAS  C:\Users\Utente\AppData\Local\Temp\cc5VhcGM.s 			page 21
+
+
+ 1141 0873 7D000000 		.4byte	.LASF123
+ 1142 0877 0F       		.byte	0xf
+ 1143 0878 55       		.byte	0x55
+ 1144 0879 19       		.byte	0x19
+ 1145 087a 25000000 		.4byte	0x25
+ 1146 087e 04       		.byte	0x4
+ 1147 087f 00       		.byte	0
+ 1148 0880 04       		.uleb128 0x4
+ 1149 0881 2D080000 		.4byte	0x82d
+ 1150 0885 1C       		.uleb128 0x1c
+ 1151 0886 57       		.byte	0x57
+ 1152 0887 A6080000 		.4byte	0x8a6
+ 1153 088b 02       		.uleb128 0x2
+ 1154 088c 82050000 		.4byte	.LASF124
+ 1155 0890 0F       		.byte	0xf
+ 1156 0891 58       		.byte	0x58
+ 1157 0892 1A       		.byte	0x1a
+ 1158 0893 A6080000 		.4byte	0x8a6
+ 1159 0897 00       		.byte	0
+ 1160 0898 02       		.uleb128 0x2
+ 1161 0899 3C030000 		.4byte	.LASF125
+ 1162 089d 0F       		.byte	0xf
+ 1163 089e 59       		.byte	0x59
+ 1164 089f 19       		.byte	0x19
+ 1165 08a0 25000000 		.4byte	0x25
+ 1166 08a4 04       		.byte	0x4
+ 1167 08a5 00       		.byte	0
+ 1168 08a6 04       		.uleb128 0x4
+ 1169 08a7 EC070000 		.4byte	0x7ec
+ 1170 08ab 12       		.uleb128 0x12
+ 1171 08ac A0050000 		.4byte	.LASF133
+ 1172 08b0 5C       		.byte	0x5c
+ 1173 08b1 16       		.byte	0x16
+ 1174 08b2 EC070000 		.4byte	0x7ec
+ 1175 08b6 13       		.uleb128 0x13
+ 1176 08b7 10010000 		.4byte	.LASF126
+ 1177 08bb 6B       		.byte	0x6b
+ 1178 08bc C6080000 		.4byte	0x8c6
+ 1179 08c0 08       		.uleb128 0x8
+ 1180 08c1 B6070000 		.4byte	0x7b6
+ 1181 08c5 00       		.byte	0
+ 1182 08c6 13       		.uleb128 0x13
+ 1183 08c7 2F040000 		.4byte	.LASF127
+ 1184 08cb 67       		.byte	0x67
+ 1185 08cc D6080000 		.4byte	0x8d6
+ 1186 08d0 08       		.uleb128 0x8
+ 1187 08d1 B6070000 		.4byte	0x7b6
+ 1188 08d5 00       		.byte	0
+ 1189 08d6 13       		.uleb128 0x13
+ 1190 08d7 ED050000 		.4byte	.LASF128
+ 1191 08db 66       		.byte	0x66
+ 1192 08dc E6080000 		.4byte	0x8e6
+ 1193 08e0 08       		.uleb128 0x8
+ 1194 08e1 B6070000 		.4byte	0x7b6
+ 1195 08e5 00       		.byte	0
+ 1196 08e6 22       		.uleb128 0x22
+ 1197 08e7 D7040000 		.4byte	.LASF146
+ARM GAS  C:\Users\Utente\AppData\Local\Temp\cc5VhcGM.s 			page 22
+
+
+ 1198 08eb 0E       		.byte	0xe
+ 1199 08ec 7F       		.byte	0x7f
+ 1200 08ed 09       		.byte	0x9
+ 1201 08ee 8A050000 		.4byte	0x58a
+ 1202 08f2 06090000 		.4byte	0x906
+ 1203 08f6 08       		.uleb128 0x8
+ 1204 08f7 25000000 		.4byte	0x25
+ 1205 08fb 08       		.uleb128 0x8
+ 1206 08fc 31000000 		.4byte	0x31
+ 1207 0900 08       		.uleb128 0x8
+ 1208 0901 25000000 		.4byte	0x25
+ 1209 0905 00       		.byte	0
+ 1210 0906 23       		.uleb128 0x23
+ 1211 0907 C2050000 		.4byte	.LASF129
+ 1212 090b 10       		.byte	0x10
+ 1213 090c 6501     		.2byte	0x165
+ 1214 090e 08       		.byte	0x8
+ 1215 090f 25000000 		.4byte	0x25
+ 1216 0913 71090000 		.4byte	0x971
+ 1217 0917 14       		.uleb128 0x14
+ 1218 0918 00010000 		.4byte	.LASF130
+ 1219 091c 24       		.byte	0x24
+ 1220 091d A6080000 		.4byte	0x8a6
+ 1221 0921 14       		.uleb128 0x14
+ 1222 0922 2C050000 		.4byte	.LASF131
+ 1223 0926 33       		.byte	0x33
+ 1224 0927 71090000 		.4byte	0x971
+ 1225 092b 14       		.uleb128 0x14
+ 1226 092c 6E060000 		.4byte	.LASF132
+ 1227 0930 43       		.byte	0x43
+ 1228 0931 71090000 		.4byte	0x971
+ 1229 0935 10       		.uleb128 0x10
+ 1230 0936 717000   		.ascii	"qp\000"
+ 1231 0939 6601     		.2byte	0x166
+ 1232 093b 12       		.byte	0x12
+ 1233 093c 80080000 		.4byte	0x880
+ 1234 0940 10       		.uleb128 0x10
+ 1235 0941 6E00     		.ascii	"n\000"
+ 1236 0943 6701     		.2byte	0x167
+ 1237 0945 0A       		.byte	0xa
+ 1238 0946 25000000 		.4byte	0x25
+ 1239 094a 11       		.uleb128 0x11
+ 1240 094b 4B050000 		.4byte	.LASF134
+ 1241 094f 6701     		.2byte	0x167
+ 1242 0951 0D       		.byte	0xd
+ 1243 0952 25000000 		.4byte	0x25
+ 1244 0956 11       		.uleb128 0x11
+ 1245 0957 28010000 		.4byte	.LASF135
+ 1246 095b 6701     		.2byte	0x167
+ 1247 095d 15       		.byte	0x15
+ 1248 095e 25000000 		.4byte	0x25
+ 1249 0962 15       		.uleb128 0x15
+ 1250 0963 11       		.uleb128 0x11
+ 1251 0964 7D000000 		.4byte	.LASF123
+ 1252 0968 7301     		.2byte	0x173
+ 1253 096a 0C       		.byte	0xc
+ 1254 096b 25000000 		.4byte	0x25
+ARM GAS  C:\Users\Utente\AppData\Local\Temp\cc5VhcGM.s 			page 23
+
+
+ 1255 096f 00       		.byte	0
+ 1256 0970 00       		.byte	0
+ 1257 0971 04       		.uleb128 0x4
+ 1258 0972 25000000 		.4byte	0x25
+ 1259 0976 24       		.uleb128 0x24
+ 1260 0977 3D010000 		.4byte	.LASF140
+ 1261 097b 10       		.byte	0x10
+ 1262 097c 2501     		.2byte	0x125
+ 1263 097e 06       		.byte	0x6
+ 1264 097f BA090000 		.4byte	0x9ba
+ 1265 0983 25       		.uleb128 0x25
+ 1266 0984 7000     		.ascii	"p\000"
+ 1267 0986 10       		.byte	0x10
+ 1268 0987 2501     		.2byte	0x125
+ 1269 0989 17       		.byte	0x17
+ 1270 098a 8A050000 		.4byte	0x58a
+ 1271 098e 10       		.uleb128 0x10
+ 1272 098f 717000   		.ascii	"qp\000"
+ 1273 0992 2601     		.2byte	0x126
+ 1274 0994 12       		.byte	0x12
+ 1275 0995 80080000 		.4byte	0x880
+ 1276 0999 10       		.uleb128 0x10
+ 1277 099a 687000   		.ascii	"hp\000"
+ 1278 099d 2601     		.2byte	0x126
+ 1279 099f 17       		.byte	0x17
+ 1280 09a0 80080000 		.4byte	0x880
+ 1281 09a4 11       		.uleb128 0x11
+ 1282 09a5 00010000 		.4byte	.LASF130
+ 1283 09a9 2701     		.2byte	0x127
+ 1284 09ab 12       		.byte	0x12
+ 1285 09ac A6080000 		.4byte	0x8a6
+ 1286 09b0 16       		.uleb128 0x16
+ 1287 09b1 10050000 		.4byte	.LASF138
+ 1288 09b5 CA090000 		.4byte	0x9ca
+ 1289 09b9 00       		.byte	0
+ 1290 09ba 17       		.uleb128 0x17
+ 1291 09bb 2D030000 		.4byte	0x32d
+ 1292 09bf CA090000 		.4byte	0x9ca
+ 1293 09c3 18       		.uleb128 0x18
+ 1294 09c4 31000000 		.4byte	0x31
+ 1295 09c8 0A       		.byte	0xa
+ 1296 09c9 00       		.byte	0
+ 1297 09ca 0D       		.uleb128 0xd
+ 1298 09cb BA090000 		.4byte	0x9ba
+ 1299 09cf 26       		.uleb128 0x26
+ 1300 09d0 4C060000 		.4byte	.LASF136
+ 1301 09d4 10       		.byte	0x10
+ 1302 09d5 AC       		.byte	0xac
+ 1303 09d6 07       		.byte	0x7
+ 1304 09d7 8A050000 		.4byte	0x58a
+ 1305 09db 5D0A0000 		.4byte	0xa5d
+ 1306 09df 0E       		.uleb128 0xe
+ 1307 09e0 00010000 		.4byte	.LASF130
+ 1308 09e4 AC       		.byte	0xac
+ 1309 09e5 29       		.byte	0x29
+ 1310 09e6 A6080000 		.4byte	0x8a6
+ 1311 09ea 0E       		.uleb128 0xe
+ARM GAS  C:\Users\Utente\AppData\Local\Temp\cc5VhcGM.s 			page 24
+
+
+ 1312 09eb 3C030000 		.4byte	.LASF125
+ 1313 09ef AC       		.byte	0xac
+ 1314 09f0 37       		.byte	0x37
+ 1315 09f1 25000000 		.4byte	0x25
+ 1316 09f5 0E       		.uleb128 0xe
+ 1317 09f6 23020000 		.4byte	.LASF137
+ 1318 09fa AC       		.byte	0xac
+ 1319 09fb 46       		.byte	0x46
+ 1320 09fc 31000000 		.4byte	0x31
+ 1321 0a00 0C       		.uleb128 0xc
+ 1322 0a01 717000   		.ascii	"qp\000"
+ 1323 0a04 AD       		.byte	0xad
+ 1324 0a05 12       		.byte	0x12
+ 1325 0a06 80080000 		.4byte	0x880
+ 1326 0a0a 0C       		.uleb128 0xc
+ 1327 0a0b 687000   		.ascii	"hp\000"
+ 1328 0a0e AD       		.byte	0xad
+ 1329 0a0f 17       		.byte	0x17
+ 1330 0a10 80080000 		.4byte	0x880
+ 1331 0a14 0C       		.uleb128 0xc
+ 1332 0a15 61687000 		.ascii	"ahp\000"
+ 1333 0a19 AD       		.byte	0xad
+ 1334 0a1a 1C       		.byte	0x1c
+ 1335 0a1b 80080000 		.4byte	0x880
+ 1336 0a1f 12       		.uleb128 0x12
+ 1337 0a20 7D000000 		.4byte	.LASF123
+ 1338 0a24 AE       		.byte	0xae
+ 1339 0a25 0A       		.byte	0xa
+ 1340 0a26 25000000 		.4byte	0x25
+ 1341 0a2a 16       		.uleb128 0x16
+ 1342 0a2b 10050000 		.4byte	.LASF138
+ 1343 0a2f 6D0A0000 		.4byte	0xa6d
+ 1344 0a33 27       		.uleb128 0x27
+ 1345 0a34 500A0000 		.4byte	0xa50
+ 1346 0a38 12       		.uleb128 0x12
+ 1347 0a39 6C030000 		.4byte	.LASF139
+ 1348 0a3d D2       		.byte	0xd2
+ 1349 0a3e 10       		.byte	0x10
+ 1350 0a3f 25000000 		.4byte	0x25
+ 1351 0a43 15       		.uleb128 0x15
+ 1352 0a44 0C       		.uleb128 0xc
+ 1353 0a45 667000   		.ascii	"fp\000"
+ 1354 0a48 D8       		.byte	0xd8
+ 1355 0a49 1A       		.byte	0x1a
+ 1356 0a4a 80080000 		.4byte	0x880
+ 1357 0a4e 00       		.byte	0
+ 1358 0a4f 00       		.byte	0
+ 1359 0a50 15       		.uleb128 0x15
+ 1360 0a51 0C       		.uleb128 0xc
+ 1361 0a52 667000   		.ascii	"fp\000"
+ 1362 0a55 EE       		.byte	0xee
+ 1363 0a56 1A       		.byte	0x1a
+ 1364 0a57 80080000 		.4byte	0x880
+ 1365 0a5b 00       		.byte	0
+ 1366 0a5c 00       		.byte	0
+ 1367 0a5d 17       		.uleb128 0x17
+ 1368 0a5e 2D030000 		.4byte	0x32d
+ARM GAS  C:\Users\Utente\AppData\Local\Temp\cc5VhcGM.s 			page 25
+
+
+ 1369 0a62 6D0A0000 		.4byte	0xa6d
+ 1370 0a66 18       		.uleb128 0x18
+ 1371 0a67 31000000 		.4byte	0x31
+ 1372 0a6b 12       		.byte	0x12
+ 1373 0a6c 00       		.byte	0
+ 1374 0a6d 0D       		.uleb128 0xd
+ 1375 0a6e 5D0A0000 		.4byte	0xa5d
+ 1376 0a72 28       		.uleb128 0x28
+ 1377 0a73 B9030000 		.4byte	.LASF141
+ 1378 0a77 10       		.byte	0x10
+ 1379 0a78 83       		.byte	0x83
+ 1380 0a79 06       		.byte	0x6
+ 1381 0a7a B40A0000 		.4byte	0xab4
+ 1382 0a7e 0E       		.uleb128 0xe
+ 1383 0a7f 00010000 		.4byte	.LASF130
+ 1384 0a83 83       		.byte	0x83
+ 1385 0a84 26       		.byte	0x26
+ 1386 0a85 A6080000 		.4byte	0x8a6
+ 1387 0a89 29       		.uleb128 0x29
+ 1388 0a8a 62756600 		.ascii	"buf\000"
+ 1389 0a8e 10       		.byte	0x10
+ 1390 0a8f 83       		.byte	0x83
+ 1391 0a90 33       		.byte	0x33
+ 1392 0a91 8A050000 		.4byte	0x58a
+ 1393 0a95 0E       		.uleb128 0xe
+ 1394 0a96 3C030000 		.4byte	.LASF125
+ 1395 0a9a 83       		.byte	0x83
+ 1396 0a9b 3F       		.byte	0x3f
+ 1397 0a9c 25000000 		.4byte	0x25
+ 1398 0aa0 0C       		.uleb128 0xc
+ 1399 0aa1 687000   		.ascii	"hp\000"
+ 1400 0aa4 84       		.byte	0x84
+ 1401 0aa5 12       		.byte	0x12
+ 1402 0aa6 80080000 		.4byte	0x880
+ 1403 0aaa 16       		.uleb128 0x16
+ 1404 0aab 10050000 		.4byte	.LASF138
+ 1405 0aaf C40A0000 		.4byte	0xac4
+ 1406 0ab3 00       		.byte	0
+ 1407 0ab4 17       		.uleb128 0x17
+ 1408 0ab5 2D030000 		.4byte	0x32d
+ 1409 0ab9 C40A0000 		.4byte	0xac4
+ 1410 0abd 18       		.uleb128 0x18
+ 1411 0abe 31000000 		.4byte	0x31
+ 1412 0ac2 10       		.byte	0x10
+ 1413 0ac3 00       		.byte	0
+ 1414 0ac4 0D       		.uleb128 0xd
+ 1415 0ac5 B40A0000 		.4byte	0xab4
+ 1416 0ac9 2A       		.uleb128 0x2a
+ 1417 0aca 5B050000 		.4byte	.LASF147
+ 1418 0ace 10       		.byte	0x10
+ 1419 0acf 6B       		.byte	0x6b
+ 1420 0ad0 06       		.byte	0x6
+ 1421 0ad1 00       		.byte	0
+ 1422              		.section	.gnu.debuglto_.debug_abbrev,"e",%progbits
+ 1423              	.Ldebug_abbrev0:
+ 1424 0000 01       		.uleb128 0x1
+ 1425 0001 16       		.uleb128 0x16
+ARM GAS  C:\Users\Utente\AppData\Local\Temp\cc5VhcGM.s 			page 26
+
+
+ 1426 0002 00       		.byte	0
+ 1427 0003 03       		.uleb128 0x3
+ 1428 0004 0E       		.uleb128 0xe
+ 1429 0005 3A       		.uleb128 0x3a
+ 1430 0006 0B       		.uleb128 0xb
+ 1431 0007 3B       		.uleb128 0x3b
+ 1432 0008 0B       		.uleb128 0xb
+ 1433 0009 39       		.uleb128 0x39
+ 1434 000a 0B       		.uleb128 0xb
+ 1435 000b 49       		.uleb128 0x49
+ 1436 000c 13       		.uleb128 0x13
+ 1437 000d 00       		.byte	0
+ 1438 000e 00       		.byte	0
+ 1439 000f 02       		.uleb128 0x2
+ 1440 0010 0D       		.uleb128 0xd
+ 1441 0011 00       		.byte	0
+ 1442 0012 03       		.uleb128 0x3
+ 1443 0013 0E       		.uleb128 0xe
+ 1444 0014 3A       		.uleb128 0x3a
+ 1445 0015 0B       		.uleb128 0xb
+ 1446 0016 3B       		.uleb128 0x3b
+ 1447 0017 0B       		.uleb128 0xb
+ 1448 0018 39       		.uleb128 0x39
+ 1449 0019 0B       		.uleb128 0xb
+ 1450 001a 49       		.uleb128 0x49
+ 1451 001b 13       		.uleb128 0x13
+ 1452 001c 38       		.uleb128 0x38
+ 1453 001d 0B       		.uleb128 0xb
+ 1454 001e 00       		.byte	0
+ 1455 001f 00       		.byte	0
+ 1456 0020 03       		.uleb128 0x3
+ 1457 0021 0D       		.uleb128 0xd
+ 1458 0022 00       		.byte	0
+ 1459 0023 03       		.uleb128 0x3
+ 1460 0024 0E       		.uleb128 0xe
+ 1461 0025 3A       		.uleb128 0x3a
+ 1462 0026 0B       		.uleb128 0xb
+ 1463 0027 3B       		.uleb128 0x3b
+ 1464 0028 05       		.uleb128 0x5
+ 1465 0029 39       		.uleb128 0x39
+ 1466 002a 0B       		.uleb128 0xb
+ 1467 002b 49       		.uleb128 0x49
+ 1468 002c 13       		.uleb128 0x13
+ 1469 002d 38       		.uleb128 0x38
+ 1470 002e 0B       		.uleb128 0xb
+ 1471 002f 00       		.byte	0
+ 1472 0030 00       		.byte	0
+ 1473 0031 04       		.uleb128 0x4
+ 1474 0032 0F       		.uleb128 0xf
+ 1475 0033 00       		.byte	0
+ 1476 0034 0B       		.uleb128 0xb
+ 1477 0035 21       		.uleb128 0x21
+ 1478 0036 04       		.sleb128 4
+ 1479 0037 49       		.uleb128 0x49
+ 1480 0038 13       		.uleb128 0x13
+ 1481 0039 00       		.byte	0
+ 1482 003a 00       		.byte	0
+ARM GAS  C:\Users\Utente\AppData\Local\Temp\cc5VhcGM.s 			page 27
+
+
+ 1483 003b 05       		.uleb128 0x5
+ 1484 003c 0D       		.uleb128 0xd
+ 1485 003d 00       		.byte	0
+ 1486 003e 03       		.uleb128 0x3
+ 1487 003f 08       		.uleb128 0x8
+ 1488 0040 3A       		.uleb128 0x3a
+ 1489 0041 0B       		.uleb128 0xb
+ 1490 0042 3B       		.uleb128 0x3b
+ 1491 0043 05       		.uleb128 0x5
+ 1492 0044 39       		.uleb128 0x39
+ 1493 0045 0B       		.uleb128 0xb
+ 1494 0046 49       		.uleb128 0x49
+ 1495 0047 13       		.uleb128 0x13
+ 1496 0048 38       		.uleb128 0x38
+ 1497 0049 0B       		.uleb128 0xb
+ 1498 004a 00       		.byte	0
+ 1499 004b 00       		.byte	0
+ 1500 004c 06       		.uleb128 0x6
+ 1501 004d 24       		.uleb128 0x24
+ 1502 004e 00       		.byte	0
+ 1503 004f 0B       		.uleb128 0xb
+ 1504 0050 0B       		.uleb128 0xb
+ 1505 0051 3E       		.uleb128 0x3e
+ 1506 0052 0B       		.uleb128 0xb
+ 1507 0053 03       		.uleb128 0x3
+ 1508 0054 0E       		.uleb128 0xe
+ 1509 0055 00       		.byte	0
+ 1510 0056 00       		.byte	0
+ 1511 0057 07       		.uleb128 0x7
+ 1512 0058 13       		.uleb128 0x13
+ 1513 0059 01       		.byte	0x1
+ 1514 005a 03       		.uleb128 0x3
+ 1515 005b 0E       		.uleb128 0xe
+ 1516 005c 0B       		.uleb128 0xb
+ 1517 005d 0B       		.uleb128 0xb
+ 1518 005e 3A       		.uleb128 0x3a
+ 1519 005f 0B       		.uleb128 0xb
+ 1520 0060 3B       		.uleb128 0x3b
+ 1521 0061 0B       		.uleb128 0xb
+ 1522 0062 39       		.uleb128 0x39
+ 1523 0063 0B       		.uleb128 0xb
+ 1524 0064 01       		.uleb128 0x1
+ 1525 0065 13       		.uleb128 0x13
+ 1526 0066 00       		.byte	0
+ 1527 0067 00       		.byte	0
+ 1528 0068 08       		.uleb128 0x8
+ 1529 0069 05       		.uleb128 0x5
+ 1530 006a 00       		.byte	0
+ 1531 006b 49       		.uleb128 0x49
+ 1532 006c 13       		.uleb128 0x13
+ 1533 006d 00       		.byte	0
+ 1534 006e 00       		.byte	0
+ 1535 006f 09       		.uleb128 0x9
+ 1536 0070 0D       		.uleb128 0xd
+ 1537 0071 00       		.byte	0
+ 1538 0072 03       		.uleb128 0x3
+ 1539 0073 0E       		.uleb128 0xe
+ARM GAS  C:\Users\Utente\AppData\Local\Temp\cc5VhcGM.s 			page 28
+
+
+ 1540 0074 3A       		.uleb128 0x3a
+ 1541 0075 0B       		.uleb128 0xb
+ 1542 0076 3B       		.uleb128 0x3b
+ 1543 0077 0B       		.uleb128 0xb
+ 1544 0078 39       		.uleb128 0x39
+ 1545 0079 0B       		.uleb128 0xb
+ 1546 007a 49       		.uleb128 0x49
+ 1547 007b 13       		.uleb128 0x13
+ 1548 007c 00       		.byte	0
+ 1549 007d 00       		.byte	0
+ 1550 007e 0A       		.uleb128 0xa
+ 1551 007f 13       		.uleb128 0x13
+ 1552 0080 01       		.byte	0x1
+ 1553 0081 03       		.uleb128 0x3
+ 1554 0082 0E       		.uleb128 0xe
+ 1555 0083 0B       		.uleb128 0xb
+ 1556 0084 0B       		.uleb128 0xb
+ 1557 0085 3A       		.uleb128 0x3a
+ 1558 0086 0B       		.uleb128 0xb
+ 1559 0087 3B       		.uleb128 0x3b
+ 1560 0088 05       		.uleb128 0x5
+ 1561 0089 39       		.uleb128 0x39
+ 1562 008a 0B       		.uleb128 0xb
+ 1563 008b 01       		.uleb128 0x1
+ 1564 008c 13       		.uleb128 0x13
+ 1565 008d 00       		.byte	0
+ 1566 008e 00       		.byte	0
+ 1567 008f 0B       		.uleb128 0xb
+ 1568 0090 0D       		.uleb128 0xd
+ 1569 0091 00       		.byte	0
+ 1570 0092 03       		.uleb128 0x3
+ 1571 0093 0E       		.uleb128 0xe
+ 1572 0094 3A       		.uleb128 0x3a
+ 1573 0095 21       		.uleb128 0x21
+ 1574 0096 06       		.sleb128 6
+ 1575 0097 3B       		.uleb128 0x3b
+ 1576 0098 05       		.uleb128 0x5
+ 1577 0099 39       		.uleb128 0x39
+ 1578 009a 0B       		.uleb128 0xb
+ 1579 009b 49       		.uleb128 0x49
+ 1580 009c 13       		.uleb128 0x13
+ 1581 009d 00       		.byte	0
+ 1582 009e 00       		.byte	0
+ 1583 009f 0C       		.uleb128 0xc
+ 1584 00a0 34       		.uleb128 0x34
+ 1585 00a1 00       		.byte	0
+ 1586 00a2 03       		.uleb128 0x3
+ 1587 00a3 08       		.uleb128 0x8
+ 1588 00a4 3A       		.uleb128 0x3a
+ 1589 00a5 21       		.uleb128 0x21
+ 1590 00a6 10       		.sleb128 16
+ 1591 00a7 3B       		.uleb128 0x3b
+ 1592 00a8 0B       		.uleb128 0xb
+ 1593 00a9 39       		.uleb128 0x39
+ 1594 00aa 0B       		.uleb128 0xb
+ 1595 00ab 49       		.uleb128 0x49
+ 1596 00ac 13       		.uleb128 0x13
+ARM GAS  C:\Users\Utente\AppData\Local\Temp\cc5VhcGM.s 			page 29
+
+
+ 1597 00ad 00       		.byte	0
+ 1598 00ae 00       		.byte	0
+ 1599 00af 0D       		.uleb128 0xd
+ 1600 00b0 26       		.uleb128 0x26
+ 1601 00b1 00       		.byte	0
+ 1602 00b2 49       		.uleb128 0x49
+ 1603 00b3 13       		.uleb128 0x13
+ 1604 00b4 00       		.byte	0
+ 1605 00b5 00       		.byte	0
+ 1606 00b6 0E       		.uleb128 0xe
+ 1607 00b7 05       		.uleb128 0x5
+ 1608 00b8 00       		.byte	0
+ 1609 00b9 03       		.uleb128 0x3
+ 1610 00ba 0E       		.uleb128 0xe
+ 1611 00bb 3A       		.uleb128 0x3a
+ 1612 00bc 21       		.uleb128 0x21
+ 1613 00bd 10       		.sleb128 16
+ 1614 00be 3B       		.uleb128 0x3b
+ 1615 00bf 0B       		.uleb128 0xb
+ 1616 00c0 39       		.uleb128 0x39
+ 1617 00c1 0B       		.uleb128 0xb
+ 1618 00c2 49       		.uleb128 0x49
+ 1619 00c3 13       		.uleb128 0x13
+ 1620 00c4 00       		.byte	0
+ 1621 00c5 00       		.byte	0
+ 1622 00c6 0F       		.uleb128 0xf
+ 1623 00c7 0D       		.uleb128 0xd
+ 1624 00c8 00       		.byte	0
+ 1625 00c9 03       		.uleb128 0x3
+ 1626 00ca 08       		.uleb128 0x8
+ 1627 00cb 3A       		.uleb128 0x3a
+ 1628 00cc 0B       		.uleb128 0xb
+ 1629 00cd 3B       		.uleb128 0x3b
+ 1630 00ce 0B       		.uleb128 0xb
+ 1631 00cf 39       		.uleb128 0x39
+ 1632 00d0 0B       		.uleb128 0xb
+ 1633 00d1 49       		.uleb128 0x49
+ 1634 00d2 13       		.uleb128 0x13
+ 1635 00d3 38       		.uleb128 0x38
+ 1636 00d4 0B       		.uleb128 0xb
+ 1637 00d5 00       		.byte	0
+ 1638 00d6 00       		.byte	0
+ 1639 00d7 10       		.uleb128 0x10
+ 1640 00d8 34       		.uleb128 0x34
+ 1641 00d9 00       		.byte	0
+ 1642 00da 03       		.uleb128 0x3
+ 1643 00db 08       		.uleb128 0x8
+ 1644 00dc 3A       		.uleb128 0x3a
+ 1645 00dd 21       		.uleb128 0x21
+ 1646 00de 10       		.sleb128 16
+ 1647 00df 3B       		.uleb128 0x3b
+ 1648 00e0 05       		.uleb128 0x5
+ 1649 00e1 39       		.uleb128 0x39
+ 1650 00e2 0B       		.uleb128 0xb
+ 1651 00e3 49       		.uleb128 0x49
+ 1652 00e4 13       		.uleb128 0x13
+ 1653 00e5 00       		.byte	0
+ARM GAS  C:\Users\Utente\AppData\Local\Temp\cc5VhcGM.s 			page 30
+
+
+ 1654 00e6 00       		.byte	0
+ 1655 00e7 11       		.uleb128 0x11
+ 1656 00e8 34       		.uleb128 0x34
+ 1657 00e9 00       		.byte	0
+ 1658 00ea 03       		.uleb128 0x3
+ 1659 00eb 0E       		.uleb128 0xe
+ 1660 00ec 3A       		.uleb128 0x3a
+ 1661 00ed 21       		.uleb128 0x21
+ 1662 00ee 10       		.sleb128 16
+ 1663 00ef 3B       		.uleb128 0x3b
+ 1664 00f0 05       		.uleb128 0x5
+ 1665 00f1 39       		.uleb128 0x39
+ 1666 00f2 0B       		.uleb128 0xb
+ 1667 00f3 49       		.uleb128 0x49
+ 1668 00f4 13       		.uleb128 0x13
+ 1669 00f5 00       		.byte	0
+ 1670 00f6 00       		.byte	0
+ 1671 00f7 12       		.uleb128 0x12
+ 1672 00f8 34       		.uleb128 0x34
+ 1673 00f9 00       		.byte	0
+ 1674 00fa 03       		.uleb128 0x3
+ 1675 00fb 0E       		.uleb128 0xe
+ 1676 00fc 3A       		.uleb128 0x3a
+ 1677 00fd 21       		.uleb128 0x21
+ 1678 00fe 10       		.sleb128 16
+ 1679 00ff 3B       		.uleb128 0x3b
+ 1680 0100 0B       		.uleb128 0xb
+ 1681 0101 39       		.uleb128 0x39
+ 1682 0102 0B       		.uleb128 0xb
+ 1683 0103 49       		.uleb128 0x49
+ 1684 0104 13       		.uleb128 0x13
+ 1685 0105 00       		.byte	0
+ 1686 0106 00       		.byte	0
+ 1687 0107 13       		.uleb128 0x13
+ 1688 0108 2E       		.uleb128 0x2e
+ 1689 0109 01       		.byte	0x1
+ 1690 010a 3F       		.uleb128 0x3f
+ 1691 010b 19       		.uleb128 0x19
+ 1692 010c 03       		.uleb128 0x3
+ 1693 010d 0E       		.uleb128 0xe
+ 1694 010e 3A       		.uleb128 0x3a
+ 1695 010f 21       		.uleb128 0x21
+ 1696 0110 0D       		.sleb128 13
+ 1697 0111 3B       		.uleb128 0x3b
+ 1698 0112 0B       		.uleb128 0xb
+ 1699 0113 39       		.uleb128 0x39
+ 1700 0114 21       		.uleb128 0x21
+ 1701 0115 08       		.sleb128 8
+ 1702 0116 27       		.uleb128 0x27
+ 1703 0117 19       		.uleb128 0x19
+ 1704 0118 3C       		.uleb128 0x3c
+ 1705 0119 19       		.uleb128 0x19
+ 1706 011a 01       		.uleb128 0x1
+ 1707 011b 13       		.uleb128 0x13
+ 1708 011c 00       		.byte	0
+ 1709 011d 00       		.byte	0
+ 1710 011e 14       		.uleb128 0x14
+ARM GAS  C:\Users\Utente\AppData\Local\Temp\cc5VhcGM.s 			page 31
+
+
+ 1711 011f 05       		.uleb128 0x5
+ 1712 0120 00       		.byte	0
+ 1713 0121 03       		.uleb128 0x3
+ 1714 0122 0E       		.uleb128 0xe
+ 1715 0123 3A       		.uleb128 0x3a
+ 1716 0124 21       		.uleb128 0x21
+ 1717 0125 10       		.sleb128 16
+ 1718 0126 3B       		.uleb128 0x3b
+ 1719 0127 21       		.uleb128 0x21
+ 1720 0128 E502     		.sleb128 357
+ 1721 012a 39       		.uleb128 0x39
+ 1722 012b 0B       		.uleb128 0xb
+ 1723 012c 49       		.uleb128 0x49
+ 1724 012d 13       		.uleb128 0x13
+ 1725 012e 00       		.byte	0
+ 1726 012f 00       		.byte	0
+ 1727 0130 15       		.uleb128 0x15
+ 1728 0131 0B       		.uleb128 0xb
+ 1729 0132 01       		.byte	0x1
+ 1730 0133 00       		.byte	0
+ 1731 0134 00       		.byte	0
+ 1732 0135 16       		.uleb128 0x16
+ 1733 0136 34       		.uleb128 0x34
+ 1734 0137 00       		.byte	0
+ 1735 0138 03       		.uleb128 0x3
+ 1736 0139 0E       		.uleb128 0xe
+ 1737 013a 49       		.uleb128 0x49
+ 1738 013b 13       		.uleb128 0x13
+ 1739 013c 34       		.uleb128 0x34
+ 1740 013d 19       		.uleb128 0x19
+ 1741 013e 00       		.byte	0
+ 1742 013f 00       		.byte	0
+ 1743 0140 17       		.uleb128 0x17
+ 1744 0141 01       		.uleb128 0x1
+ 1745 0142 01       		.byte	0x1
+ 1746 0143 49       		.uleb128 0x49
+ 1747 0144 13       		.uleb128 0x13
+ 1748 0145 01       		.uleb128 0x1
+ 1749 0146 13       		.uleb128 0x13
+ 1750 0147 00       		.byte	0
+ 1751 0148 00       		.byte	0
+ 1752 0149 18       		.uleb128 0x18
+ 1753 014a 21       		.uleb128 0x21
+ 1754 014b 00       		.byte	0
+ 1755 014c 49       		.uleb128 0x49
+ 1756 014d 13       		.uleb128 0x13
+ 1757 014e 2F       		.uleb128 0x2f
+ 1758 014f 0B       		.uleb128 0xb
+ 1759 0150 00       		.byte	0
+ 1760 0151 00       		.byte	0
+ 1761 0152 19       		.uleb128 0x19
+ 1762 0153 35       		.uleb128 0x35
+ 1763 0154 00       		.byte	0
+ 1764 0155 49       		.uleb128 0x49
+ 1765 0156 13       		.uleb128 0x13
+ 1766 0157 00       		.byte	0
+ 1767 0158 00       		.byte	0
+ARM GAS  C:\Users\Utente\AppData\Local\Temp\cc5VhcGM.s 			page 32
+
+
+ 1768 0159 1A       		.uleb128 0x1a
+ 1769 015a 17       		.uleb128 0x17
+ 1770 015b 01       		.byte	0x1
+ 1771 015c 0B       		.uleb128 0xb
+ 1772 015d 0B       		.uleb128 0xb
+ 1773 015e 3A       		.uleb128 0x3a
+ 1774 015f 21       		.uleb128 0x21
+ 1775 0160 06       		.sleb128 6
+ 1776 0161 3B       		.uleb128 0x3b
+ 1777 0162 0B       		.uleb128 0xb
+ 1778 0163 39       		.uleb128 0x39
+ 1779 0164 21       		.uleb128 0x21
+ 1780 0165 03       		.sleb128 3
+ 1781 0166 01       		.uleb128 0x1
+ 1782 0167 13       		.uleb128 0x13
+ 1783 0168 00       		.byte	0
+ 1784 0169 00       		.byte	0
+ 1785 016a 1B       		.uleb128 0x1b
+ 1786 016b 16       		.uleb128 0x16
+ 1787 016c 00       		.byte	0
+ 1788 016d 03       		.uleb128 0x3
+ 1789 016e 0E       		.uleb128 0xe
+ 1790 016f 3A       		.uleb128 0x3a
+ 1791 0170 21       		.uleb128 0x21
+ 1792 0171 06       		.sleb128 6
+ 1793 0172 3B       		.uleb128 0x3b
+ 1794 0173 05       		.uleb128 0x5
+ 1795 0174 39       		.uleb128 0x39
+ 1796 0175 21       		.uleb128 0x21
+ 1797 0176 03       		.sleb128 3
+ 1798 0177 49       		.uleb128 0x49
+ 1799 0178 13       		.uleb128 0x13
+ 1800 0179 00       		.byte	0
+ 1801 017a 00       		.byte	0
+ 1802 017b 1C       		.uleb128 0x1c
+ 1803 017c 13       		.uleb128 0x13
+ 1804 017d 01       		.byte	0x1
+ 1805 017e 0B       		.uleb128 0xb
+ 1806 017f 21       		.uleb128 0x21
+ 1807 0180 08       		.sleb128 8
+ 1808 0181 3A       		.uleb128 0x3a
+ 1809 0182 21       		.uleb128 0x21
+ 1810 0183 0F       		.sleb128 15
+ 1811 0184 3B       		.uleb128 0x3b
+ 1812 0185 0B       		.uleb128 0xb
+ 1813 0186 39       		.uleb128 0x39
+ 1814 0187 21       		.uleb128 0x21
+ 1815 0188 03       		.sleb128 3
+ 1816 0189 01       		.uleb128 0x1
+ 1817 018a 13       		.uleb128 0x13
+ 1818 018b 00       		.byte	0
+ 1819 018c 00       		.byte	0
+ 1820 018d 1D       		.uleb128 0x1d
+ 1821 018e 11       		.uleb128 0x11
+ 1822 018f 01       		.byte	0x1
+ 1823 0190 25       		.uleb128 0x25
+ 1824 0191 0E       		.uleb128 0xe
+ARM GAS  C:\Users\Utente\AppData\Local\Temp\cc5VhcGM.s 			page 33
+
+
+ 1825 0192 13       		.uleb128 0x13
+ 1826 0193 0B       		.uleb128 0xb
+ 1827 0194 03       		.uleb128 0x3
+ 1828 0195 0E       		.uleb128 0xe
+ 1829 0196 1B       		.uleb128 0x1b
+ 1830 0197 0E       		.uleb128 0xe
+ 1831 0198 10       		.uleb128 0x10
+ 1832 0199 17       		.uleb128 0x17
+ 1833 019a 00       		.byte	0
+ 1834 019b 00       		.byte	0
+ 1835 019c 1E       		.uleb128 0x1e
+ 1836 019d 24       		.uleb128 0x24
+ 1837 019e 00       		.byte	0
+ 1838 019f 0B       		.uleb128 0xb
+ 1839 01a0 0B       		.uleb128 0xb
+ 1840 01a1 3E       		.uleb128 0x3e
+ 1841 01a2 0B       		.uleb128 0xb
+ 1842 01a3 03       		.uleb128 0x3
+ 1843 01a4 08       		.uleb128 0x8
+ 1844 01a5 00       		.byte	0
+ 1845 01a6 00       		.byte	0
+ 1846 01a7 1F       		.uleb128 0x1f
+ 1847 01a8 0F       		.uleb128 0xf
+ 1848 01a9 00       		.byte	0
+ 1849 01aa 0B       		.uleb128 0xb
+ 1850 01ab 0B       		.uleb128 0xb
+ 1851 01ac 00       		.byte	0
+ 1852 01ad 00       		.byte	0
+ 1853 01ae 20       		.uleb128 0x20
+ 1854 01af 15       		.uleb128 0x15
+ 1855 01b0 01       		.byte	0x1
+ 1856 01b1 27       		.uleb128 0x27
+ 1857 01b2 19       		.uleb128 0x19
+ 1858 01b3 49       		.uleb128 0x49
+ 1859 01b4 13       		.uleb128 0x13
+ 1860 01b5 01       		.uleb128 0x1
+ 1861 01b6 13       		.uleb128 0x13
+ 1862 01b7 00       		.byte	0
+ 1863 01b8 00       		.byte	0
+ 1864 01b9 21       		.uleb128 0x21
+ 1865 01ba 17       		.uleb128 0x17
+ 1866 01bb 01       		.byte	0x1
+ 1867 01bc 03       		.uleb128 0x3
+ 1868 01bd 0E       		.uleb128 0xe
+ 1869 01be 0B       		.uleb128 0xb
+ 1870 01bf 0B       		.uleb128 0xb
+ 1871 01c0 3A       		.uleb128 0x3a
+ 1872 01c1 0B       		.uleb128 0xb
+ 1873 01c2 3B       		.uleb128 0x3b
+ 1874 01c3 0B       		.uleb128 0xb
+ 1875 01c4 39       		.uleb128 0x39
+ 1876 01c5 0B       		.uleb128 0xb
+ 1877 01c6 01       		.uleb128 0x1
+ 1878 01c7 13       		.uleb128 0x13
+ 1879 01c8 00       		.byte	0
+ 1880 01c9 00       		.byte	0
+ 1881 01ca 22       		.uleb128 0x22
+ARM GAS  C:\Users\Utente\AppData\Local\Temp\cc5VhcGM.s 			page 34
+
+
+ 1882 01cb 2E       		.uleb128 0x2e
+ 1883 01cc 01       		.byte	0x1
+ 1884 01cd 3F       		.uleb128 0x3f
+ 1885 01ce 19       		.uleb128 0x19
+ 1886 01cf 03       		.uleb128 0x3
+ 1887 01d0 0E       		.uleb128 0xe
+ 1888 01d1 3A       		.uleb128 0x3a
+ 1889 01d2 0B       		.uleb128 0xb
+ 1890 01d3 3B       		.uleb128 0x3b
+ 1891 01d4 0B       		.uleb128 0xb
+ 1892 01d5 39       		.uleb128 0x39
+ 1893 01d6 0B       		.uleb128 0xb
+ 1894 01d7 27       		.uleb128 0x27
+ 1895 01d8 19       		.uleb128 0x19
+ 1896 01d9 49       		.uleb128 0x49
+ 1897 01da 13       		.uleb128 0x13
+ 1898 01db 3C       		.uleb128 0x3c
+ 1899 01dc 19       		.uleb128 0x19
+ 1900 01dd 01       		.uleb128 0x1
+ 1901 01de 13       		.uleb128 0x13
+ 1902 01df 00       		.byte	0
+ 1903 01e0 00       		.byte	0
+ 1904 01e1 23       		.uleb128 0x23
+ 1905 01e2 2E       		.uleb128 0x2e
+ 1906 01e3 01       		.byte	0x1
+ 1907 01e4 3F       		.uleb128 0x3f
+ 1908 01e5 19       		.uleb128 0x19
+ 1909 01e6 03       		.uleb128 0x3
+ 1910 01e7 0E       		.uleb128 0xe
+ 1911 01e8 3A       		.uleb128 0x3a
+ 1912 01e9 0B       		.uleb128 0xb
+ 1913 01ea 3B       		.uleb128 0x3b
+ 1914 01eb 05       		.uleb128 0x5
+ 1915 01ec 39       		.uleb128 0x39
+ 1916 01ed 0B       		.uleb128 0xb
+ 1917 01ee 27       		.uleb128 0x27
+ 1918 01ef 19       		.uleb128 0x19
+ 1919 01f0 49       		.uleb128 0x49
+ 1920 01f1 13       		.uleb128 0x13
+ 1921 01f2 01       		.uleb128 0x1
+ 1922 01f3 13       		.uleb128 0x13
+ 1923 01f4 00       		.byte	0
+ 1924 01f5 00       		.byte	0
+ 1925 01f6 24       		.uleb128 0x24
+ 1926 01f7 2E       		.uleb128 0x2e
+ 1927 01f8 01       		.byte	0x1
+ 1928 01f9 3F       		.uleb128 0x3f
+ 1929 01fa 19       		.uleb128 0x19
+ 1930 01fb 03       		.uleb128 0x3
+ 1931 01fc 0E       		.uleb128 0xe
+ 1932 01fd 3A       		.uleb128 0x3a
+ 1933 01fe 0B       		.uleb128 0xb
+ 1934 01ff 3B       		.uleb128 0x3b
+ 1935 0200 05       		.uleb128 0x5
+ 1936 0201 39       		.uleb128 0x39
+ 1937 0202 0B       		.uleb128 0xb
+ 1938 0203 27       		.uleb128 0x27
+ARM GAS  C:\Users\Utente\AppData\Local\Temp\cc5VhcGM.s 			page 35
+
+
+ 1939 0204 19       		.uleb128 0x19
+ 1940 0205 01       		.uleb128 0x1
+ 1941 0206 13       		.uleb128 0x13
+ 1942 0207 00       		.byte	0
+ 1943 0208 00       		.byte	0
+ 1944 0209 25       		.uleb128 0x25
+ 1945 020a 05       		.uleb128 0x5
+ 1946 020b 00       		.byte	0
+ 1947 020c 03       		.uleb128 0x3
+ 1948 020d 08       		.uleb128 0x8
+ 1949 020e 3A       		.uleb128 0x3a
+ 1950 020f 0B       		.uleb128 0xb
+ 1951 0210 3B       		.uleb128 0x3b
+ 1952 0211 05       		.uleb128 0x5
+ 1953 0212 39       		.uleb128 0x39
+ 1954 0213 0B       		.uleb128 0xb
+ 1955 0214 49       		.uleb128 0x49
+ 1956 0215 13       		.uleb128 0x13
+ 1957 0216 00       		.byte	0
+ 1958 0217 00       		.byte	0
+ 1959 0218 26       		.uleb128 0x26
+ 1960 0219 2E       		.uleb128 0x2e
+ 1961 021a 01       		.byte	0x1
+ 1962 021b 3F       		.uleb128 0x3f
+ 1963 021c 19       		.uleb128 0x19
+ 1964 021d 03       		.uleb128 0x3
+ 1965 021e 0E       		.uleb128 0xe
+ 1966 021f 3A       		.uleb128 0x3a
+ 1967 0220 0B       		.uleb128 0xb
+ 1968 0221 3B       		.uleb128 0x3b
+ 1969 0222 0B       		.uleb128 0xb
+ 1970 0223 39       		.uleb128 0x39
+ 1971 0224 0B       		.uleb128 0xb
+ 1972 0225 27       		.uleb128 0x27
+ 1973 0226 19       		.uleb128 0x19
+ 1974 0227 49       		.uleb128 0x49
+ 1975 0228 13       		.uleb128 0x13
+ 1976 0229 01       		.uleb128 0x1
+ 1977 022a 13       		.uleb128 0x13
+ 1978 022b 00       		.byte	0
+ 1979 022c 00       		.byte	0
+ 1980 022d 27       		.uleb128 0x27
+ 1981 022e 0B       		.uleb128 0xb
+ 1982 022f 01       		.byte	0x1
+ 1983 0230 01       		.uleb128 0x1
+ 1984 0231 13       		.uleb128 0x13
+ 1985 0232 00       		.byte	0
+ 1986 0233 00       		.byte	0
+ 1987 0234 28       		.uleb128 0x28
+ 1988 0235 2E       		.uleb128 0x2e
+ 1989 0236 01       		.byte	0x1
+ 1990 0237 3F       		.uleb128 0x3f
+ 1991 0238 19       		.uleb128 0x19
+ 1992 0239 03       		.uleb128 0x3
+ 1993 023a 0E       		.uleb128 0xe
+ 1994 023b 3A       		.uleb128 0x3a
+ 1995 023c 0B       		.uleb128 0xb
+ARM GAS  C:\Users\Utente\AppData\Local\Temp\cc5VhcGM.s 			page 36
+
+
+ 1996 023d 3B       		.uleb128 0x3b
+ 1997 023e 0B       		.uleb128 0xb
+ 1998 023f 39       		.uleb128 0x39
+ 1999 0240 0B       		.uleb128 0xb
+ 2000 0241 27       		.uleb128 0x27
+ 2001 0242 19       		.uleb128 0x19
+ 2002 0243 01       		.uleb128 0x1
+ 2003 0244 13       		.uleb128 0x13
+ 2004 0245 00       		.byte	0
+ 2005 0246 00       		.byte	0
+ 2006 0247 29       		.uleb128 0x29
+ 2007 0248 05       		.uleb128 0x5
+ 2008 0249 00       		.byte	0
+ 2009 024a 03       		.uleb128 0x3
+ 2010 024b 08       		.uleb128 0x8
+ 2011 024c 3A       		.uleb128 0x3a
+ 2012 024d 0B       		.uleb128 0xb
+ 2013 024e 3B       		.uleb128 0x3b
+ 2014 024f 0B       		.uleb128 0xb
+ 2015 0250 39       		.uleb128 0x39
+ 2016 0251 0B       		.uleb128 0xb
+ 2017 0252 49       		.uleb128 0x49
+ 2018 0253 13       		.uleb128 0x13
+ 2019 0254 00       		.byte	0
+ 2020 0255 00       		.byte	0
+ 2021 0256 2A       		.uleb128 0x2a
+ 2022 0257 2E       		.uleb128 0x2e
+ 2023 0258 00       		.byte	0
+ 2024 0259 3F       		.uleb128 0x3f
+ 2025 025a 19       		.uleb128 0x19
+ 2026 025b 03       		.uleb128 0x3
+ 2027 025c 0E       		.uleb128 0xe
+ 2028 025d 3A       		.uleb128 0x3a
+ 2029 025e 0B       		.uleb128 0xb
+ 2030 025f 3B       		.uleb128 0x3b
+ 2031 0260 0B       		.uleb128 0xb
+ 2032 0261 39       		.uleb128 0x39
+ 2033 0262 0B       		.uleb128 0xb
+ 2034 0263 27       		.uleb128 0x27
+ 2035 0264 19       		.uleb128 0x19
+ 2036 0265 00       		.byte	0
+ 2037 0266 00       		.byte	0
+ 2038 0267 00       		.byte	0
+ 2039              		.section	.gnu.debuglto_.debug_line,"e",%progbits
+ 2040              	.Ldebug_line0:
+ 2041 0000 9D000000 		.4byte	.LELT0-.LSLT0
+ 2042              	.LSLT0:
+ 2043 0004 0500     		.2byte	0x5
+ 2044 0006 04       		.byte	0x4
+ 2045 0007 00       		.byte	0
+ 2046 0008 95000000 		.4byte	.LELTP0-.LASLTP0
+ 2047              	.LASLTP0:
+ 2048 000c 01       		.byte	0x1
+ 2049 000d 01       		.byte	0x1
+ 2050 000e 01       		.byte	0x1
+ 2051 000f F6       		.byte	0xf6
+ 2052 0010 F2       		.byte	0xf2
+ARM GAS  C:\Users\Utente\AppData\Local\Temp\cc5VhcGM.s 			page 37
+
+
+ 2053 0011 0D       		.byte	0xd
+ 2054 0012 00       		.byte	0
+ 2055 0013 01       		.byte	0x1
+ 2056 0014 01       		.byte	0x1
+ 2057 0015 01       		.byte	0x1
+ 2058 0016 01       		.byte	0x1
+ 2059 0017 00       		.byte	0
+ 2060 0018 00       		.byte	0
+ 2061 0019 00       		.byte	0
+ 2062 001a 01       		.byte	0x1
+ 2063 001b 00       		.byte	0
+ 2064 001c 00       		.byte	0
+ 2065 001d 01       		.byte	0x1
+ 2066 001e 01       		.byte	0x1
+ 2067 001f 01       		.uleb128 0x1
+ 2068 0020 1F       		.uleb128 0x1f
+ 2069 0021 09       		.uleb128 0x9
+ 2070 0022 11000000 		.4byte	.LASF148
+ 2071 0026 81010000 		.4byte	.LASF149
+ 2072 002a 58000000 		.4byte	.LASF150
+ 2073 002e A8020000 		.4byte	.LASF151
+ 2074 0032 86000000 		.4byte	.LASF152
+ 2075 0036 7E020000 		.4byte	.LASF153
+ 2076 003a 1E010000 		.4byte	.LASF154
+ 2077 003e 2B020000 		.4byte	.LASF155
+ 2078 0042 AE010000 		.4byte	.LASF156
+ 2079 0046 02       		.byte	0x2
+ 2080 0047 01       		.uleb128 0x1
+ 2081 0048 1F       		.uleb128 0x1f
+ 2082 0049 02       		.uleb128 0x2
+ 2083 004a 0B       		.uleb128 0xb
+ 2084 004b 11       		.uleb128 0x11
+ 2085 004c CB000000 		.4byte	.LASF157
+ 2086 0050 00       		.byte	0
+ 2087 0051 15020000 		.4byte	.LASF158
+ 2088 0055 08       		.byte	0x8
+ 2089 0056 00000000 		.4byte	.LASF159
+ 2090 005a 06       		.byte	0x6
+ 2091 005b 0A010000 		.4byte	.LASF160
+ 2092 005f 07       		.byte	0x7
+ 2093 0060 00010000 		.4byte	.LASF161
+ 2094 0064 01       		.byte	0x1
+ 2095 0065 9E020000 		.4byte	.LASF162
+ 2096 0069 05       		.byte	0x5
+ 2097 006a 75010000 		.4byte	.LASF163
+ 2098 006e 05       		.byte	0x5
+ 2099 006f 0C020000 		.4byte	.LASF164
+ 2100 0073 05       		.byte	0x5
+ 2101 0074 CB020000 		.4byte	.LASF165
+ 2102 0078 05       		.byte	0x5
+ 2103 0079 F7000000 		.4byte	.LASF166
+ 2104 007d 05       		.byte	0x5
+ 2105 007e 14010000 		.4byte	.LASF167
+ 2106 0082 05       		.byte	0x5
+ 2107 0083 A5000000 		.4byte	.LASF168
+ 2108 0087 02       		.byte	0x2
+ 2109 0088 AE000000 		.4byte	.LASF169
+ARM GAS  C:\Users\Utente\AppData\Local\Temp\cc5VhcGM.s 			page 38
+
+
+ 2110 008c 05       		.byte	0x5
+ 2111 008d C3000000 		.4byte	.LASF170
+ 2112 0091 05       		.byte	0x5
+ 2113 0092 4C000000 		.4byte	.LASF171
+ 2114 0096 03       		.byte	0x3
+ 2115 0097 B6000000 		.4byte	.LASF172
+ 2116 009b 03       		.byte	0x3
+ 2117 009c 1E020000 		.4byte	.LASF173
+ 2118 00a0 04       		.byte	0x4
+ 2119              	.LELTP0:
+ 2120              	.LELT0:
+ 2121              		.section	.gnu.debuglto_.debug_str,"eMS",%progbits,1
+ 2122              	.LASF144:
+ 2123 0000 433A5C43 		.ascii	"C:\\ChibiStudio\\workspace_user\\Progetto-servomoto"
+ 2123      68696269 
+ 2123      53747564 
+ 2123      696F5C77 
+ 2123      6F726B73 
+ 2124 0030 72692D73 		.ascii	"ri-seriale\000"
+ 2124      65726961 
+ 2124      6C6500
+ 2125              	.LASF50:
+ 2126 003b 72666375 		.ascii	"rfcu\000"
+ 2126      00
+ 2127              	.LASF4:
+ 2128 0040 73697A65 		.ascii	"size_t\000"
+ 2128      5F7400
+ 2129              	.LASF65:
+ 2130 0047 6E657874 		.ascii	"next\000"
+ 2130      00
+ 2131              	.LASF74:
+ 2132 004c 64656C74 		.ascii	"delta\000"
+ 2132      6100
+ 2133              	.LASF94:
+ 2134 0052 7264796D 		.ascii	"rdymsg\000"
+ 2134      736700
+ 2135              	.LASF18:
+ 2136 0059 75696E74 		.ascii	"uint64_t\000"
+ 2136      36345F74 
+ 2136      00
+ 2137              	.LASF5:
+ 2138 0062 5F5F7569 		.ascii	"__uint8_t\000"
+ 2138      6E74385F 
+ 2138      7400
+ 2139              	.LASF68:
+ 2140 006c 70726576 		.ascii	"prev\000"
+ 2140      00
+ 2141              	.LASF78:
+ 2142 0071 706F7274 		.ascii	"port_intctx\000"
+ 2142      5F696E74 
+ 2142      63747800 
+ 2143              	.LASF123:
+ 2144 007d 70616765 		.ascii	"pages\000"
+ 2144      7300
+ 2145              	.LASF60:
+ 2146 0083 73797374 		.ascii	"system_debug_t\000"
+ 2146      656D5F64 
+ARM GAS  C:\Users\Utente\AppData\Local\Temp\cc5VhcGM.s 			page 39
+
+
+ 2146      65627567 
+ 2146      5F7400
+ 2147              	.LASF118:
+ 2148 0092 70726F76 		.ascii	"provider\000"
+ 2148      69646572 
+ 2148      00
+ 2149              	.LASF49:
+ 2150 009b 636F7265 		.ascii	"core_id\000"
+ 2150      5F696400 
+ 2151              	.LASF69:
+ 2152 00a3 63685F70 		.ascii	"ch_priority_queue_t\000"
+ 2152      72696F72 
+ 2152      6974795F 
+ 2152      71756575 
+ 2152      655F7400 
+ 2153              	.LASF14:
+ 2154 00b7 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 2154      206C6F6E 
+ 2154      6720756E 
+ 2154      7369676E 
+ 2154      65642069 
+ 2155              	.LASF95:
+ 2156 00ce 65786974 		.ascii	"exitcode\000"
+ 2156      636F6465 
+ 2156      00
+ 2157              	.LASF52:
+ 2158 00d7 6D61696E 		.ascii	"mainthread\000"
+ 2158      74687265 
+ 2158      616400
+ 2159              	.LASF98:
+ 2160 00e2 73656E74 		.ascii	"sentmsg\000"
+ 2160      6D736700 
+ 2161              	.LASF87:
+ 2162 00ea 76697274 		.ascii	"virtual_timers_list_t\000"
+ 2162      75616C5F 
+ 2162      74696D65 
+ 2162      72735F6C 
+ 2162      6973745F 
+ 2163              	.LASF130:
+ 2164 0100 68656170 		.ascii	"heapp\000"
+ 2164      7000
+ 2165              	.LASF121:
+ 2166 0106 66726565 		.ascii	"free\000"
+ 2166      00
+ 2167              	.LASF36:
+ 2168 010b 72656673 		.ascii	"refs\000"
+ 2168      00
+ 2169              	.LASF126:
+ 2170 0110 63684D74 		.ascii	"chMtxUnlock\000"
+ 2170      78556E6C 
+ 2170      6F636B00 
+ 2171              	.LASF3:
+ 2172 011c 7369676E 		.ascii	"signed char\000"
+ 2172      65642063 
+ 2172      68617200 
+ 2173              	.LASF135:
+ 2174 0128 6C706167 		.ascii	"lpages\000"
+ARM GAS  C:\Users\Utente\AppData\Local\Temp\cc5VhcGM.s 			page 40
+
+
+ 2174      657300
+ 2175              	.LASF73:
+ 2176 012f 63685F64 		.ascii	"ch_delta_list\000"
+ 2176      656C7461 
+ 2176      5F6C6973 
+ 2176      7400
+ 2177              	.LASF140:
+ 2178 013d 63684865 		.ascii	"chHeapFree\000"
+ 2178      61704672 
+ 2178      656500
+ 2179              	.LASF47:
+ 2180 0148 76746C69 		.ascii	"vtlist\000"
+ 2180      737400
+ 2181              	.LASF38:
+ 2182 014f 6D736771 		.ascii	"msgqueue\000"
+ 2182      75657565 
+ 2182      00
+ 2183              	.LASF34:
+ 2184 0158 73746174 		.ascii	"state\000"
+ 2184      6500
+ 2185              	.LASF10:
+ 2186 015e 6C6F6E67 		.ascii	"long int\000"
+ 2186      20696E74 
+ 2186      00
+ 2187              	.LASF22:
+ 2188 0167 74737461 		.ascii	"tstate_t\000"
+ 2188      74655F74 
+ 2188      00
+ 2189              	.LASF54:
+ 2190 0170 63685F72 		.ascii	"ch_rfcu\000"
+ 2190      66637500 
+ 2191              	.LASF116:
+ 2192 0178 6D656D6F 		.ascii	"memory_heap_t\000"
+ 2192      72795F68 
+ 2192      6561705F 
+ 2192      7400
+ 2193              	.LASF67:
+ 2194 0186 63685F71 		.ascii	"ch_queue\000"
+ 2194      75657565 
+ 2194      00
+ 2195              	.LASF1:
+ 2196 018f 6C6F6E67 		.ascii	"long long int\000"
+ 2196      206C6F6E 
+ 2196      6720696E 
+ 2196      7400
+ 2197              	.LASF115:
+ 2198 019d 6D656D67 		.ascii	"memgetfunc2_t\000"
+ 2198      65746675 
+ 2198      6E63325F 
+ 2198      7400
+ 2199              	.LASF72:
+ 2200 01ab 63685F64 		.ascii	"ch_delta_list_t\000"
+ 2200      656C7461 
+ 2200      5F6C6973 
+ 2200      745F7400 
+ 2201              	.LASF88:
+ 2202 01bb 63685F72 		.ascii	"ch_registry\000"
+ARM GAS  C:\Users\Utente\AppData\Local\Temp\cc5VhcGM.s 			page 41
+
+
+ 2202      65676973 
+ 2202      74727900 
+ 2203              	.LASF11:
+ 2204 01c7 5F5F7569 		.ascii	"__uint32_t\000"
+ 2204      6E743332 
+ 2204      5F7400
+ 2205              	.LASF55:
+ 2206 01d2 6D61736B 		.ascii	"mask\000"
+ 2206      00
+ 2207              	.LASF143:
+ 2208 01d7 2E2E2F2E 		.ascii	"../../chibios2111/os/oslib/src/chmemheaps.c\000"
+ 2208      2E2F6368 
+ 2208      6962696F 
+ 2208      73323131 
+ 2208      312F6F73 
+ 2209              	.LASF37:
+ 2210 0203 77616974 		.ascii	"waiting\000"
+ 2210      696E6700 
+ 2211              	.LASF108:
+ 2212 020b 6D61696E 		.ascii	"mainthread_base\000"
+ 2212      74687265 
+ 2212      61645F62 
+ 2212      61736500 
+ 2213              	.LASF113:
+ 2214 021b 6D757465 		.ascii	"mutex_t\000"
+ 2214      785F7400 
+ 2215              	.LASF137:
+ 2216 0223 616C6967 		.ascii	"align\000"
+ 2216      6E00
+ 2217              	.LASF62:
+ 2218 0229 73797369 		.ascii	"sysinterval_t\000"
+ 2218      6E746572 
+ 2218      76616C5F 
+ 2218      7400
+ 2219              	.LASF27:
+ 2220 0237 636E745F 		.ascii	"cnt_t\000"
+ 2220      7400
+ 2221              	.LASF0:
+ 2222 023d 756E7369 		.ascii	"unsigned int\000"
+ 2222      676E6564 
+ 2222      20696E74 
+ 2222      00
+ 2223              	.LASF76:
+ 2224 024a 6C725F74 		.ascii	"lr_thd\000"
+ 2224      686400
+ 2225              	.LASF99:
+ 2226 0251 77747365 		.ascii	"wtsemp\000"
+ 2226      6D7000
+ 2227              	.LASF97:
+ 2228 0258 77747472 		.ascii	"wttrp\000"
+ 2228      7000
+ 2229              	.LASF30:
+ 2230 025e 72717565 		.ascii	"rqueue\000"
+ 2230      756500
+ 2231              	.LASF66:
+ 2232 0265 63685F71 		.ascii	"ch_queue_t\000"
+ 2232      75657565 
+ARM GAS  C:\Users\Utente\AppData\Local\Temp\cc5VhcGM.s 			page 42
+
+
+ 2232      5F7400
+ 2233              	.LASF32:
+ 2234 0270 6E616D65 		.ascii	"name\000"
+ 2234      00
+ 2235              	.LASF89:
+ 2236 0275 71756575 		.ascii	"queue\000"
+ 2236      6500
+ 2237              	.LASF42:
+ 2238 027b 6D706F6F 		.ascii	"mpool\000"
+ 2238      6C00
+ 2239              	.LASF142:
+ 2240 0281 474E5520 		.ascii	"GNU C17 11.3.1 20220712 -mcpu=cortex-m4 -mthumb -mf"
+ 2240      43313720 
+ 2240      31312E33 
+ 2240      2E312032 
+ 2240      30323230 
+ 2241 02b4 6C6F6174 		.ascii	"loat-abi=soft -march=armv7e-m -ggdb -O2 -fomit-fram"
+ 2241      2D616269 
+ 2241      3D736F66 
+ 2241      74202D6D 
+ 2241      61726368 
+ 2242 02e7 652D706F 		.ascii	"e-pointer -falign-functions=16 -ffunction-sections "
+ 2242      696E7465 
+ 2242      72202D66 
+ 2242      616C6967 
+ 2242      6E2D6675 
+ 2243 031a 2D666461 		.ascii	"-fdata-sections -fno-common -flto\000"
+ 2243      74612D73 
+ 2243      65637469 
+ 2243      6F6E7320 
+ 2243      2D666E6F 
+ 2244              	.LASF125:
+ 2245 033c 73697A65 		.ascii	"size\000"
+ 2245      00
+ 2246              	.LASF79:
+ 2247 0341 62617365 		.ascii	"basepri\000"
+ 2247      70726900 
+ 2248              	.LASF63:
+ 2249 0349 63685F6C 		.ascii	"ch_list_t\000"
+ 2249      6973745F 
+ 2249      7400
+ 2250              	.LASF44:
+ 2251 0353 63685F74 		.ascii	"ch_thread\000"
+ 2251      68726561 
+ 2251      6400
+ 2252              	.LASF25:
+ 2253 035d 6D73675F 		.ascii	"msg_t\000"
+ 2253      7400
+ 2254              	.LASF39:
+ 2255 0363 6570656E 		.ascii	"epending\000"
+ 2255      64696E67 
+ 2255      00
+ 2256              	.LASF139:
+ 2257 036c 62706167 		.ascii	"bpages\000"
+ 2257      657300
+ 2258              	.LASF21:
+ 2259 0373 746D6F64 		.ascii	"tmode_t\000"
+ARM GAS  C:\Users\Utente\AppData\Local\Temp\cc5VhcGM.s 			page 43
+
+
+ 2259      655F7400 
+ 2260              	.LASF64:
+ 2261 037b 63685F6C 		.ascii	"ch_list\000"
+ 2261      69737400 
+ 2262              	.LASF104:
+ 2263 0383 63685F72 		.ascii	"ch_ready_list\000"
+ 2263      65616479 
+ 2263      5F6C6973 
+ 2263      7400
+ 2264              	.LASF26:
+ 2265 0391 6576656E 		.ascii	"eventmask_t\000"
+ 2265      746D6173 
+ 2265      6B5F7400 
+ 2266              	.LASF9:
+ 2267 039d 5F5F696E 		.ascii	"__int32_t\000"
+ 2267      7433325F 
+ 2267      7400
+ 2268              	.LASF80:
+ 2269 03a7 6C725F65 		.ascii	"lr_exc\000"
+ 2269      786300
+ 2270              	.LASF20:
+ 2271 03ae 73746B61 		.ascii	"stkalign_t\000"
+ 2271      6C69676E 
+ 2271      5F7400
+ 2272              	.LASF141:
+ 2273 03b9 63684865 		.ascii	"chHeapObjectInit\000"
+ 2273      61704F62 
+ 2273      6A656374 
+ 2273      496E6974 
+ 2273      00
+ 2274              	.LASF110:
+ 2275 03ca 69646C65 		.ascii	"idlethread_base\000"
+ 2275      74687265 
+ 2275      61645F62 
+ 2275      61736500 
+ 2276              	.LASF86:
+ 2277 03da 6C617374 		.ascii	"laststamp\000"
+ 2277      7374616D 
+ 2277      7000
+ 2278              	.LASF41:
+ 2279 03e4 7265616C 		.ascii	"realprio\000"
+ 2279      7072696F 
+ 2279      00
+ 2280              	.LASF53:
+ 2281 03ed 72666375 		.ascii	"rfcu_mask_t\000"
+ 2281      5F6D6173 
+ 2281      6B5F7400 
+ 2282              	.LASF91:
+ 2283 03f9 74687265 		.ascii	"thread_reference_t\000"
+ 2283      61645F72 
+ 2283      65666572 
+ 2283      656E6365 
+ 2283      5F7400
+ 2284              	.LASF83:
+ 2285 040c 63685F76 		.ascii	"ch_virtual_timers_list\000"
+ 2285      69727475 
+ 2285      616C5F74 
+ARM GAS  C:\Users\Utente\AppData\Local\Temp\cc5VhcGM.s 			page 44
+
+
+ 2285      696D6572 
+ 2285      735F6C69 
+ 2286              	.LASF2:
+ 2287 0423 6C6F6E67 		.ascii	"long double\000"
+ 2287      20646F75 
+ 2287      626C6500 
+ 2288              	.LASF127:
+ 2289 042f 63684D74 		.ascii	"chMtxLock\000"
+ 2289      784C6F63 
+ 2289      6B00
+ 2290              	.LASF107:
+ 2291 0439 63685F6F 		.ascii	"ch_os_instance_config\000"
+ 2291      735F696E 
+ 2291      7374616E 
+ 2291      63655F63 
+ 2291      6F6E6669 
+ 2292              	.LASF81:
+ 2293 044f 706F7274 		.ascii	"port_context\000"
+ 2293      5F636F6E 
+ 2293      74657874 
+ 2293      00
+ 2294              	.LASF75:
+ 2295 045c 706F7274 		.ascii	"port_extctx\000"
+ 2295      5F657874 
+ 2295      63747800 
+ 2296              	.LASF71:
+ 2297 0468 7072696F 		.ascii	"prio\000"
+ 2297      00
+ 2298              	.LASF105:
+ 2299 046d 63757272 		.ascii	"current\000"
+ 2299      656E7400 
+ 2300              	.LASF13:
+ 2301 0475 5F5F7569 		.ascii	"__uint64_t\000"
+ 2301      6E743634 
+ 2301      5F7400
+ 2302              	.LASF122:
+ 2303 0480 75736564 		.ascii	"used\000"
+ 2303      00
+ 2304              	.LASF28:
+ 2305 0485 636F7265 		.ascii	"core_id_t\000"
+ 2305      5F69645F 
+ 2305      7400
+ 2306              	.LASF23:
+ 2307 048f 74726566 		.ascii	"trefs_t\000"
+ 2307      735F7400 
+ 2308              	.LASF24:
+ 2309 0497 74707269 		.ascii	"tprio_t\000"
+ 2309      6F5F7400 
+ 2310              	.LASF57:
+ 2311 049f 63685F73 		.ascii	"ch_system_debug\000"
+ 2311      79737465 
+ 2311      6D5F6465 
+ 2311      62756700 
+ 2312              	.LASF114:
+ 2313 04af 5F426F6F 		.ascii	"_Bool\000"
+ 2313      6C00
+ 2314              	.LASF16:
+ARM GAS  C:\Users\Utente\AppData\Local\Temp\cc5VhcGM.s 			page 45
+
+
+ 2315 04b5 696E7433 		.ascii	"int32_t\000"
+ 2315      325F7400 
+ 2316              	.LASF6:
+ 2317 04bd 756E7369 		.ascii	"unsigned char\000"
+ 2317      676E6564 
+ 2317      20636861 
+ 2317      7200
+ 2318              	.LASF145:
+ 2319 04cb 68656170 		.ascii	"heap_header\000"
+ 2319      5F686561 
+ 2319      64657200 
+ 2320              	.LASF146:
+ 2321 04d7 6368436F 		.ascii	"chCoreAllocFromTop\000"
+ 2321      7265416C 
+ 2321      6C6F6346 
+ 2321      726F6D54 
+ 2321      6F7000
+ 2322              	.LASF56:
+ 2323 04ea 72666375 		.ascii	"rfcu_t\000"
+ 2323      5F7400
+ 2324              	.LASF7:
+ 2325 04f1 73686F72 		.ascii	"short int\000"
+ 2325      7420696E 
+ 2325      7400
+ 2326              	.LASF85:
+ 2327 04fb 6C617374 		.ascii	"lasttime\000"
+ 2327      74696D65 
+ 2327      00
+ 2328              	.LASF77:
+ 2329 0504 78707372 		.ascii	"xpsr\000"
+ 2329      00
+ 2330              	.LASF101:
+ 2331 0509 65776D61 		.ascii	"ewmask\000"
+ 2331      736B00
+ 2332              	.LASF138:
+ 2333 0510 5F5F6675 		.ascii	"__func__\000"
+ 2333      6E635F5F 
+ 2333      00
+ 2334              	.LASF8:
+ 2335 0519 73686F72 		.ascii	"short unsigned int\000"
+ 2335      7420756E 
+ 2335      7369676E 
+ 2335      65642069 
+ 2335      6E7400
+ 2336              	.LASF131:
+ 2337 052c 746F7461 		.ascii	"totalp\000"
+ 2337      6C7000
+ 2338              	.LASF102:
+ 2339 0533 63685F73 		.ascii	"ch_semaphore\000"
+ 2339      656D6170 
+ 2339      686F7265 
+ 2339      00
+ 2340              	.LASF90:
+ 2341 0540 72656769 		.ascii	"registry_t\000"
+ 2341      73747279 
+ 2341      5F7400
+ 2342              	.LASF134:
+ARM GAS  C:\Users\Utente\AppData\Local\Temp\cc5VhcGM.s 			page 46
+
+
+ 2343 054b 74706167 		.ascii	"tpages\000"
+ 2343      657300
+ 2344              	.LASF17:
+ 2345 0552 75696E74 		.ascii	"uint32_t\000"
+ 2345      33325F74 
+ 2345      00
+ 2346              	.LASF147:
+ 2347 055b 5F5F6865 		.ascii	"__heap_init\000"
+ 2347      61705F69 
+ 2347      6E697400 
+ 2348              	.LASF19:
+ 2349 0567 706F7274 		.ascii	"port_stkalign_t\000"
+ 2349      5F73746B 
+ 2349      616C6967 
+ 2349      6E5F7400 
+ 2350              	.LASF31:
+ 2351 0577 6F776E65 		.ascii	"owner\000"
+ 2351      7200
+ 2352              	.LASF82:
+ 2353 057d 72656773 		.ascii	"regs\000"
+ 2353      00
+ 2354              	.LASF124:
+ 2355 0582 68656170 		.ascii	"heap\000"
+ 2355      00
+ 2356              	.LASF12:
+ 2357 0587 6C6F6E67 		.ascii	"long unsigned int\000"
+ 2357      20756E73 
+ 2357      69676E65 
+ 2357      6420696E 
+ 2357      7400
+ 2358              	.LASF33:
+ 2359 0599 77616261 		.ascii	"wabase\000"
+ 2359      736500
+ 2360              	.LASF133:
+ 2361 05a0 64656661 		.ascii	"default_heap\000"
+ 2361      756C745F 
+ 2361      68656170 
+ 2361      00
+ 2362              	.LASF59:
+ 2363 05ad 63686172 		.ascii	"char\000"
+ 2363      00
+ 2364              	.LASF51:
+ 2365 05b2 636F6E66 		.ascii	"config\000"
+ 2365      696700
+ 2366              	.LASF29:
+ 2367 05b9 74687265 		.ascii	"thread_t\000"
+ 2367      61645F74 
+ 2367      00
+ 2368              	.LASF129:
+ 2369 05c2 63684865 		.ascii	"chHeapStatus\000"
+ 2369      61705374 
+ 2369      61747573 
+ 2369      00
+ 2370              	.LASF84:
+ 2371 05cf 646C6973 		.ascii	"dlist\000"
+ 2371      7400
+ 2372              	.LASF61:
+ARM GAS  C:\Users\Utente\AppData\Local\Temp\cc5VhcGM.s 			page 47
+
+
+ 2373 05d5 73797374 		.ascii	"systime_t\000"
+ 2373      696D655F 
+ 2373      7400
+ 2374              	.LASF120:
+ 2375 05df 68656170 		.ascii	"heap_header_t\000"
+ 2375      5F686561 
+ 2375      6465725F 
+ 2375      7400
+ 2376              	.LASF128:
+ 2377 05ed 63684D74 		.ascii	"chMtxObjectInit\000"
+ 2377      784F626A 
+ 2377      65637449 
+ 2377      6E697400 
+ 2378              	.LASF100:
+ 2379 05fd 77746D74 		.ascii	"wtmtxp\000"
+ 2379      787000
+ 2380              	.LASF58:
+ 2381 0604 70616E69 		.ascii	"panic_msg\000"
+ 2381      635F6D73 
+ 2381      6700
+ 2382              	.LASF93:
+ 2383 060e 70717565 		.ascii	"pqueue\000"
+ 2383      756500
+ 2384              	.LASF45:
+ 2385 0615 63685F6F 		.ascii	"ch_os_instance\000"
+ 2385      735F696E 
+ 2385      7374616E 
+ 2385      636500
+ 2386              	.LASF43:
+ 2387 0624 6F735F69 		.ascii	"os_instance_t\000"
+ 2387      6E737461 
+ 2387      6E63655F 
+ 2387      7400
+ 2388              	.LASF48:
+ 2389 0632 7265676C 		.ascii	"reglist\000"
+ 2389      69737400 
+ 2390              	.LASF70:
+ 2391 063a 63685F70 		.ascii	"ch_priority_queue\000"
+ 2391      72696F72 
+ 2391      6974795F 
+ 2391      71756575 
+ 2391      6500
+ 2392              	.LASF136:
+ 2393 064c 63684865 		.ascii	"chHeapAllocAligned\000"
+ 2393      6170416C 
+ 2393      6C6F6341 
+ 2393      6C69676E 
+ 2393      656400
+ 2394              	.LASF109:
+ 2395 065f 6D61696E 		.ascii	"mainthread_end\000"
+ 2395      74687265 
+ 2395      61645F65 
+ 2395      6E6400
+ 2396              	.LASF132:
+ 2397 066e 6C617267 		.ascii	"largestp\000"
+ 2397      65737470 
+ 2397      00
+ARM GAS  C:\Users\Utente\AppData\Local\Temp\cc5VhcGM.s 			page 48
+
+
+ 2398              	.LASF106:
+ 2399 0677 72656164 		.ascii	"ready_list_t\000"
+ 2399      795F6C69 
+ 2399      73745F74 
+ 2399      00
+ 2400              	.LASF112:
+ 2401 0684 6F735F69 		.ascii	"os_instance_config_t\000"
+ 2401      6E737461 
+ 2401      6E63655F 
+ 2401      636F6E66 
+ 2401      69675F74 
+ 2402              	.LASF103:
+ 2403 0699 63685F6D 		.ascii	"ch_mutex\000"
+ 2403      75746578 
+ 2403      00
+ 2404              	.LASF46:
+ 2405 06a2 726C6973 		.ascii	"rlist\000"
+ 2405      7400
+ 2406              	.LASF15:
+ 2407 06a8 75696E74 		.ascii	"uint8_t\000"
+ 2407      385F7400 
+ 2408              	.LASF35:
+ 2409 06b0 666C6167 		.ascii	"flags\000"
+ 2409      7300
+ 2410              	.LASF96:
+ 2411 06b6 77746F62 		.ascii	"wtobjp\000"
+ 2411      6A7000
+ 2412              	.LASF92:
+ 2413 06bd 6C697374 		.ascii	"list\000"
+ 2413      00
+ 2414              	.LASF111:
+ 2415 06c2 69646C65 		.ascii	"idlethread_end\000"
+ 2415      74687265 
+ 2415      61645F65 
+ 2415      6E6400
+ 2416              	.LASF40:
+ 2417 06d1 6D74786C 		.ascii	"mtxlist\000"
+ 2417      69737400 
+ 2418              	.LASF119:
+ 2419 06d9 68656164 		.ascii	"header\000"
+ 2419      657200
+ 2420              	.LASF117:
+ 2421 06e0 6D656D6F 		.ascii	"memory_heap\000"
+ 2421      72795F68 
+ 2421      65617000 
+ 2422              		.section	.gnu.debuglto_.debug_line_str,"eMS",%progbits,1
+ 2423              	.LASF159:
+ 2424 0000 5F646566 		.ascii	"_default_types.h\000"
+ 2424      61756C74 
+ 2424      5F747970 
+ 2424      65732E68 
+ 2424      00
+ 2425              	.LASF148:
+ 2426 0011 433A5C43 		.ascii	"C:\\ChibiStudio\\workspace_user\\Progetto-servomoto"
+ 2426      68696269 
+ 2426      53747564 
+ 2426      696F5C77 
+ARM GAS  C:\Users\Utente\AppData\Local\Temp\cc5VhcGM.s 			page 49
+
+
+ 2426      6F726B73 
+ 2427 0041 72692D73 		.ascii	"ri-seriale\000"
+ 2427      65726961 
+ 2427      6C6500
+ 2428              	.LASF171:
+ 2429 004c 63686D65 		.ascii	"chmemcore.h\000"
+ 2429      6D636F72 
+ 2429      652E6800 
+ 2430              	.LASF150:
+ 2431 0058 2E2E2F2E 		.ascii	"../../chibios2111/os/common/ports/ARMv7-M-ALT\000"
+ 2431      2E2F6368 
+ 2431      6962696F 
+ 2431      73323131 
+ 2431      312F6F73 
+ 2432              	.LASF152:
+ 2433 0086 2E2E2F2E 		.ascii	"../../chibios2111/os/oslib/src\000"
+ 2433      2E2F6368 
+ 2433      6962696F 
+ 2433      73323131 
+ 2433      312F6F73 
+ 2434              	.LASF168:
+ 2435 00a5 6368636F 		.ascii	"chcore.h\000"
+ 2435      72652E68 
+ 2435      00
+ 2436              	.LASF169:
+ 2437 00ae 63687365 		.ascii	"chsem.h\000"
+ 2437      6D2E6800 
+ 2438              	.LASF172:
+ 2439 00b6 63686D65 		.ascii	"chmemheaps.h\000"
+ 2439      6D686561 
+ 2439      70732E68 
+ 2439      00
+ 2440              	.LASF170:
+ 2441 00c3 63686D74 		.ascii	"chmtx.h\000"
+ 2441      782E6800 
+ 2442              	.LASF157:
+ 2443 00cb 2E2E2F2E 		.ascii	"../../chibios2111/os/oslib/src/chmemheaps.c\000"
+ 2443      2E2F6368 
+ 2443      6962696F 
+ 2443      73323131 
+ 2443      312F6F73 
+ 2444              	.LASF166:
+ 2445 00f7 63687469 		.ascii	"chtime.h\000"
+ 2445      6D652E68 
+ 2445      00
+ 2446              	.LASF161:
+ 2447 0100 63687479 		.ascii	"chtypes.h\000"
+ 2447      7065732E 
+ 2447      6800
+ 2448              	.LASF160:
+ 2449 010a 5F737464 		.ascii	"_stdint.h\000"
+ 2449      696E742E 
+ 2449      6800
+ 2450              	.LASF167:
+ 2451 0114 63686C69 		.ascii	"chlists.h\000"
+ 2451      7374732E 
+ 2451      6800
+ARM GAS  C:\Users\Utente\AppData\Local\Temp\cc5VhcGM.s 			page 50
+
+
+ 2452              	.LASF154:
+ 2453 011e 633A5C63 		.ascii	"c:\\chibistudio\\tools\\gnu tools arm embedded\\11."
+ 2453      68696269 
+ 2453      73747564 
+ 2453      696F5C74 
+ 2453      6F6F6C73 
+ 2454 014d 33203230 		.ascii	"3 2022.08\\arm-none-eabi\\include\\machine\000"
+ 2454      32322E30 
+ 2454      385C6172 
+ 2454      6D2D6E6F 
+ 2454      6E652D65 
+ 2455              	.LASF163:
+ 2456 0175 63686F62 		.ascii	"chobjects.h\000"
+ 2456      6A656374 
+ 2456      732E6800 
+ 2457              	.LASF149:
+ 2458 0181 2E2E2F2E 		.ascii	"../../chibios2111/os/common/ports/ARM-common\000"
+ 2458      2E2F6368 
+ 2458      6962696F 
+ 2458      73323131 
+ 2458      312F6F73 
+ 2459              	.LASF156:
+ 2460 01ae 633A5C63 		.ascii	"c:\\chibistudio\\tools\\gnu tools arm embedded\\11."
+ 2460      68696269 
+ 2460      73747564 
+ 2460      696F5C74 
+ 2460      6F6F6C73 
+ 2461 01dd 33203230 		.ascii	"3 2022.08\\lib\\gcc\\arm-none-eabi\\11.3.1\\include"
+ 2461      32322E30 
+ 2461      385C6C69 
+ 2461      625C6763 
+ 2461      635C6172 
+ 2462 020b 00       		.ascii	"\000"
+ 2463              	.LASF164:
+ 2464 020c 63687266 		.ascii	"chrfcu.h\000"
+ 2464      63752E68 
+ 2464      00
+ 2465              	.LASF158:
+ 2466 0215 73746464 		.ascii	"stddef.h\000"
+ 2466      65662E68 
+ 2466      00
+ 2467              	.LASF173:
+ 2468 021e 63686D65 		.ascii	"chmemheaps.c\000"
+ 2468      6D686561 
+ 2468      70732E63 
+ 2468      00
+ 2469              	.LASF155:
+ 2470 022b 633A5C63 		.ascii	"c:\\chibistudio\\tools\\gnu tools arm embedded\\11."
+ 2470      68696269 
+ 2470      73747564 
+ 2470      696F5C74 
+ 2470      6F6F6C73 
+ 2471 025a 33203230 		.ascii	"3 2022.08\\arm-none-eabi\\include\\sys\000"
+ 2471      32322E30 
+ 2471      385C6172 
+ 2471      6D2D6E6F 
+ 2471      6E652D65 
+ARM GAS  C:\Users\Utente\AppData\Local\Temp\cc5VhcGM.s 			page 51
+
+
+ 2472              	.LASF153:
+ 2473 027e 2E2E2F2E 		.ascii	"../../chibios2111/os/rt/include\000"
+ 2473      2E2F6368 
+ 2473      6962696F 
+ 2473      73323131 
+ 2473      312F6F73 
+ 2474              	.LASF162:
+ 2475 029e 63686561 		.ascii	"chearly.h\000"
+ 2475      726C792E 
+ 2475      6800
+ 2476              	.LASF151:
+ 2477 02a8 2E2E2F2E 		.ascii	"../../chibios2111/os/oslib/include\000"
+ 2477      2E2F6368 
+ 2477      6962696F 
+ 2477      73323131 
+ 2477      312F6F73 
+ 2478              	.LASF165:
+ 2479 02cb 63686465 		.ascii	"chdebug.h\000"
+ 2479      6275672E 
+ 2479      6800
+ 2480              		.text
+ 2481              		.section	.gnu.lto_.profile.7155281a,"e",%progbits
+ 2482 0000 789C6361 		.ascii	"x\234ca\000\002F\026\006\000\0003\000\012"
+ 2482      00024616 
+ 2482      06000033 
+ 2482      000A
+ 2483              		.text
+ 2484              		.section	.gnu.lto_.icf.7155281a,"e",%progbits
+ 2485 0000 789C7BCD 		.ascii	"x\234{\315\200\000l\014\033\026\355\335\305\315\306"
+ 2485      80006C0C 
+ 2485      1B16EDDD 
+ 2485      C5CDC6
+ 2486 000f C4C0C4C8 		.ascii	"\304\300\304\310\304\004\301\214\013\036\315\351\342"
+ 2486      C404C18C 
+ 2486      0B1ECDE9 
+ 2486      E2
+ 2487 001c 627EF774 		.ascii	"b~\367t\335M>.\240\0043P\020\202Y \220\345X\373\352"
+ 2487      DD4D3E2E 
+ 2487      A0043350 
+ 2487      10825920 
+ 2487      90E558FB 
+ 2488 0031 FF5C2A30 		.ascii	"\377\\*0.Y\220\001a\034\353\347\227W\247\362Rf\034\022"
+ 2488      2E599001 
+ 2488      611CEBE7 
+ 2488      9757A7F2 
+ 2488      52661C12 
+ 2489 0045 64EB7B3B 		.ascii	"d\353{;\363\000'\007\\\200\025\002\031\0005\200\025"
+ 2489      F3002707 
+ 2489      5C801502 
+ 2489      19003580 
+ 2489      15
+ 2490 0056 A7       		.ascii	"\247"
+ 2491              		.text
+ 2492              		.section	.gnu.lto_.ipa_sra.7155281a,"e",%progbits
+ 2493 0000 789C0B64 		.ascii	"x\234\013d@\000V\006\006F\006Fff$!\006FFF\020\311\202"
+ 2493      40005606 
+ 2493      06460646 
+ARM GAS  C:\Users\Utente\AppData\Local\Temp\cc5VhcGM.s 			page 52
+
+
+ 2493      66662421 
+ 2493      06464646 
+ 2494 0017 22C80C52 		.ascii	"\"\310\014R\007\204\014\254\214`5 \310\206E\005\000"
+ 2494      07840CAC 
+ 2494      8C603520 
+ 2494      C8864505 
+ 2494      00
+ 2495 0028 26C50087 		.ascii	"&\305\000\207"
+ 2496              		.text
+ 2497              		.section	.gnu.lto_.inline.7155281a,"e",%progbits
+ 2498 0000 789C6D51 		.ascii	"x\234mQ\261J\003A\024\234\367\336\335\336\006%,\330"
+ 2498      B14A0341 
+ 2498      149CF7DE 
+ 2498      DDDE0625 
+ 2498      2CD8
+ 2499 0012 58E61BFC 		.ascii	"X\346\033\374\002k\013\377A\022\215\271BP\260\260;\004"
+ 2499      026B0BFF 
+ 2499      41128DB9 
+ 2499      4250B0B0 
+ 2499      3B04
+ 2500 0024 2B4FB411 		.ascii	"+O\264\021Q\260\365\003\014Q\354\004\2334\"\321V\261"
+ 2500      51B0F503 
+ 2500      0C51EC04 
+ 2500      9B3422D1 
+ 2500      56B1
+ 2501 0036 8B958582 		.ascii	"\213\225\205\202\205\010\352\333;oc\320e\331\233\335"
+ 2501      8508EADB 
+ 2501      3B6F63D0 
+ 2501      65D99BDD 
+ 2502 0046 9D9D37F3 		.ascii	"\235\2357\363.a\204\021\0036\323\301m\002\033\217\244"
+ 2502      2E618411 
+ 2502      0336D3C1 
+ 2502      6D021B8F 
+ 2502      A4
+ 2503 0057 0514805B 		.ascii	"\005\024\200[\214\202\311\023\272\020 p\005\241MB\304"
+ 2503      8C82C913 
+ 2503      BA102070 
+ 2503      05A14D42 
+ 2503      C4
+ 2504 0068 C6DF1027 		.ascii	"\306\337\020'\236A,\272F\211\336^\372\367\265\022\370"
+ 2504      9E412CBA 
+ 2504      4689DE5E 
+ 2504      FAF7B512 
+ 2504      F8
+ 2505 0079 F7956614 		.ascii	"\367\225f\024\320\344Hso^\317o\361<x{\222\224\"\254"
+ 2505      D0E44873 
+ 2505      6F5ECF6F 
+ 2505      F13C787B 
+ 2505      929422AC 
+ 2506 008d B2980D1A 		.ascii	"\262\230\015\032)\252\276\365\233\262L\274\222\037\337"
+ 2506      29AABEF5 
+ 2506      9BB24CBC 
+ 2506      921FDF
+ 2507 009c 7F72AAFE 		.ascii	"\177r\252\376\362\340/*\255\302\"\352o\235\356\313\022"
+ 2507      F2E02F2A 
+ 2507      ADC222EA 
+ 2507      6F9DEECB 
+ARM GAS  C:\Users\Utente\AppData\Local\Temp\cc5VhcGM.s 			page 53
+
+
+ 2507      12
+ 2508 00ad 1CEAAF27 		.ascii	"\034\352\257'7\357z\326\030\253\364\027$S\012D\201N"
+ 2508      37EF7AD6 
+ 2508      18ABF417 
+ 2508      24530A44 
+ 2508      814E
+ 2509 00bf DF8A99CD 		.ascii	"\337\212\231\315\235\203\013N\211P\306\223\271^\366"
+ 2509      9D830B4E 
+ 2509      8950C693 
+ 2509      B95EF6
+ 2510 00ce F1251DC0 		.ascii	"\361%\035\300\335\035v\207\274\350\013rQ\260\251\306"
+ 2510      DD1D7687 
+ 2510      BCE80B72 
+ 2510      51B0A9C6 
+ 2511 00de 83F8EE2F 		.ascii	"\203\370\356/M\203\351~\357\361\205;d|\034:\3238\264"
+ 2511      4D83E97E 
+ 2511      EFF1853B 
+ 2511      647C1C3A 
+ 2511      D338B4
+ 2512 00f1 C6B159F7 		.ascii	"\306\261Y\367\271X\021\235S\010\250\311\3422\247\377"
+ 2512      B958119D 
+ 2512      5308A8C9 
+ 2512      E232A7FF 
+ 2513 0101 D4EA5783 		.ascii	"\324\352W\203\355\007Y\036\373\001U\300F@\263\220\243"
+ 2513      ED07591E 
+ 2513      FB0155C0 
+ 2513      4640B390 
+ 2513      A3
+ 2514 0112 EE30E7A6 		.ascii	"\3560\347\246\325\324t\355\235-X\206\035q3\252(N\333"
+ 2514      D5D474ED 
+ 2514      9D2D5886 
+ 2514      1D7133AA 
+ 2514      284EDB
+ 2515 0125 F143710C 		.ascii	"\361Cq\014\307\377w\004\337Z\361c\025"
+ 2515      C7FF7704 
+ 2515      DF5AF163 
+ 2515      15
+ 2516              		.text
+ 2517              		.section	.gnu.lto_.jmpfuncs.7155281a,"e",%progbits
+ 2518 0000 789C958F 		.ascii	"x\234\225\217=\012\002A\014\205\363\336\374\026\302"
+ 2518      3D0A0241 
+ 2518      0C85F3DE 
+ 2518      FC16C2
+ 2519 000f 5EC15378 		.ascii	"^\301Sx\036\027\261\020\261\260\262\234\336\013\330"
+ 2519      1E17B110 
+ 2519      B1B0B29C 
+ 2519      DE0BD8
+ 2520 001e 7A0DB5D9 		.ascii	"z\015\265\331{\330x\014\013a\315\254\253#\202\305\204"
+ 2520      7BD8780C 
+ 2520      0B61CDAC 
+ 2520      AB2382C5 
+ 2520      84
+ 2521 002f 6460BEBC 		.ascii	"d`\276\274\220\227\003\344\023N\213f&\233\365J\304\200"
+ 2521      909703E4 
+ 2521      134E8B66 
+ 2521      269BF54A 
+ 2521      C480
+ARM GAS  C:\Users\Utente\AppData\Local\Temp\cc5VhcGM.s 			page 54
+
+
+ 2522 0041 93633F06 		.ascii	"\223c?\006\260\007\227\013\241\355\012\362;\010\303"
+ 2522      B007970B 
+ 2522      A1ED0AF2 
+ 2522      3B08C3
+ 2523 0050 ED0B6C21 		.ascii	"\355\013l!\350,D\353\241\244\001}\253\270E\3567\306"
+ 2523      E82C44EB 
+ 2523      A1A4017D 
+ 2523      ABB845EE 
+ 2523      37C6
+ 2524 0062 00088926 		.ascii	"\000\010\211&\321'\006\306\271\356{\353\373\227\036"
+ 2524      D12706C6 
+ 2524      B9EE7BEB 
+ 2524      FB971E
+ 2525 0071 67E0025B 		.ascii	"g\340\002[\224\372F\376\221\325r_\370}\344\247lz\370"
+ 2525      94FA46FE 
+ 2525      91D5725F 
+ 2525      F87DE4A7 
+ 2525      6C7AF8
+ 2526 0084 FCCC08FD 		.ascii	"\374\314\010\375U\020\007\030sC\322\324\251+\365^\275"
+ 2526      55100718 
+ 2526      7343D2D4 
+ 2526      A92BF55E 
+ 2526      BD
+ 2527 0095 B65CE334 		.ascii	"\266\\\3434k\307\345\011\020I{,"
+ 2527      6BC7E509 
+ 2527      10497B2C 
+ 2528              		.text
+ 2529              		.section	.gnu.lto_.pureconst.7155281a,"e",%progbits
+ 2530 0000 789C1360 		.ascii	"x\234\023````e\230\301\302<\213\205e\026\013\353,\026"
+ 2530      60606065 
+ 2530      98C1C23C 
+ 2530      8B856516 
+ 2530      0BEB2C16 
+ 2531 0014 B6592C00 		.ascii	"\266Y,\000\032\234\003<"
+ 2531      1A9C033C 
+ 2532              		.text
+ 2533              		.section	.gnu.lto_.ipa_modref.7155281a,"e",%progbits
+ 2534 0000 789C6D4E 		.ascii	"x\234mN\273\016\2000\010<\256>\026\007\034\272\363\251"
+ 2534      BB0E8030 
+ 2534      083CAE3E 
+ 2534      16071CBA 
+ 2534      F3A9
+ 2535 0012 1DFA616E 		.ascii	"\035\372an\256~\222T\232h\023!\\\340.\007\234xc\006"
+ 2535      AE7E9254 
+ 2535      9A681321 
+ 2535      5CE02E07 
+ 2535      9C786306 
+ 2536 0026 4C3540A8 		.ascii	"L5@\250 7\001w\001R\312\037\215\241A<a\306\035\364\316"
+ 2536      20370177 
+ 2536      0152CA1F 
+ 2536      8DA1413C 
+ 2536      61C61DF4 
+ 2537 003b CC1C8F20 		.ascii	"\314\034\217 \244\331j\321\251\033:\303\266\330\227"
+ 2537      A4D96AD1 
+ 2537      A91B3AC3 
+ 2537      B6D897
+ 2538 004a C6854EFA 		.ascii	"\306\205N\372\335a\036\305%i\316?\372\372\024%^x\260"
+ARM GAS  C:\Users\Utente\AppData\Local\Temp\cc5VhcGM.s 			page 55
+
+
+ 2538      DD611EC5 
+ 2538      2569CE3F 
+ 2538      FAFA1425 
+ 2538      5E78B0
+ 2539 005d 96AB14E2 		.ascii	"\226\253\024\342\006\373=\013f"
+ 2539      06FB3D0B 
+ 2539      66
+ 2540              		.text
+ 2541              		.section	.gnu.lto_.lto.7155281a,"e",%progbits
+ 2542 0000 0B000300 		.ascii	"\013\000\003\000\001\000\000\000"
+ 2542      01000000 
+ 2543              		.text
+ 2544              		.section	.gnu.lto___heap_init.336.7155281a,"e",%progbits
+ 2545 0000 789C5D90 		.ascii	"x\234]\220?H[A\034\307\277\337{\276\304\342\320\311"
+ 2545      3F485B41 
+ 2545      1CC7BFDF 
+ 2545      7BBEC4E2 
+ 2545      D0C9
+ 2546 0012 B120C4D1 		.ascii	"\261 \304\321&\244\203\203]\204\014]\013\016EL\011\361"
+ 2546      26A48383 
+ 2546      5D840C5D 
+ 2546      0B0E454C 
+ 2546      09F1
+ 2547 0024 F9489E1A 		.ascii	"\371H\236\032N\337K\014\245H\316P\227\267\210\016\216"
+ 2547      4EDF4B0C 
+ 2547      A548CE50 
+ 2547      97B7880E 
+ 2547      8E
+ 2548 0035 866E1984 		.ascii	"\206n\031\204\216\375#\332\224\0323\330,\256Y\244]\202"
+ 2548      8EFD23DA 
+ 2548      941A33D8 
+ 2548      2CAE59A4 
+ 2548      5D82
+ 2549 0047 D04D68A1 		.ascii	"\320Mh\241\212^\336\213Z=~\307\375\276\034\237\017\367"
+ 2549      8A5EDE8B 
+ 2549      5A3D7EC7 
+ 2549      FDBE1C9F 
+ 2549      0FF7
+ 2550 0059 BB7502F3 		.ascii	"\273u\002\363\000bz\323\000\2676}\001\245\324dTpm\323"
+ 2550      00627AD3 
+ 2550      00B7367D 
+ 2550      01A5D464 
+ 2550      54706DD3 
+ 2551 006d 7FC48F0C 		.ascii	"\177\304\217\014\022Q\021\254\360\275\221\320\361o\263"
+ 2551      125111AC 
+ 2551      F0BD91D0 
+ 2551      F16FB3
+ 2552 007c D6F94E55 		.ascii	"\326\371NUo\360\014\250\240\277\206\302^\013\361\341"
+ 2552      6FF00CA8 
+ 2552      A0BF86C2 
+ 2552      5E0BF1E1 
+ 2553 008c C46CA88B 		.ascii	"\304l\250\213\253\015\245\232\277\370;\026\001v\214"
+ 2553      AB0DA59A 
+ 2553      BFF83B16 
+ 2553      01768C
+ 2554 009b 9E550D50 		.ascii	"\236U\015P5\200\232!\302\260\246\303\037\241~\356\265"
+ 2554      35809A21 
+ARM GAS  C:\Users\Utente\AppData\Local\Temp\cc5VhcGM.s 			page 56
+
+
+ 2554      C2B0A6C3 
+ 2554      1FA17EEE 
+ 2554      B5
+ 2555 00ac 887FA2BA 		.ascii	"\210\177\242\272\355\267\015\223\221U\302\244O\261\372"
+ 2555      EDB70D93 
+ 2555      9155C2A4 
+ 2555      4FB1FA
+ 2556 00bb 569FBBC4 		.ascii	"V\237\273\304\233/\374L\214k\242\373\270\274\307\022"
+ 2556      9B2FFC4C 
+ 2556      8C6BA2FB 
+ 2556      B8BCC712 
+ 2557 00cb E0B3AAC3 		.ascii	"\340\263\252\303\023o9\304\367C\374\274>z\237;\350q"
+ 2557      136F39C4 
+ 2557      F743FCBC 
+ 2557      3E7A9F3B 
+ 2557      E871
+ 2558 00dd 260392F2 		.ascii	"&\003\222\362+\013\350\247\301\205\006\035\004\312\301"
+ 2558      2B0BE8A7 
+ 2558      C185061D 
+ 2558      04CAC1
+ 2559 00ec DC37DA40 		.ascii	"\3347\332@$\307\320u\020\015T\335\007\252\303{\252\346"
+ 2559      24C7D075 
+ 2559      100D54DD 
+ 2559      07AAC37B 
+ 2559      AAE6
+ 2560 00fe FFAAA35B 		.ascii	"\377\252\243[\225\325bV\253\254\276\352$\212K\361nD"
+ 2560      95D56256 
+ 2560      ABACBEEA 
+ 2560      248A4BF1 
+ 2560      6E44
+ 2561 0110 BF56645E 		.ascii	"\277Vd^\343\301L\307w\302\372\350\314\017N\337L\305"
+ 2561      E3C14CC7 
+ 2561      77C2FAE8 
+ 2561      CC0F4EDF 
+ 2561      4CC5
+ 2562 0122 576D7EA2 		.ascii	"Wm~\242\030\306\225\250\236v^\004_\273c\360\356\367"
+ 2562      18C695A8 
+ 2562      9E765E04 
+ 2562      5FBB63F0 
+ 2562      EEF7
+ 2563 0134 80E7A989 		.ascii	"\200\347\251\211t*\357\314:S\305\322\234#\323e\351."
+ 2563      742AEFCC 
+ 2563      3A53C5D2 
+ 2563      9C23D365 
+ 2563      E92E
+ 2564 0146 784B59CB 		.ascii	"xKY\313\316\224<\333M\277te\316.\026\345S\035VdA\026"
+ 2564      CE943CDB 
+ 2564      4DBF7465 
+ 2564      CE2E16E5 
+ 2564      531D5664 
+ 2565 015c A5EBF47A 		.ascii	"\245\353\364z'\273hc,\036O\350\262z\270\364\236%\223"
+ 2565      27BB6863 
+ 2565      2C1E4FE8 
+ 2565      B27AB8F4 
+ 2565      9E2593
+ 2566 016f C984F474 		.ascii	"\311\204\364t-:\263\011\317\265\364E\301.\344\355\354"
+ 2566      2D3AB309 
+ARM GAS  C:\Users\Utente\AppData\Local\Temp\cc5VhcGM.s 			page 57
+
+
+ 2566      CFB5F445 
+ 2566      C12EE4ED 
+ 2566      EC
+ 2567 0180 9217B770 		.ascii	"\222\027\267p\015+\251\246\240"
+ 2567      0D2BA9A6 
+ 2567      A0
+ 2568              		.text
+ 2569              		.section	.gnu.lto_chHeapObjectInit.337.7155281a,"e",%progbits
+ 2570 0000 789C7553 		.ascii	"x\234uSOH\024a\024\177\357{\373\177\327\365P\333\251"
+ 2570      4F481461 
+ 2570      147FEF7B 
+ 2570      FB7FD7F5 
+ 2570      50DBA9
+ 2571 0013 40EA1294 		.ascii	"@\352\022\224\273YPR\227\240[\247\240CD\206\254\333"
+ 2571      BB595052 
+ 2571      97A05BA7 
+ 2571      A0434486 
+ 2571      ACDB
+ 2572 0025 A4836EB3 		.ascii	"\244\203n\263\273\263\266\030\310\216\032kmFY\030vH"
+ 2572      BBB3B618 
+ 2572      C88E1A6B 
+ 2572      6D465918 
+ 2572      7648
+ 2573 0037 EB6610D4 		.ascii	"\353f\020\324IL\304Vb\203\014-M+\224(\274du\211\012"
+ 2573      494CC456 
+ 2573      62830C2D 
+ 2573      4D2B9428 
+ 2573      BC647589 
+ 2574 004c 124AB737 		.ascii	"\022J\2677\337\354\256\036j\230\367\315\367\373\336"
+ 2574      DFECAE1E 
+ 2574      6A98F7CD 
+ 2574      F7FBDE
+ 2575 005b EFFDBEDF 		.ascii	"\357\375\276\337\367f\246\205\000n\002\300\016\016$"
+ 2575      F766A685 
+ 2575      006E02C0 
+ 2575      0E0E24
+ 2576 006a C01BBD59 		.ascii	"\300\033\275Y\001\206a\034v\012\354\350\315\272q\002"
+ 2576      0186611C 
+ 2576      760AECE8 
+ 2576      CDBA7102 
+ 2577 007a 2542480B 		.ascii	"%BH\013L\343=\0121\\\311\017^\311\2431\224\303/\000"
+ 2577      4CE33D0A 
+ 2577      315CC90F 
+ 2577      5EC9A331 
+ 2577      94C32F00 
+ 2578 008e 6990971D 		.ascii	"i\220\227\035\035\233\320\306c\000\253\354\350j\206"
+ 2578      1D9BD0C6 
+ 2578      6300ABEC 
+ 2578      E86A86
+ 2579 009d EA9C61BC 		.ascii	"\352\234a\274\232\0361\0147\264\217b\3721\216 \200\300"
+ 2579      9A1E310C 
+ 2579      37B48F62 
+ 2579      FA318E20 
+ 2579      80C0
+ 2580 00af F8DA664E 		.ascii	"\370\332fN_B+\377U\346?\303X\231 \342\227\003L\350)"
+ 2580      5F422BFF 
+ 2580      55E63FC3 
+ARM GAS  C:\Users\Utente\AppData\Local\Temp\cc5VhcGM.s 			page 58
+
+
+ 2580      589920E2 
+ 2580      97034CE8 
+ 2581 00c4 120A92D0 		.ascii	"\022\012\222\3206^\316S\274/`\356\346\352E\036w1\347"
+ 2581      365ECE53 
+ 2581      BC2F60EE 
+ 2581      E6EA451E 
+ 2581      7731E7
+ 2582 00d7 5B4F3EEB 		.ascii	"[O>\353\277\336\341J\345J$\200\370\335\200\027&P\232"
+ 2582      BFDEE14A 
+ 2582      E54A2480 
+ 2582      F8DD8017 
+ 2582      26509A
+ 2583 00ea E305C41C 		.ascii	"\343\005\304\034>\234\265\347\214?\205k\206\361a\347"
+ 2583      3E9CB5E7 
+ 2583      8C3F856B 
+ 2583      86F161E7 
+ 2584 00fa D5A79FFA 		.ascii	"\325\247\237\3720\200 \354\202\2038l\200\343\350@\034"
+ 2584      308020EC 
+ 2584      8283386C 
+ 2584      80E3E840 
+ 2584      1C
+ 2585 010b 4527E218 		.ascii	"E'\342\030\272\200+\334\310k\036\020\016/\023|\034\025"
+ 2585      BA802BDC 
+ 2585      C86B1E10 
+ 2585      0E2F137C 
+ 2585      1C15
+ 2586 011d 1C7E104E 		.ascii	"\034~\020N\200\0012\233d\330\320\310\001\014\222\260"
+ 2586      8001329B 
+ 2586      64D8D0C8 
+ 2586      010C92B0 
+ 2587 012d 4007835F 		.ascii	"@\007\203_\302X\272=\211\360[t\256u\347\355\204\344"
+ 2587      C258BA3D 
+ 2587      89F05B74 
+ 2587      AE75E7ED 
+ 2587      84E4
+ 2588 013f E479D740 		.ascii	"\344y\327@\006I\020:\026\001%\356\357F\"\022&^)\024"
+ 2588      0649103A 
+ 2588      160125EE 
+ 2588      EF462212 
+ 2588      265E2914 
+ 2589 0153 0A95167F 		.ascii	"\012\225\026\177^\220\213\2105:\253x\177rI\265;\254"
+ 2589      5E908B88 
+ 2589      353AAB78 
+ 2589      7F7249B5 
+ 2589      3BAC
+ 2590 0165 C6CFEDE5 		.ascii	"\306\317\355\345ai\330cJ\014g\346m\344\341\002\247U"
+ 2590      6169D863 
+ 2590      4A0C67E6 
+ 2590      6DE4E102 
+ 2590      A755
+ 2591 0177 FC1EC94B 		.ascii	"\374\036\311K2\363(\223G\262\221\233\274\226\3248#Y"
+ 2591      32F32893 
+ 2591      47B2919B 
+ 2591      BC96D438 
+ 2591      2359
+ 2592 0189 F8C432F6 		.ascii	"\370\3042\366s\231[\354h7\033\370\300|\275C>-\221G\330"
+ 2592      73995BEC 
+ARM GAS  C:\Users\Utente\AppData\Local\Temp\cc5VhcGM.s 			page 59
+
+
+ 2592      68371BF8 
+ 2592      C07CBD43 
+ 2592      3E2D9147 
+ 2593 019e CF5357F4 		.ascii	"\317SW\364\0316\0038\242h\035e\306\252\350\277\277\255"
+ 2593      19360338 
+ 2593      A2681D65 
+ 2593      C6AAE8BF 
+ 2593      BFAD
+ 2594 01b0 C85D46C9 		.ascii	"\310]F\311\265\243d\253\317\261\021J@\231\304\010X*"
+ 2594      B5A364AB 
+ 2594      CFB1114A 
+ 2594      4099C408 
+ 2594      582A
+ 2595 01c2 A9171806 		.ascii	"\251\027\030\006(\036`\326cm\372\037\211\251\215\022"
+ 2595      281E60D6 
+ 2595      636DFA1F 
+ 2595      89A98D12 
+ 2596 01d2 D36589B6 		.ascii	"\323e\211\266\227X\317F\332\212F\346,\221\241Jv\236"
+ 2596      9758CF46 
+ 2596      DA8A46E6 
+ 2596      2C91A14A 
+ 2596      769E
+ 2597 01e4 2A3B5F46 		.ascii	"*;_F\365\334lYJy\275n`\3164\2003\262uKo<\326;X\025\344"
+ 2597      F5DC6C59 
+ 2597      4A79BD6E 
+ 2597      60CE3480 
+ 2597      33B2754B 
+ 2598 01ff 231B6B96 		.ascii	"#\033k\226z\336\265\226\231rP\005\371\260\332\224\377"
+ 2598      7ADEB596 
+ 2598      99725005 
+ 2598      F9B0DA94 
+ 2598      FF
+ 2599 0210 9E5DC57F 		.ascii	"\236]\305\177+\277]\367\365\316\364E\025RxA\272\272"
+ 2599      2BBF5DF7 
+ 2599      F5CEF445 
+ 2599      15527841 
+ 2599      BABA
+ 2600 0222 9545F297 		.ascii	"\225E\362\227\352\266n<\334\351\005<\005\220\265\004"
+ 2600      EAB66E3C 
+ 2600      DCE9053C 
+ 2600      0590B504 
+ 2601 0232 E38B7C96 		.ascii	"\343\213|\226Uq\261\212\027\304\311\023,\342\027\001"
+ 2601      5571B18A 
+ 2601      17C4C913 
+ 2601      2CE21701 
+ 2602 0242 2888CE8F 		.ascii	"(\210\316\217?\216\312\177h\200p\375\253\0028t\344`"
+ 2602      3F8ECA7F 
+ 2602      688070FD 
+ 2602      AB023874 
+ 2602      E460
+ 2603 0254 DD9126B5 		.ascii	"\335\221&\265A=\236l=\243ju)-\321\254\307\302\021\245"
+ 2603      413D9E6C 
+ 2603      3DA36A75 
+ 2603      292DD1AC 
+ 2603      C7C211A5 
+ 2604 0268 BE555712 		.ascii	"\276UW\022u\307\022Z\243\222Lj\325\014\316kQ-\251%T"
+ 2604      75C7125A 
+ARM GAS  C:\Users\Utente\AppData\Local\Temp\cc5VhcGM.s 			page 60
+
+
+ 2604      A3924C6A 
+ 2604      D50CCE6B 
+ 2604      512DA925 
+ 2605 027d 73AE865B 		.ascii	"s\256\206[\024\330\035\014\206\370\216\230\345\232\276"
+ 2605      14D81D0C 
+ 2605      86F88E98 
+ 2605      E59ABE
+ 2606 028c B7A6A626 		.ascii	"\267\246\246&\244\351|\267\250\015!=\021\341DT\2116"
+ 2606      A4E97CB7 
+ 2606      A80D213D 
+ 2606      11E14454 
+ 2606      8936
+ 2607 029e 29E1981E 		.ascii	")\341\230\036\214\200\335\234\304\266l\\\013\326*{\016"
+ 2607      8C80DD9C 
+ 2607      C4B66C5C 
+ 2607      0BD62A7B 
+ 2607      0E
+ 2608 02af 44F6D52A 		.ascii	"D\366\325*@\015\255gm\272zA\021M\261\277fjE\343"
+ 2608      400DAD67 
+ 2608      6DBA7A41 
+ 2608      114DB1BF 
+ 2608      666A45E3 
+ 2609              		.text
+ 2610              		.section	.gnu.lto_chHeapAllocAligned.338.7155281a,"e",%progbits
+ 2611 0000 789C7D56 		.ascii	"x\234}V\013P\224\327\025\276\347\236\177\377\335e_\274"
+ 2611      0B5094D7 
+ 2611      15BEE79E 
+ 2611      7FFFDD65 
+ 2611      5FBC
+ 2612 0012 145F5150 		.ascii	"\024_QP\343\023XQ\0222\320\211\314d\242\323\311\230"
+ 2612      E3135851 
+ 2612      1232D089 
+ 2612      CC64A2D3 
+ 2612      C998
+ 2613 0024 C4C964DA 		.ascii	"\304\311d\332Nu:H\266\272U\3133e\246\216eEeSb\024\214"
+ 2613      4E753A48 
+ 2613      B6BA55CB 
+ 2613      3365A68E 
+ 2613      65456553 
+ 2614 003b 4DC48A18 		.ascii	"M\304\212\030m&b2\211A\223R\037\014\001\0151\002\">"
+ 2614      6D266232 
+ 2614      89419352 
+ 2614      1F0C010D 
+ 2614      3102223E 
+ 2615 004f 920C44AB 		.ascii	"\222\014D\2536&\232\332\212VbL\204\236{\357\356\377"
+ 2615      36269ADA 
+ 2615      8A56624C 
+ 2615      849E7BEF 
+ 2615      EEFF
+ 2616 0061 FF8CB60C 		.ascii	"\377\214\266\014w\357\275\347|\347}\356\275\177\222"
+ 2616      77EFBDE7 
+ 2616      7CE77DEE 
+ 2616      BD7F92
+ 2617 0070 87B17718 		.ascii	"\207\261w\030c\001`\014\022\031l\256\251\342,\024\012"
+ 2617      6301600C 
+ 2617      12196CAE 
+ 2617      A9E22C14 
+ARM GAS  C:\Users\Utente\AppData\Local\Temp\cc5VhcGM.s 			page 61
+
+
+ 2617      0A
+ 2618 0081 E5DA395F 		.ascii	"\345\3329_[\3632\207v\270\322Q\233\240\255\253\361n"
+ 2618      5BF33287 
+ 2618      76B8D251 
+ 2618      9BA0ADAB 
+ 2618      F16E
+ 2619 0093 DB7F2555 		.ascii	"\333\177%UC\330b 4\250\337\274\253\177\303[\363\010"
+ 2619      43D86220 
+ 2619      34A8DFBC 
+ 2619      AB7FC35B 
+ 2619      F308
+ 2620 00a5 2409365E 		.ascii	"$\0116^Y\343\242U\262\266\243\372\022\310\205\316\303"
+ 2620      59E3A255 
+ 2620      B2B6A3FA 
+ 2620      12C885CE 
+ 2620      C3
+ 2621 00b6 35AECFDA 		.ascii	"5\256\317\332[Q\222\032\232\216\374D\263\363\255\325"
+ 2621      5B51921A 
+ 2621      9A8EFC44 
+ 2621      B3F3ADD5 
+ 2622 00c6 8D8ABB2D 		.ascii	"\215\212\273-\012s\360\332\352\306\024\370T\355\352"
+ 2622      0A73F0DA 
+ 2622      EAC614F8 
+ 2622      54EDEA
+ 2623 00d5 A26427D4 		.ascii	"\242d'\324m\336\225\242\254\305\360?\013H;\374s\367"
+ 2623      6DDE95A2 
+ 2623      ACC5F03F 
+ 2623      0B483BFC 
+ 2623      73F7
+ 2624 00e7 C511DA76 		.ascii	"\305\021\332v\202l\351\3331Cs\011\2102\357\266\240="
+ 2624      826CE9DB 
+ 2624      31437309 
+ 2624      8832EFB6 
+ 2624      A03D
+ 2625 00f9 F036F936 		.ascii	"\3606\3716\324>?\352\233\227\234\255\2148\356\343\353"
+ 2625      D43E3FEA 
+ 2625      9B979CAD 
+ 2625      8C38EEE3 
+ 2625      EB
+ 2626 010a 5568D29F 		.ascii	"Uh\322\237=\244Jz\030\313\033\310\261\327\033\017=\252"
+ 2626      3DA44A7A 
+ 2626      18CB1BC8 
+ 2626      B1D71B0F 
+ 2626      3DAA
+ 2627 011c BD4DB4AB 		.ascii	"\275M\264\253\235G\235Z\034\337K\264\352\217.\371%\355"
+ 2627      9D479D5A 
+ 2627      1CDF4BB4 
+ 2627      EA8F2EF9 
+ 2627      25ED
+ 2628 012e 46735DAC 		.ascii	"Fs]\254\026/t\277\377\256S\352J\2005FB\200\225s\324"
+ 2628      162F74BF 
+ 2628      FFAE53EA 
+ 2628      4A803546 
+ 2628      42809573 
+ 2629 0143 6CBADDE1 		.ascii	"l\272\335\341\214q\271=^_l\\|\002\224s\0373\377\336"
+ 2629      8C71B93D 
+ 2629      5E5F6C5C 
+ARM GAS  C:\Users\Utente\AppData\Local\Temp\cc5VhcGM.s 			page 62
+
+
+ 2629      7C029473 
+ 2629      1F33FFDE 
+ 2630 0157 401BE809 		.ascii	"@\033\350\011\240\321\357\010H\366\267\204Bw\216\325"
+ 2630      A0D1EF08 
+ 2630      48F6B784 
+ 2630      42778ED5 
+ 2631 0167 F77D05DB 		.ascii	"\367}\005\333\367\264hW\031+o\202\277\202\300\331\300"
+ 2631      F7B46857 
+ 2631      192B6F82 
+ 2631      BF82C0D9 
+ 2631      C0
+ 2632 0178 B19CA511 		.ascii	"\261\234\245\021\273\373\213\246P\310\311V\037\204\010"
+ 2632      BBFB8BA6 
+ 2632      50C8C956 
+ 2632      1F8408
+ 2633 0187 8F43D185 		.ascii	"\217C\321\205\004b\277\004\212\377o\311_u\330\340\363"
+ 2633      0462BF04 
+ 2633      8AFF6FC9 
+ 2633      5F75D8E0 
+ 2633      F3
+ 2634 0198 A26B82FF 		.ascii	"\242k\202\377J\204\277qm8\024\253\365\262f\003\200E"
+ 2634      4A84BF71 
+ 2634      6D3814AB 
+ 2634      F5B26603 
+ 2634      8045
+ 2635 01aa B713A485 		.ascii	"\267\023\244\205W\201~g\022\350\306\371c\225\336\352"
+ 2635      57817E67 
+ 2635      12E8C6F9 
+ 2635      6395DEEA 
+ 2636 01ba 358E552D 		.ascii	"5\216U-`xPT\237H\220Z\003\362\345\372M\002R\326j\201"
+ 2636      60785054 
+ 2636      9F48905A 
+ 2636      03F2E5FA 
+ 2636      4D0252D6 
+ 2637 01d0 6C1190BA 		.ascii	"l\021\220\272(\244\373=\341Jr\331Q\013\242J v\032\210"
+ 2637      28A4FB3D 
+ 2637      E14A72D9 
+ 2637      510BA24A 
+ 2637      20761A88 
+ 2638 01e4 BD0AF1B1 		.ascii	"\275\012\361\261\005\021Jt\261v8\006m\360\021%\220\334"
+ 2638      05114A74 
+ 2638      B1763806 
+ 2638      6DF01125 
+ 2638      90DC
+ 2639 01f6 2381DD86 		.ascii	"#\201\335\206\325\275\341*\351\330q\213D\023\351t\261"
+ 2639      D5BDE12A 
+ 2639      E9D8718B 
+ 2639      4413E974 
+ 2639      B1
+ 2640 0207 4F817D02 		.ascii	"O\201}\002\254h\2770\260\327\3007\265o\224^vX\360G\311"
+ 2640      AC68BF30 
+ 2640      B0D7C037 
+ 2640      B56F945E 
+ 2640      7658F047 
+ 2641 021c 4227B013 		.ascii	"B'\260\023\204nKT\270}\347\303\224\225u\311\303p\247"
+ 2641      846E4B54 
+ 2641      B87DE7C3 
+ARM GAS  C:\Users\Utente\AppData\Local\Temp\cc5VhcGM.s 			page 63
+
+
+ 2641      949575C9 
+ 2641      C370A7
+ 2642 022f 08775269 		.ascii	"\010wRi\355N$\222\016\037\003\034\005h\005h\001\350"
+ 2642      ED4E2492 
+ 2642      0E1F031C 
+ 2642      05680568 
+ 2642      01E8
+ 2643 0241 00E882F7 		.ascii	"\000\350\202\367zl-\241\037\2076\205B_\247\325\265\335"
+ 2643      7A6C2DA1 
+ 2643      1F873685 
+ 2643      425FA7D5 
+ 2643      B5DD
+ 2644 0253 7A139EE6 		.ascii	"z\023\236\346\000\007\001\031Am\214V\272X\331\031\211"
+ 2644      00070119 
+ 2644      416D8C56 
+ 2644      BA58D919 
+ 2644      89
+ 2645 0264 39281227 		.ascii	"9(\022'%;\206q\335E\263\233\206\207\206\227\206\217"
+ 2645      253B8671 
+ 2645      DD45B39B 
+ 2645      86878697 
+ 2645      868F
+ 2646 0276 462CE3F6 		.ascii	"F,\343\3668\232\343iN\240\221\310\2706\202\306H\242"
+ 2646      389AE369 
+ 2646      4EA091C8 
+ 2646      B83682C6 
+ 2646      48A2
+ 2647 0288 25D13C8A 		.ascii	"%\321<\212\221\341\321\264\030\303\270c,\215q\304x\210"
+ 2647      91E1D1B4 
+ 2647      18C3B863 
+ 2647      2C8D71C4 
+ 2647      7888
+ 2648 029a F6E3693D 		.ascii	"\366\343i=\201F2\355SHp\"\215I\264\236L\343a\342O\241"
+ 2648      814632ED 
+ 2648      53487022 
+ 2648      8D49B49E 
+ 2648      4CE361E2 
+ 2649 02b0 319568D3 		.ascii	"1\225h\323hL\247\365\014\0323\011\237J#\2150\351\264"
+ 2649      684CA7F5 
+ 2649      0C1A3309 
+ 2649      9F4A238D 
+ 2649      30E9B4
+ 2650 02c3 F733EE9C 		.ascii	"\3673\356\234%\\\315 \302l\200f\230\003p\0302\031E\232"
+ 2650      255CCD20 
+ 2650      C26C8066 
+ 2650      98037018 
+ 2650      3219459A 
+ 2651 02d7 25E8D9C2 		.ascii	"%\350\331\302z\0161\037\2471Wlr\031\305?\217Q\036\026"
+ 2651      7A0E311F 
+ 2651      A731576C 
+ 2651      7219C53F 
+ 2651      8F511E16 
+ 2652 02eb 50648CED 		.ascii	"Pd\214\355@\266\257\343\320t\010\2650V\217\\\256\327"
+ 2652      40B6AFE3 
+ 2652      D07408B5 
+ 2652      30568F5C 
+ 2652      AED7
+ARM GAS  C:\Users\Utente\AppData\Local\Temp\cc5VhcGM.s 			page 64
+
+
+ 2653 02fd D0FA3B1E 		.ascii	"\320\372;\036\272t\350\204\223\216\227\\\036v\311\251"
+ 2653      BA74E884 
+ 2653      938E975C 
+ 2653      1E76C9A9 
+ 2654 030d 5B4E138D 		.ascii	"[N\023\215\237K\347\\l\200\257\273\3326\006\271\276"
+ 2654      9F4BE75C 
+ 2654      6C80AFBB 
+ 2654      DA3606B9 
+ 2654      BE
+ 2655 031e 1AD4E1A8 		.ascii	"\032\324\341\250G\354\335\335\3446\324|q\202\323\\\261"
+ 2655      47ECDDDD 
+ 2655      E436D47C 
+ 2655      7182D35C 
+ 2655      B1
+ 2656 032f 338B126B 		.ascii	"3\213\022k\203*\340\253\227S\235\337\001\026\354\201"
+ 2656      832AE0AB 
+ 2656      97539DDF 
+ 2656      0116EC81 
+ 2657 033f 53C0AAA0 		.ascii	"S\300\252\240\"\024\372\306\273\3724(a\315\342CE\256"
+ 2657      2214FAC6 
+ 2657      BBFA3428 
+ 2657      61CDE243 
+ 2657      45AE
+ 2658 0351 A806DAA4 		.ascii	"\250\006\332\244\236~\345\316\017|\355\000\335\001\230"
+ 2658      9E7EE5CE 
+ 2658      0F7CED00 
+ 2658      DD0198
+ 2659 0360 A3F73270 		.ascii	"\243\3672p\340l\342q\212\034s$\350\356S\021\314\216"
+ 2659      E06CE271 
+ 2659      8A1C7324 
+ 2659      E8EE5311 
+ 2659      CC8E
+ 2660 0372 CA2F019D 		.ascii	"\312/\001\2358G\240\354\2020X\331\011\230\211NH\023"
+ 2660      3847A0EC 
+ 2660      823058D9 
+ 2660      0998894E 
+ 2660      4813
+ 2661 0384 8A932945 		.ascii	"\212\223)E\230)Ej\272\204@\305kU\2001\302/\272\005\034"
+ 2661      9829456A 
+ 2661      BA8440C5 
+ 2661      6B558031 
+ 2661      C22FBA05 
+ 2662 0399 C1D253A2 		.ascii	"\301\322S\242\031\037\025\353\245\237A\200\221\233b"
+ 2662      191F15EB 
+ 2662      A59F4180 
+ 2662      919B62
+ 2663 03a8 5DF23979 		.ascii	"]\3629yy\217\257K\246=\317\317c\014cx\254\324\362\232"
+ 2663      798FAF4B 
+ 2663      A63DCFCF 
+ 2663      630C6378 
+ 2663      ACD4F29A 
+ 2664 03bc 57297904 		.ascii	"W)y\004\263\"J\366\370\254Z\026\367\302/#Z\366\270\313"
+ 2664      B3224AF6 
+ 2664      F8AC5A16 
+ 2664      F7C22F23 
+ 2664      5AF6B8CB 
+ 2665 03d0 FA4086B7 		.ascii	"\372@\206\267\323CE\302,\251\240\226\334`a\264!\347"
+ARM GAS  C:\Users\Utente\AppData\Local\Temp\cc5VhcGM.s 			page 65
+
+
+ 2665      D34345C2 
+ 2665      2CA9A096 
+ 2665      DC6061B4 
+ 2665      21E7
+ 2666 03e2 9A4A4AD3 		.ascii	"\232JJ\323@\017R\256\360\340$\021S=\332\216\267~{\031"
+ 2666      400F52AE 
+ 2666      F0E02411 
+ 2666      533DDA8E 
+ 2666      B77E7B19 
+ 2667 03f6 8DBCD677 		.ascii	"\215\274\326w\251\274fP\233R;\010\322\007D\"/\006\303"
+ 2667      A9BC6650 
+ 2667      9B523B08 
+ 2667      D2074422 
+ 2667      2F06C3
+ 2668 0409 5F21BA88 		.ascii	"_!\272\210&\363\000\350\246MNt\343A7\234\225\021\337"
+ 2668      26F300E8 
+ 2668      A64D4E74 
+ 2668      E341379C 
+ 2668      9511DF
+ 2669 041c A49D5731 		.ascii	"\244\235W1\266\206\001}\304\362*\324=;\306\242\217n"
+ 2669      B686017D 
+ 2669      C4F22AD4 
+ 2669      3D3BC6A2 
+ 2669      8F6E
+ 2670 042e B83B4343 		.ascii	"\270;CCC>\245\222\2627\027cU\356Zi-\015\376M\031lnH"
+ 2670      433EA592 
+ 2670      B2371763 
+ 2670      55EE5A69 
+ 2670      2D0DFE4D 
+ 2671 0446 C438BA0C 		.ascii	"\3048\272\014\313\200E3\270xW\371\337\215\340\177q\021"
+ 2671      CB804533 
+ 2671      B87857F9 
+ 2671      DF8DE07F 
+ 2671      7111
+ 2672 0458 7EC6985C 		.ascii	"~\306\230\\\256\272\004\317S\235#\316\304c\0345/m\032"
+ 2672      AEBA04CF 
+ 2672      539D23CE 
+ 2672      C4631C35 
+ 2672      2F6D1A
+ 2673 046b 699380F1 		.ascii	"i\223\200\361d\322!\266\007h\233\210\351\230 \332\353"
+ 2673      64D221B6 
+ 2673      07689B88 
+ 2673      E99820DA 
+ 2673      EB
+ 2674 047c 7CDB12DA 		.ascii	"|\333\022\332\314\2154\227\376\227\213\267\373Ad\001"
+ 2674      CC8D3497 
+ 2674      FE978BB7 
+ 2674      FB416401 
+ 2675 048c 24F0AC0D 		.ascii	"$\360\254\015G\343\\\270,\253\376!\311\215!\360h\261"
+ 2675      47E35CB8 
+ 2675      2CABFE21 
+ 2675      C98D21F0 
+ 2675      68B1
+ 2676 049e E9A3CD58 		.ascii	"\351\243\315X\034\243\3671\251\224b\000\034\207c\205"
+ 2676      1CA3F731 
+ 2676      A9946200 
+ 2676      1C876385 
+ARM GAS  C:\Users\Utente\AppData\Local\Temp\cc5VhcGM.s 			page 66
+
+
+ 2677 04ae CA0B6D03 		.ascii	"\312\013m\003b\235\031\321i\277\273\361-\217\221\330"
+ 2677      629D19D1 
+ 2677      69BFBBF1 
+ 2677      2D8F91D8 
+ 2678 04be 535D2830 		.ascii	"S](0}m\277\301$\034%\020a\234\205\272\256\321\3748\306"
+ 2678      7D6DBFC1 
+ 2678      241C2510 
+ 2678      619C85BA 
+ 2678      AED1FC38 
+ 2679 04d3 E95DB776 		.ascii	"\351]\267v\212N\014\343\010L\244\247\021G\3428}\257"
+ 2679      8A4E0CE3 
+ 2679      084CA4A7 
+ 2679      1147E238 
+ 2679      7DAF
+ 2680 04e5 2B4CE074 		.ascii	"+L\340t\275\253\177Y\030G\341\\\375\335[/\220b\307\221"
+ 2680      BDAB7F59 
+ 2680      1847E15C 
+ 2680      FDDD5B2F 
+ 2680      9062C791 
+ 2681 04f9 F6D3BAA1 		.ascii	"\366\323\272\241\370\314\323\3648\312\325\347^Y\272"
+ 2681      F8CCD3F4 
+ 2681      38CAD5E7 
+ 2681      5E59BA
+ 2682 0508 85701C70 		.ascii	"\205p\034p\244\244\364v\271U\340\367\350~\300$K<\343"
+ 2682      A4A4F476 
+ 2682      B955E0F7 
+ 2682      E87EC024 
+ 2682      4B3CE3
+ 2683 051b 49DF43D1 		.ascii	"I\337C\321x&\340x\370\007D\243I\306\011\262\220U\327"
+ 2683      7826E078 
+ 2683      F80744A3 
+ 2683      49C609B2 
+ 2683      9055D7
+ 2684 052e 7924EFDF 		.ascii	"y$\357\337\270\027?k\311\373\0253\357_\213\274c\262"
+ 2684      B8173F6B 
+ 2684      C9FB1533 
+ 2684      EF5F8BBC 
+ 2684      63B2
+ 2685 0540 34D6E755 		.ascii	"4\326\347Uy-&\337\2439p\236\277\334`6W\177\327+\000"
+ 2685      792D26DF 
+ 2685      A339709E 
+ 2685      BFDC6036 
+ 2685      577FD72B 
+ 2686 0555 9DCAD981 		.ascii	"\235\312\331\201HW\\GL\301L\263^\0231%\342\346\201\312"
+ 2686      48575C47 
+ 2686      4CC14CB3 
+ 2686      5E133125 
+ 2686      E2E681CA 
+ 2687 0569 DB80F3C8 		.ascii	"\333\200\363\310\317\211\252?:h'E\277\357\362\010\376"
+ 2687      CF89AA3F 
+ 2687      3A682745 
+ 2687      BFEFF208 
+ 2687      FE
+ 2688 057a BECA4E0D 		.ascii	"\276\312N\015'IcR\023\325l2N\322W\301P\264\277nV\335"
+ 2688      27496352 
+ 2688      13D56C32 
+ 2688      4ED257C1 
+ARM GAS  C:\Users\Utente\AppData\Local\Temp\cc5VhcGM.s 			page 67
+
+
+ 2688      50B4BF6E 
+ 2689 0590 3342F02C 		.ascii	"3B\360,\276\371\007K\014\327\314\030\276\2251L\226\252"
+ 2689      BEF9074B 
+ 2689      0CD7CC18 
+ 2689      BE95314C 
+ 2689      96AA
+ 2690 05a2 07BDAAF3 		.ascii	"\007\275\252\363\306\341\303F\317YC\277n\210\225\375"
+ 2690      C6E1C346 
+ 2690      CF5943BF 
+ 2690      6E8895FD 
+ 2691 05b2 0B9E932D 		.ascii	"\013\236\223-GVn\377/+7Lx\277\200\323%,\254TK\357\266"
+ 2691      47566EFF 
+ 2691      2F2B374C 
+ 2691      78BF80D3 
+ 2691      252CAC54 
+ 2692 05c9 36249962 		.ascii	"6$\231bV#\267L\251\377H\251y2\2271\303\312\376\376\311"
+ 2692      5623B74C 
+ 2692      A9FF48A9 
+ 2692      79329731 
+ 2692      C3CAFEFE 
+ 2693 05de 0D204EB0 		.ascii	"\015 N\260\274)\213\251\205\242)w]m{\203\033\260\017"
+ 2693      BC298BA9 
+ 2693      85A22977 
+ 2693      5D6D7B83 
+ 2693      1BB00F
+ 2694 05f1 4E7AA211 		.ascii	"Nz\242\021My`D\003\246\261\357\036\034\321\016\353\231"
+ 2694      4D796044 
+ 2694      03A6B1EF 
+ 2694      1E1CD10E 
+ 2694      EB99
+ 2695 0603 FBDE84DF 		.ascii	"\373\336\204\337\225\276M\221F\335g\3266j\206\321\303"
+ 2695      95BE4D91 
+ 2695      46DD67D6 
+ 2695      366A86D1 
+ 2695      C3
+ 2696 0614 CFC04955 		.ascii	"\317\300IU\345n\237\252\015]\035S\255U\236\206S\255"
+ 2696      E56E9FAA 
+ 2696      0D5D1D53 
+ 2696      AD559E86 
+ 2696      53AD
+ 2697 0626 55CEA536 		.ascii	"U\316\2456\237\246\252\334E;)z\332\364|\372\003=\377"
+ 2697      9FA6AADC 
+ 2697      453B297A 
+ 2697      DAF47CFA 
+ 2697      033DFF
+ 2698 0639 D174E5DE 		.ascii	"\321t\345\336\203=\037\264\326b\310\204\207\270\360"
+ 2698      833D1FB4 
+ 2698      D662C884 
+ 2698      87B8F0
+ 2699 0648 7CBA3A3E 		.ascii	"|\272:>>\345E'\342\014\314\265\234\220\231t\022gDOH"
+ 2699      3EE54527 
+ 2699      E20CCCB5 
+ 2699      9C909974 
+ 2699      1267444F 
+ 2700 065d 2ACEB49C 		.ascii	"*\316\264\234\2204L\275\277\275\206\031\253\340F{\255"
+ 2700      90344CBD 
+ 2700      BFBD8619 
+ARM GAS  C:\Users\Utente\AppData\Local\Temp\cc5VhcGM.s 			page 68
+
+
+ 2700      ABE0467B 
+ 2700      AD
+ 2701 066e E5A2BDD2 		.ascii	"\345\242\275\322\324\313v\177\341\207ew\275!VV)}\314"
+ 2701      D4CB767F 
+ 2701      E1876577 
+ 2701      BD215656 
+ 2701      297DCC
+ 2702 0681 95D9F558 		.ascii	"\225\331\365Xn\022\361z\321\325lW\007\352\244K\275L"
+ 2702      6E12F17A 
+ 2702      D1D56C57 
+ 2702      07EAA44B 
+ 2702      BD4C
+ 2703 0693 15DB1B46 		.ascii	"\025\333\033FDu\342\342BS\345\302\227\3703QO\376\310"
+ 2703      4475E2E2 
+ 2703      4253E5C2 
+ 2703      97F83351 
+ 2703      4FFEC8
+ 2704 06a6 1790CA39 		.ascii	"\027\220\3129R\362\246\357\377J\275lH\255\336\300\237"
+ 2704      52F2A6EF 
+ 2704      FF4ABD6C 
+ 2704      48ADDEC0 
+ 2704      9F
+ 2705 06b7 2229F55A 		.ascii	"\")\365Z\336\361\231\357\324O-\357\324\240\317(\345"
+ 2705      DEF199EF 
+ 2705      D44F2DEF 
+ 2705      D4A0CF28 
+ 2705      E5
+ 2706 06c8 02B48B24 		.ascii	"\002\264\213$\322\255f\307QN\272\2600\311E\367\027&"
+ 2706      D2AD66C7 
+ 2706      514EBAB0 
+ 2706      30C945F7 
+ 2706      1726
+ 2707 06da B9398E72 		.ascii	"\2719\216r\250\013\314\333\275\377\3509u-\020\016\325"
+ 2707      A80BCCDB 
+ 2707      BDFFE839 
+ 2707      752D100E 
+ 2707      D5
+ 2708 06eb 0D87E936 		.ascii	"\015\207\3516N<\037\031\015i\000\221P\351%\323\205\211"
+ 2708      4E3C1F19 
+ 2708      0D690091 
+ 2708      50E925D3 
+ 2708      8589
+ 2709 06fd 5DBD5A24 		.ascii	"]\275Z$\322\346\006\017A\243\015Ql\311\336&3{\325\""
+ 2709      D2E6060F 
+ 2709      41A30D51 
+ 2709      6CC9DE26 
+ 2709      337BD522 
+ 2710 0711 7BE26C5C 		.ascii	"{\342l\\k\373\220\3361\270\000\352\306\325\021\275\032"
+ 2710      6BFB90DE 
+ 2710      31B800EA 
+ 2710      C6D511BD 
+ 2710      1A
+ 2711 0722 C32CADB9 		.ascii	"\303,\255\271\377\347\352\375\213m:\262e\234y\252z\340"
+ 2711      FFE7EAFD 
+ 2711      8B6D3AB2 
+ 2711      659C79AA 
+ 2711      7AE0
+ARM GAS  C:\Users\Utente\AppData\Local\Temp\cc5VhcGM.s 			page 69
+
+
+ 2712 0734 C11136C5 		.ascii	"\301\0216\305+\333^\364\017{\316\245\271\371\257\362"
+ 2712      2BDB5EF4 
+ 2712      0F7BCEA5 
+ 2712      B9F9AFF2 
+ 2713 0744 27A3E6C6 		.ascii	"'\243\346\306\240_\237o|\264\304]9\360C\222\371\355"
+ 2713      A05F9F6F 
+ 2713      7CB4C45D 
+ 2713      39F04392 
+ 2713      F9ED
+ 2714 0756 D3C3D501 		.ascii	"\323\303\325\001\240\257\210\014\314\244\253\312A\326"
+ 2714      A0AF880C 
+ 2714      CCA4ABCA 
+ 2714      41D6
+ 2715 0764 2A93311B 		.ascii	"*\2231\033\375\214(9p\006\370x\3435\314V\017\007\011"
+ 2715      FD8C2839 
+ 2715      7006F878 
+ 2715      E335CC56 
+ 2715      0F0709
+ 2716 0777 49CD4B30 		.ascii	"I\315K0;\022\007)\216\257i\355\2173\024\237\356Ay\365"
+ 2716      3B120729 
+ 2716      8EAF69ED 
+ 2716      8F33149F 
+ 2716      EE4179F5 
+ 2717 078b 3F42ADB1 		.ascii	"?B\255\261P&\240\252\374\002|\242\316\340YbFkM\217\251"
+ 2717      5026A0AA 
+ 2717      FC027CA2 
+ 2717      CEE05962 
+ 2717      466B4D8F 
+ 2718 07a0 7C7DCDAA 		.ascii	"|}\315\252W\225o\345F\331k\315\262o\263\224\375\\\374"
+ 2718      57956FE5 
+ 2718      46D96BCD 
+ 2718      B26FB394 
+ 2718      FD5CFC
+ 2719 07b3 7DCD324C 		.ascii	"}\3152Ll\273\331cu\226\036\353\213\227\256&4F\277\275"
+ 2719      6CBBD963 
+ 2719      75961EEB 
+ 2719      8B97AE26 
+ 2719      3446BFBD 
+ 2720 07c7 864449D1 		.ascii	"\206DI\321!+\341\300\005"
+ 2720      212BE1C0 
+ 2720      05
+ 2721 07d0 9EC1A13B 		.ascii	"\236\301\241;\016\252\002f\307_\371\023\200?\256\371"
+ 2721      0EAA0266 
+ 2721      C75FF913 
+ 2721      803FAEF9 
+ 2722 07e0 F520F863 		.ascii	"\365 \370c9}?Bc\364\373\221\261\234'\262\027=\261,\270"
+ 2722      397D3F42 
+ 2722      63F4FB91 
+ 2722      B19C27B2 
+ 2722      173DB12C 
+ 2723 07f5 24F85CE9 		.ascii	"$\370\\\351\213/\004\013\026\225\025\024//)\314\313"
+ 2723      8B2F040B 
+ 2723      16951514 
+ 2723      2F2F29CC 
+ 2723      CB
+ 2724 0806 0FFCEAC5 		.ascii	"\017\374\352\305\222@\361\242g\213\013\226\006JK\013"
+ 2724      9240F1A2 
+ARM GAS  C:\Users\Utente\AppData\Local\Temp\cc5VhcGM.s 			page 70
+
+
+ 2724      678B0B96 
+ 2724      064A4B0B 
+ 2725 0816 D268F3BB 		.ascii	"\322h\363\273\202\225\005\245\005\305A\261\016\346\255"
+ 2725      829505A5 
+ 2725      05C541B1 
+ 2725      0EE6AD
+ 2726 0825 08B0D4F4 		.ascii	"\010\260\324\364t?\375\347\013\361\202\222\331\031\031"
+ 2726      743FFDE7 
+ 2726      0BF18292 
+ 2726      D91919
+ 2727 0834 19FE8212 		.ascii	"\031\376\202\022\372_\021\\\342/)\316'\306\312\300\312"
+ 2727      FA5F115C 
+ 2727      E22F29CE 
+ 2727      27C6CAC0 
+ 2727      CA
+ 2728 0845 6581BCC2 		.ascii	"e\201\274\302\222\364|f\023\213\302\221VZ\372c\201Y"
+ 2728      92F47C66 
+ 2728      138BC291 
+ 2728      565AFA63 
+ 2728      8159
+ 2729 0857 59F9731E 		.ascii	"Y\371s\036\0130\255$\370\373\200-oEp\351om\205yK\003"
+ 2729      0B30AD24 
+ 2729      F8FB802D 
+ 2729      6F4570E9 
+ 2729      6F6D8579 
+ 2730 086d 2598B7AC 		.ascii	"%\230\267\254\220\323\177Q\241\276D\022\370\257\013"
+ 2730      90D37F51 
+ 2730      A1BE4412 
+ 2730      F8AF0B
+ 2731 087c FF0BB962 		.ascii	"\377\013\271b\245\017"
+ 2731      A50F
+ 2732              		.text
+ 2733              		.section	.gnu.lto_chHeapFree.339.7155281a,"e",%progbits
+ 2734 0000 789C6D55 		.ascii	"x\234mU}lTE\020\237\331\271\273\336gir\345(\245\300"
+ 2734      7D6C5445 
+ 2734      109FD9B9 
+ 2734      BBDE6769 
+ 2734      72E528A5 
+ 2735 0015 B5E5B340 		.ascii	"\265\345\263@k%(Q\243D\3762!\021%F\215(9\352\005Nh\256"
+ 2735      6B252851 
+ 2735      A344FE32 
+ 2735      21112546 
+ 2735      8D2839EA 
+ 2736 002d B445D3F0 		.ascii	"\264E\323\360\007\257\245\224\344\210\322B\242\024j"
+ 2736      07AFA594 
+ 2736      E488D242 
+ 2736      A2146A
+ 2737 003c ABC60430 		.ascii	"\253\306\0040\306\206\226\304R\241\024\021\025S\012"
+ 2737      C68696C4 
+ 2737      52A11411 
+ 2737      15530A
+ 2738 004b 78725569 		.ascii	"xrUi$\226\320P\224\024!\"\006h\235\335w\357\275;\354"
+ 2738      2496D050 
+ 2738      94142122 
+ 2738      06689DDD 
+ 2738      77EFBD3B 
+ 2739 0060 E5F6BD9D 		.ascii	"\345\366\275\235\235\331\337\314\374fv_\211\023`\027"
+ARM GAS  C:\Users\Utente\AppData\Local\Temp\cc5VhcGM.s 			page 71
+
+
+ 2739      9DD9DFCC 
+ 2739      FC66765F 
+ 2739      89136017 
+ 2740 0070 005CE181 		.ascii	"\000\\\341\201>\300\335M1\001\232\246-\313\020\270\247"
+ 2740      3EC0DD4D 
+ 2740      31019AA6 
+ 2740      2DCB10B8 
+ 2740      A7
+ 2741 0081 C9AD6624 		.ascii	"\311\255f$\2667\355\024x\022\207\373\232\375\266\372"
+ 2741      B637ED14 
+ 2741      781287FB 
+ 2741      9AFDB6FA 
+ 2742 0091 A6CC7D9D 		.ascii	"\246\314}\235\303\013m6^\365\260>h\333\3378\204jb\027"
+ 2742      C30B6D36 
+ 2742      5EF5B03E 
+ 2742      68DBDF38 
+ 2742      846A6217 
+ 2743 00a5 3B9A3C03 		.ascii	";\232<\003\337}M\266\206\246\314C]\307\237\2629\314"
+ 2743      DF7D4DB6 
+ 2743      86A6CC43 
+ 2743      5DC79FB2 
+ 2743      39CC
+ 2744 00b7 1569A496 		.ascii	"\025i\244\2262\304\336\306\016\035\252\231\327\024\226"
+ 2744      32C4DEC6 
+ 2744      0E1DAA99 
+ 2744      D71496
+ 2745 00c6 139B777F 		.ascii	"\023\233w\177\222\257\373u\211}\215\035\371\206\267"
+ 2745      92AFFB75 
+ 2745      897D8D1D 
+ 2745      F986B7
+ 2746 00d5 16C3C48D 		.ascii	"\026\303\304\215-\246\211\007\367\034\216\235;W\304"
+ 2746      2DA68907 
+ 2746      F71C8E9D 
+ 2746      3B57C4
+ 2747 00e4 464AF662 		.ascii	"FJ\366bmS\354\362\257\016% l\025d\263;2\234.\267\307"
+ 2747      6D53ECF2 
+ 2747      AF0E2520 
+ 2747      6C1564B3 
+ 2747      3B329C2E 
+ 2748 00fa 8B2C80F5 		.ascii	"\213,\200\365\373\230J\330\350\356\351\266\263gP;\330"
+ 2748      FB984AD8 
+ 2748      E8EEE9B6 
+ 2748      B367503B 
+ 2748      D8
+ 2749 010b 8BD701B6 		.ascii	"\213\327\001\266\352\032;:\374h\343\347d\014\332\321"
+ 2749      EA1A3B3A 
+ 2749      FC68E3E7 
+ 2749      640CDAD1 
+ 2750 011b B90116F5 		.ascii	"\271\001\026\365j\332\371\366.Ms\301\010t\343\326\243"
+ 2750      6ADAF9F6 
+ 2750      2E4D73C1 
+ 2750      0874E3D6 
+ 2750      A3
+ 2751 012c D8850002 		.ascii	"\330\205\000\002\313\267\371\245\265\263\036\371\271"
+ 2751      CBB7F9A5 
+ 2751      B5B31EF9 
+ 2751      B9
+ARM GAS  C:\Users\Utente\AppData\Local\Temp\cc5VhcGM.s 			page 72
+
+
+ 2752 0139 808D6E9E 		.ascii	"\200\215n\236;\023\313l\254un9f\030\001\224\177\352"
+ 2752      3B13CB6C 
+ 2752      AC756E39 
+ 2752      66180194 
+ 2752      7FEA
+ 2753 014b 67939869 		.ascii	"g\223\230i\322?\262S\232\324\364\244\2304K\223w\015"
+ 2753      D23FB253 
+ 2753      9AD4F4A4 
+ 2753      98344B93 
+ 2753      770D
+ 2754 015d 93F39F49 		.ascii	"\223\363\237IW\301\232\336\024\213\367\374\0368\211"
+ 2754      57C19ADE 
+ 2754      148BF7FC 
+ 2754      1E3889
+ 2755 016c 27F038AA 		.ascii	"'\3608\252(y\221\260\027\261\007\361\030\266\377h\357"
+ 2755      287991B0 
+ 2755      17B107F1 
+ 2755      18B6FF68 
+ 2755      EF
+ 2756 017d D5EE8FEF 		.ascii	"\325\356\217\357\322\264\321\025\335-\177\270\027\020"
+ 2756      D2B4D115 
+ 2756      DD2D7FB8 
+ 2756      1710
+ 2757 018b B0CE05C2 		.ascii	"\260\316\005\302\346\346\341\341\341\005a\367\311\305"
+ 2757      E6E6E1E1 
+ 2757      E10561F7 
+ 2757      C9C5
+ 2758 0199 2CF9F023 		.ascii	",\371\360#vc6\360\346\000\360\366)r-\007\004M\345\221"
+ 2758      766336F0 
+ 2758      E600F0F6 
+ 2758      29722D07 
+ 2758      044DE591 
+ 2759 01ad CBD6D340 		.ascii	"\313\326\323@8\362xLgy\006\217\231\274\026\344\221\317"
+ 2759      38F2784C 
+ 2759      6779068F 
+ 2759      99BC16E4 
+ 2759      91CF
+ 2760 01bf A380E542 		.ascii	"\243\200\345B~\317b\375l\036sX\236\313\362<\036\363"
+ 2760      7ECF62FD 
+ 2760      6C1E7358 
+ 2760      9ECBF23C 
+ 2760      1EF3
+ 2761 01d1 79148124 		.ascii	"y\024\201$\271\225\340\213{}\205\250\365\002\264\221"
+ 2761      B995E08B 
+ 2761      7B7D85A8 
+ 2761      F502B491 
+ 2762 01e1 50F35A9E 		.ascii	"P\363Z\236\377#\264\241\026\277z\265\352\257\016\365"
+ 2762      FF23B4A1 
+ 2762      16BF7AB5 
+ 2762      EAAF0EF5 
+ 2763 01f1 2A301F43 		.ascii	"*0\037C]~\270'\266\035iXB\331\344\347:\334\035\037\037"
+ 2763      5D7EB827 
+ 2763      B61D6958 
+ 2763      42D9E4E7 
+ 2763      3ADC1D1F 
+ 2764 0206 9FC49ABA 		.ascii	"\237\304\232\272 \307K\331\312\346x\034\331\250\256"
+ 2764      20C74BD9 
+ARM GAS  C:\Users\Utente\AppData\Local\Temp\cc5VhcGM.s 			page 73
+
+
+ 2764      CAE6781C 
+ 2764      D9A8AE
+ 2765 0215 67C44B01 		.ascii	"g\304K\001.S\215nd\307\317e\017\\\363mz\345\033I\345"
+ 2765      2E538D6E 
+ 2765      64C7CF65 
+ 2765      0F5CF36D 
+ 2765      7AE51B49 
+ 2766 022a 632C38A3 		.ascii	"c,8\243\247\261\034@M\267|\213\033@\306P\367\321bN\233"
+ 2766      A7B11C40 
+ 2766      4DB77C8B 
+ 2766      1B40C650 
+ 2766      F7D1624E 
+ 2767 023f 020AEB84 		.ascii	"\002\012\353\204\216\365~l\011\371\030k\213\334\251"
+ 2767      8EF57E6C 
+ 2767      09F9186B 
+ 2767      8BDCA9
+ 2768 024e 700E4E8A 		.ascii	"p\016N\212\274\370\275\211\263\351\014\256\003\210)"
+ 2768      BCF8BD89 
+ 2768      B3E90CAE 
+ 2768      038829
+ 2769 025d 85B7E607 		.ascii	"\205\267\346\007\324q|\314\034\371\024\316E#\246lr%"
+ 2769      D4717CCC 
+ 2769      1CF914CE 
+ 2769      4523A66C 
+ 2769      7225
+ 2770 026f 119C6981 		.ascii	"\021\234i\201\364\231\201\204\317b\031\007\302i\266"
+ 2770      F4998184 
+ 2770      CF621907 
+ 2770      C269B6
+ 2771 027e 3620B9C9 		.ascii	"6 \271\311\345\270\004\230!\345\261\206\313\375\011"
+ 2771      E5B80498 
+ 2771      21E5B186 
+ 2771      CBFD09
+ 2772 028d 240FB971 		.ascii	"$\017\271q\221D\273\025\033\350\177\332\310\013S\341"
+ 2772      9144BB15 
+ 2772      1BE87FDA 
+ 2772      C80B53E1 
+ 2773 029d 42E7718D 		.ascii	"B\347q\215\001w\001_\347v\360\2500\006\375z6H^#\212"
+ 2773      0177015F 
+ 2773      E776F0A8 
+ 2773      3006FD7A 
+ 2773      36485E23 
+ 2774 02b2 D4345E8B 		.ascii	"\3244^\213\343\253\3114\234\233\177\342,\036\210\372"
+ 2774      E3ABC934 
+ 2774      9C9B7FE2 
+ 2774      2C1E88FA 
+ 2775 02c2 20CBE2E5 		.ascii	" \313\342\345\227\030\302+\002 \013F\254\326l\262b\031"
+ 2775      9718C22B 
+ 2775      02200B46 
+ 2775      ACD66CB2 
+ 2775      6219
+ 2776 02d4 9CE532D9 		.ascii	"\234\3452\331\037\224\245\340o\256\342\203\246f\267"
+ 2776      1F94A5E0 
+ 2776      6FAEE283 
+ 2776      A666B7
+ 2777 02e3 E3E2A1CA 		.ascii	"\343\342\241\312\335\361\303\035Q?rj-\371\330\232\177"
+ 2777      DDF1C31D 
+ARM GAS  C:\Users\Utente\AppData\Local\Temp\cc5VhcGM.s 			page 74
+
+
+ 2777      513F726A 
+ 2777      2DF9D89A 
+ 2777      7F
+ 2778 02f4 3B288BC8 		.ascii	";(\213\310\223\350d\212\304\330\376\251\014l\273\320"
+ 2778      93E8648A 
+ 2778      C4D8FEA9 
+ 2778      0C6CBBD0 
+ 2779 0304 DC392C24 		.ascii	"\3349,$\260`\323\301S\243\007\236c\233lu\352\332\310"
+ 2779      B060D3C1 
+ 2779      53A3079E 
+ 2779      639B6C75 
+ 2779      EADAC8
+ 2780 0317 CEA7BB4F 		.ascii	"\316\247\273OiI2yt\354\010Q\216\252/\230\214\2761`Q"
+ 2780      69493279 
+ 2780      74EC0851 
+ 2780      8EAA2F98 
+ 2780      8CBE3160 
+ 2781 032c F0B34941 		.ascii	"\360\263IA\315/\370\002C(\367\243\007\326P\016&0\011"
+ 2781      CD2FF802 
+ 2781      4328F7A3 
+ 2781      07D6500E 
+ 2781      263009
+ 2782 033f EA38D673 		.ascii	"\3528\326s\242[\201\202ry\373\3003\334Y9ImF{jk>\210"
+ 2782      A25B8182 
+ 2782      7279FBC0 
+ 2782      33DC5939 
+ 2782      496D467B 
+ 2783 0357 93CEFA45 		.ascii	"\223\316\372Ea\220Ni\244_\262<\016J\217|d\344\2761E"
+ 2783      61904E69 
+ 2783      A45FB23C 
+ 2783      0E4A8F7C 
+ 2783      64E4BE31 
+ 2784 036c FADE4393 		.ascii	"\372\336C\223\255]+S\342\374\315\332uY\355\322\273x"
+ 2784      AD5D2B53 
+ 2784      E2FCCDDA 
+ 2784      7559EDD2 
+ 2784      BB78
+ 2785 037e 77406F18 		.ascii	"w@o\030\037\345N\3240\241\337\255\012\017\311\012\033"
+ 2785      1FE54ED4 
+ 2785      30A1DFAD 
+ 2785      0A0FC90A 
+ 2785      1B
+ 2786 038f 0D338D72 		.ascii	"\0153\215r\261T\012\035,\344\3214>$N\375\314 M\347\334"
+ 2786      B1540A1D 
+ 2786      2CE4D134 
+ 2786      3E244EFD 
+ 2786      CC204DE7 
+ 2787 03a4 F214ECA1 		.ascii	"\362\024\354\241\3514cB\330\253V4\303\026ko\361\326"
+ 2787      E9346342 
+ 2787      D8AB5634 
+ 2787      C3166B6F 
+ 2787      F1D6
+ 2788 03b6 197AD1A6 		.ascii	"\031z\321\246P\226\335\006\224\345\340\371T&\322\336"
+ 2788      5096DD06 
+ 2788      94E5E0F9 
+ 2788      5426D2DE 
+ 2789 03c6 DF76C3C9 		.ascii	"\337v\303\311e\247\034\207`\312\234Gv\016\270M\312>"
+ARM GAS  C:\Users\Utente\AppData\Local\Temp\cc5VhcGM.s 			page 75
+
+
+ 2789      65A71C87 
+ 2789      60CA9C47 
+ 2789      760EB84D 
+ 2789      CA3E
+ 2790 03d8 48787577 		.ascii	"Hxuwy4\323t\367lJ\362\327\254,F\254,n\010\012R.\337"
+ 2790      7934D374 
+ 2790      F76C4AF2 
+ 2790      D7AC2C46 
+ 2790      AC2C6E08 
+ 2791 03f0 2CC99CF2 		.ascii	",\311\234\362)\350\010#\352\354\343\303qC\350O\205\002"
+ 2791      29E80823 
+ 2791      EAECE3C3 
+ 2791      7143E84F 
+ 2791      8502
+ 2792 0402 E11BAAD5 		.ascii	"\341\033\252\325\363\225\353f\303\365\024*\230\320\365"
+ 2792      F395EB66 
+ 2792      C3F5142A 
+ 2792      98D0F5
+ 2793 0411 A895E94D 		.ascii	"\250\225\351M\225\251B\277j\326\326\233\306\313-\313"
+ 2793      95A942BF 
+ 2793      6AD6D69B 
+ 2793      C6CB2DCB 
+ 2794 0421 FAB6AA52 		.ascii	"\372\266\252R\201\352\020WZ\207|\230 \335g&\025\232"
+ 2794      81EA1057 
+ 2794      5A877C98 
+ 2794      20DD6726 
+ 2794      159A
+ 2795 0433 3E536BFD 		.ascii	">Sk\375\267\225\356\235\324\242\315\242B\253h\263i\026"
+ 2795      B795EE9D 
+ 2795      D4A2CDA2 
+ 2795      42AB68B3 
+ 2795      6916
+ 2796 0445 5E41A366 		.ascii	"^A\243fs\230\361\331F\025\262iN\2625\335i<\037\266x"
+ 2796      7398F1D9 
+ 2796      4615B269 
+ 2796      4EB235DD 
+ 2796      693C1FB6 
+ 2797 045a 9E3B6159 		.ascii	"\236;aY\357Z\216\377M\343y\036\025\362\015\235\014c"
+ 2797      EF5A8EFF 
+ 2797      4DE3791E 
+ 2797      15F20D9D 
+ 2797      0C63
+ 2798 046c 3ECDC3EB 		.ascii	">\315\303\353\377\2439\231\000\204\356%i\276\257h\236"
+ 2798      FFA33999 
+ 2798      0084EE25 
+ 2798      69BEAF68 
+ 2798      9E
+ 2799 047d AF3C775A 		.ascii	"\257<wZ4\027M\350y\314\"n|b\232S\011\252\025\246u\235"
+ 2799      34174DE8 
+ 2799      79CC226E 
+ 2799      7C629A53 
+ 2799      09AA15A6 
+ 2800 0493 903417A9 		.ascii	"\2204\027\251l=\361\372\316A2\323\375*!t\247^\"\343"
+ 2800      6C3DF1FA 
+ 2800      CE4132D3 
+ 2800      FD2A2174 
+ 2800      A75E22E3 
+ARM GAS  C:\Users\Utente\AppData\Local\Temp\cc5VhcGM.s 			page 76
+
+
+ 2801 04a7 3EF6A51D 		.ascii	">\366\245\035\376z\013g\273\304Q\367q\251\274\251H!"
+ 2801      FE7A0B67 
+ 2801      BBC451F7 
+ 2801      71A9BCA9 
+ 2801      4821
+ 2802 04b9 FC15F72A 		.ascii	"\374\025\367*`oZ\375\276L\350\3328\337\017\346\325\367"
+ 2802      606F5AFD 
+ 2802      BE4CE8DA 
+ 2802      38DF0FE6 
+ 2802      D5F7
+ 2803 04cb 7CF2EA93 		.ascii	"|\362\352\223\212D\000\306\371[\243j\320J\330n|\305"
+ 2803      8A4400C6 
+ 2803      F95BA36A 
+ 2803      D04AD86E 
+ 2803      7CC5
+ 2804 04dd 009E5CFE 		.ascii	"\000\236\\\376\304\352\345\353#k#\253\2527\277\031\211"
+ 2804      C4EAE5EB 
+ 2804      236B23AB 
+ 2804      AA37BF19 
+ 2804      89
+ 2805 04ee AE7E275A 		.ascii	"\256~'Z\271\241\252\"T\026^\263\271*\\\271zeet]\270"
+ 2805      B9A1AA22 
+ 2805      54165EB3 
+ 2805      B92A5CB9 
+ 2805      7A656574 
+ 2806 0504 BA3ABA88 		.ascii	"\272:\272\210\205\267\243\345\321\352heD\316#\241\215"
+ 2806      85B7A3E5 
+ 2806      D1EA6865 
+ 2806      44CE23A1 
+ 2806      8D
+ 2807 0515 6158585C 		.ascii	"aXX\\\\\302\3772\271=Z\365hiiiI\264\212\377\033#kK\252"
+ 2807      5CC2FF32 
+ 2807      B93D5AF5 
+ 2807      68696969 
+ 2807      49B48AFF 
+ 2808 052e 2ACB5851 		.ascii	"*\313XQ\036._\037\016UT\025\227\001V\004R\345\342\245"
+ 2808      1E2E5F1F 
+ 2808      0E555415 
+ 2808      97015604 
+ 2808      52E5E2A5 
+ 2809 0542 E1471E2F 		.ascii	"\341G\036/[\2744\014v\271R!\326W\210M\025\377\001\275"
+ 2809      5BBC340C 
+ 2809      76B95221 
+ 2809      D657884D 
+ 2809      15FF01BD 
+ 2810 0556 A3F12F   		.ascii	"\243\361/"
+ 2811              		.text
+ 2812              		.section	.gnu.lto_chHeapStatus.340.7155281a,"e",%progbits
+ 2813 0000 789C5554 		.ascii	"x\234UT\355oSe\024?\3479\367\336\276\261\272u\201m\305"
+ 2813      ED6F5365 
+ 2813      143FE739 
+ 2813      F7DEBEB1 
+ 2813      BA75816D 
+ 2814 0015 0F237EF0 		.ascii	"\017#~\360\203\260\211\006\231\372\205\204\177\300D"
+ 2814      83B08906 
+ 2814      99FA8584 
+ 2814      7FC044
+ARM GAS  C:\Users\Utente\AppData\Local\Temp\cc5VhcGM.s 			page 77
+
+
+ 2815 0024 8D126748 		.ascii	"\215\022gH\251\0154\333h\273vN\262\220^\266AI\227\270"
+ 2815      A90D34DB 
+ 2815      68BB764E 
+ 2815      B2905EB6 
+ 2815      414997B8 
+ 2816 0038 15CDE4C5 		.ascii	"\025\315\344\305m\300\00732\2432\007.l\314\312x\221"
+ 2816      6DC00733 
+ 2816      32A33207 
+ 2816      2E6CCCCA 
+ 2816      7891
+ 2817 004a 39909740 		.ascii	"9\220\227@qD\220\251\004$\310$q\032\220\340y\236\333"
+ 2817      714490A9 
+ 2817      0424C824 
+ 2817      711A90E0 
+ 2817      799EDB
+ 2818 005d 5DBAE6F6 		.ascii	"]\272\346\366>\347\236\363;\277\337s\316s\356\375M\007"
+ 2818      3EE79EF3 
+ 2818      3BBFDF73 
+ 2818      CE73EEFD 
+ 2818      4D07
+ 2819 006f F80A002E 		.ascii	"\370\012\000.\360\037\027\000\356\310\244\005\230\246"
+ 2819      F01F1700 
+ 2819      EEC8A405 
+ 2819      98A6
+ 2820 007d B9CA2144 		.ascii	"\271\312!D[\246C\340)\2749\271\253Tk\317xw\177}s\251"
+ 2820      5BA643E0 
+ 2820      29BC39B9 
+ 2820      AB546BCF 
+ 2820      78777F7D 
+ 2821 0093 46F8B18D 		.ascii	"F\370\261\215\320\260;\223\316]\033\324\030\244\034"
+ 2821      D0B03B93 
+ 2821      CE5D1BD4 
+ 2821      18A41C
+ 2822 00a2 3A761F2C 		.ascii	":v\037,\266b\206\330je_\230yP\243\2452\336/:\267:4\207"
+ 2822      B66286D8 
+ 2822      6A655F98 
+ 2822      7950A3A5 
+ 2822      32DE2F3A 
+ 2823 00ba D8D93588 		.ascii	"\330\3315\210\212hW\327\264\305\354\304];\366/\261\262"
+ 2823      8A6857D7 
+ 2823      B4C5ECC4 
+ 2823      5D3BF62F 
+ 2823      B1B2
+ 2824 00cc 5C6277D7 		.ascii	"\\bw\327\340\022\316R\220=s\0207\356\261!\036\334\302"
+ 2824      E012CE52 
+ 2824      903D7310 
+ 2824      37EEB121 
+ 2824      1EDCC2
+ 2825 00df A2B7876C 		.ascii	"\242\267\207lQ\204\244 M7\034N\227\333\203Ia\300\223"
+ 2825      5184A420 
+ 2825      4D371C4E 
+ 2825      97DB8349 
+ 2825      61C093
+ 2826 00f2 DF3ED2D1 		.ascii	"\337>\322\321(E\215\357\013\261\262:k\232\377\236\350"
+ 2826      28458DEF 
+ 2826      0BB1B23A 
+ 2826      6B9AFF9E 
+ARM GAS  C:\Users\Utente\AppData\Local\Temp\cc5VhcGM.s 			page 78
+
+
+ 2826      E8
+ 2827 0103 3BD3617C 		.ascii	";\323a|\332\237\325\222\260y\030\277A\011\323\321Y\007"
+ 2827      DA9FD592 
+ 2827      B07918BF 
+ 2827      4109D3D1 
+ 2827      5907
+ 2828 0115 CB387A6E 		.ascii	"\3138znr\3304]\320r\004\3631!b\237\3708\274\035\255"
+ 2828      72D8345D 
+ 2828      D07204F3 
+ 2828      3121629F 
+ 2828      F838BC1D 
+ 2829 012a F81D15DF 		.ascii	"\370\035\025\3374j\307)\266O\306;\363\361\216\266\224"
+ 2829      346AC729 
+ 2829      B64FC63B 
+ 2829      F3F18EB6 
+ 2829      94
+ 2830 013b 59AC6D1A 		.ascii	"Y\254m\032+\210\017\370\224\300N\344\373s\214\231\371"
+ 2830      2B880FF8 
+ 2830      94C04EE4 
+ 2830      FB738C99 
+ 2830      F9
+ 2831 014c 71A0C3DB 		.ascii	"q\240\303\333\265\305\231\314\242\275\201\330eI\322"
+ 2831      B5C599CC 
+ 2831      A2BD81D8 
+ 2831      6549D2
+ 2832 015b 370739D7 		.ascii	"7\0079\327#e*\223\307\012\020\023\022\361\231\215\330"
+ 2832      23652A93 
+ 2832      C70A1013 
+ 2832      12F1998D 
+ 2832      D8
+ 2833 016c 6D218E17 		.ascii	"m!\216\027 \262\022\321o\313\234\375!-e\232O\026@\016"
+ 2833      20B212D1 
+ 2833      6FCB9CFD 
+ 2833      212D659A 
+ 2833      4F16400E 
+ 2834 0180 F93C700A 		.ascii	"\371<p\012O\3408~\207\260\231O\2343\006\354\214;\035"
+ 2834      4FE0387E 
+ 2834      87B0994F 
+ 2834      9C3306EC 
+ 2834      8C3B1D
+ 2835 0193 29B5B1D3 		.ascii	")\265\261\323\005\031\277r\306\004\302\367\010\261i"
+ 2835      0519BF72 
+ 2835      C604C2F7 
+ 2835      08B169
+ 2836 01a2 1FCA4A4E 		.ascii	"\037\312JN\"\036G<\206\230E<\215_^\320\263\346\177\217"
+ 2836      221E473C 
+ 2836      8698453C 
+ 2836      8D5F5ED0 
+ 2836      B3E67F8F 
+ 2837 01b6 3B4DF35E 		.ascii	";M\363^m\317\370\275!|\032A\350\002\030@ 4\015\204\241"
+ 2837      6DCFF8BD 
+ 2837      217C1A41 
+ 2837      E8021840 
+ 2837      20340D84 
+ 2838 01cb F3DF004E 		.ascii	"\363\337\000Nr\000\036A'0\203K>\272%\310\003\314\343"
+ 2838      72001E41 
+ 2838      2730834B 
+ARM GAS  C:\Users\Utente\AppData\Local\Temp\cc5VhcGM.s 			page 79
+
+
+ 2838      3EBA25C8 
+ 2838      03CCE3
+ 2839 01de 450E9430 		.ascii	"E\016\2240\314'\203\245\210\243\270\020q\014\313\201"
+ 2839      CC2783A5 
+ 2839      88A3B810 
+ 2839      710CCB81 
+ 2840 01ee 152A24D6 		.ascii	"\025*$\326/\261\213%\026\240\227`\346A\177\015\232Y"
+ 2840      2FB18B25 
+ 2840      16A09760 
+ 2840      E6417F0D 
+ 2840      9A59
+ 2841 0200 803E12CA 		.ascii	"\200>\022\312\336\302\366?\302\234\356\311\241Z{\313"
+ 2841      DEC2F63F 
+ 2841      C29CEEC9 
+ 2841      A15A7BCB 
+ 2842 0210 D4325806 		.ascii	"\3242X\006\263\242\375\366\270\237\274F\013Z3\321G\264"
+ 2842      B3A2FDF6 
+ 2842      B89FBC46 
+ 2842      0B5A33D1 
+ 2842      47B4
+ 2843 0222 FDCAFD62 		.ascii	"\375\312\375b;\345PN\360\332\272w%\357A\3074\212\226"
+ 2843      3BE5504E 
+ 2843      F0DABA77 
+ 2843      25EF41C7 
+ 2843      348A96
+ 2844 0235 1857F939 		.ascii	"\030W\3719B\344\014N\"\244\261\3254oy[\316\242\225\254"
+ 2844      42E40C4E 
+ 2844      22A4B1D5 
+ 2844      346F795B 
+ 2844      CEA295AC 
+ 2845 0249 15E8B5AE 		.ascii	"\025\350\265\256\222\025\221C\361\214\344\\<\222\360"
+ 2845      92159143 
+ 2845      F18CE45C 
+ 2845      3C92F0
+ 2846 0258 50B476A7 		.ascii	"P\264v\247\221PR\360|:#\321I\331\340\227\244\335p\016"
+ 2846      915052F0 
+ 2846      7C3A23D1 
+ 2846      49D9E097 
+ 2846      A4DD700E 
+ 2847 026c EB8019A5 		.ascii	"\353\200\031\245\335t\236\011\037\211\366J~\026\341"
+ 2847      DD749E09 
+ 2847      1F89F64A 
+ 2847      7E16E1
+ 2848 027b F50084A2 		.ascii	"\365\000\204\242H\021\215\226\251\375\254\340\212\215"
+ 2848      48118D96 
+ 2848      A9FDACE0 
+ 2848      8A8D
+ 2849 0289 AB80D62E 		.ascii	"\253\200\326.\277U\205I/\267\375\242U\344\371\274\317"
+ 2849      BF558549 
+ 2849      2FB7FDA2 
+ 2849      55E4F9BC 
+ 2849      CF
+ 2850 029a 230F24EF 		.ascii	"#\017$\357\273\230\313oa\005\371\362[\350\177\252p\017"
+ 2850      BB98CB6F 
+ 2850      6105F9F2 
+ 2850      5BE87FAA 
+ 2850      700F
+ARM GAS  C:\Users\Utente\AppData\Local\Temp\cc5VhcGM.s 			page 80
+
+
+ 2851 02ac C14B18C8 		.ascii	"\301K\030\310\357\241\177A\363eE\337\272\267\210\373"
+ 2851      EFA17F41 
+ 2851      F36545DF 
+ 2851      BAB788FB 
+ 2852 02bc 4E3EC570 		.ascii	"N>\305p\211\031 E\016\362\012\315\252~\370\356%\342"
+ 2852      89192045 
+ 2852      0EF20ACD 
+ 2852      AA7EF8EE 
+ 2852      25E2
+ 2853 02ce A6D09167 		.ascii	"\246\320\221gd\201}\244g\266\346N\221\335\300\\\316"
+ 2853      64817DA4 
+ 2853      67B6E64E 
+ 2853      91DDC05C 
+ 2853      CE
+ 2854 02df 8D134A75 		.ascii	"\215\023Ju\354\200\227\312\371]kF\230\323^\024\374\340"
+ 2854      EC8097CA 
+ 2854      F95D6B46 
+ 2854      98D35E14 
+ 2854      FCE0
+ 2855 02f1 275B7BED 		.ascii	"'[{\355\024\276\013\240\314\344U|\007,\355\227\371\220"
+ 2855      14BE0BA0 
+ 2855      CCE4557C 
+ 2855      072CED97 
+ 2855      F990
+ 2856 0303 A95C51FD 		.ascii	"\251\\Q\375\314g\361P\264\365n[A\025\3442\222\250\012"
+ 2856      CC67F150 
+ 2856      B4F56E5B 
+ 2856      4115E432 
+ 2856      92A80A
+ 2857 0316 ACE4FAA8 		.ascii	"\254\344\372\250B\001\256\317\001~G\362\223[\245q\234"
+ 2857      4201AECF 
+ 2857      017E47F2 
+ 2857      935BA571 
+ 2857      9C
+ 2858 0327 87CDAFE2 		.ascii	"\207\315\257\342\177Y\361\331m\002\250\204\312\311\243"
+ 2858      7F59F1D9 
+ 2858      6D02A884 
+ 2858      CAC9A3
+ 2859 0336 CECC6045 		.ascii	"\316\314`ESSd\202\373\307^ip\222[\031\314\356R\006\367"
+ 2859      53536482 
+ 2859      FBC75E69 
+ 2859      70925B19 
+ 2859      CCEE5206 
+ 2860 034b C099EF41 		.ascii	"\300\231\357A7\346\017s\354@\021\321\334a\0067\026\024"
+ 2860      37E60F73 
+ 2860      EC4011D1 
+ 2860      DC610637 
+ 2860      1614
+ 2861 035d 73CD2EA6 		.ascii	"s\315.\246\371:\256a!\036\265?\306\017#\021^Q\303\222"
+ 2861      F93AAE61 
+ 2861      211EB53F 
+ 2861      C60F2311 
+ 2861      5E51C392 
+ 2862 0371 2227A76A 		.ascii	"\"'\247j@>\255\367\350\032\346K\221\213*\330\301\207"
+ 2862      403EADF7 
+ 2862      E81AE64B 
+ 2862      918B2AD8 
+ARM GAS  C:\Users\Utente\AppData\Local\Temp\cc5VhcGM.s 			page 81
+
+
+ 2862      C187
+ 2863 0383 A57D78F4 		.ascii	"\245}x\364M\345q\223?\357\371s\344\266S\271<T\222w\315"
+ 2863      4DE57193 
+ 2863      3FEFF973 
+ 2863      E4B653B9 
+ 2863      3C549277 
+ 2864 0398 8EE856CB 		.ascii	"\216\350V\313\035\363\246<3\205\226\230\237J\215M\326"
+ 2864      1DF3A63C 
+ 2864      33859698 
+ 2864      9F4A8D4D 
+ 2864      D6
+ 2865 03a9 5CA7C8E0 		.ascii	"\\\247\310\340\216i\274\012r\033\274,&\217!\213w\336"
+ 2865      8E69BC0A 
+ 2865      721BBC2C 
+ 2865      268F218B 
+ 2865      77DE
+ 2866 03bb DA7FF859 		.ascii	"\332\177\370Y;\365\243)\267UX\333\340\266\277\371\273"
+ 2866      3BF5A329 
+ 2866      B75558DB 
+ 2866      E0B6BFF9 
+ 2866      BB
+ 2867 03cc 4982BBEC 		.ascii	"I\202\273\354\224\205\336O\337\265\252\274%\222o\337"
+ 2867      9485DE4F 
+ 2867      DFB5AABC 
+ 2867      25926FDF 
+ 2868 03dc 40204DF5 		.ascii	"@ M\365\3165Oy\317\023\345\205\370\013\346_(\367<\211"
+ 2868      CE354F79 
+ 2868      CF13E585 
+ 2868      F80BE65F 
+ 2868      28F73C89 
+ 2869 03f0 9E2961F1 		.ascii	"\236)a\361\237\340\352i1\336@\213\376\221M\377\206\244"
+ 2869      9FE0EA69 
+ 2869      31DE408B 
+ 2869      FE914DFF 
+ 2869      86A4
+ 2870 0402 D755AA67 		.ascii	"\327U\252g\036\375A\246\267\337\211\267\012\336\211"
+ 2870      1EFD41A6 
+ 2870      B7DF89B7 
+ 2870      0ADE89
+ 2871 0411 213F3C96 		.ascii	"!?<\226\323O\352\353\336Kh\177\001\000^]\375J\355\352"
+ 2871      D34FEAEB 
+ 2871      DE4B687F 
+ 2871      01005E5D 
+ 2871      FD4AEDEA 
+ 2872 0425 0DE175E1 		.ascii	"\015\341u\341\327\023M\357\205#\265\315\221\306\272"
+ 2872      D7134DEF 
+ 2872      8523B5CD 
+ 2872      91C6BA
+ 2873 0434 7834100C 		.ascii	"x4\020\014\255m\212\207\032k_k\214\254\017%\022\221"
+ 2873      AD6D8A87 
+ 2873      1A6B5F6B 
+ 2873      8CAC0F25 
+ 2873      1291
+ 2874 0446 65FCF07E 		.ascii	"e\374\360~\244!\222\2104\206\245\035\016\324\207`iU"
+ 2874      A4219288 
+ 2874      3486A51D 
+ 2874      0ED48760 
+ARM GAS  C:\Users\Utente\AppData\Local\Temp\cc5VhcGM.s 			page 82
+
+
+ 2874      6955
+ 2875 0458 55355F41 		.ascii	"U5_A\231\036\211\277\260|\371\362\352H\234\257\372\360"
+ 2875      991E89BF 
+ 2875      B07CF9F2 
+ 2875      EA489CAF 
+ 2875      FAF0
+ 2876 046a BAEA7863 		.ascii	"\272\352xc\220\003\015\241\206\015\241@4^\025\004]\032"
+ 2876      90030DA1 
+ 2876      860DA140 
+ 2876      345E1504 
+ 2876      5D1A
+ 2877 047c D14585BE 		.ascii	"\321E\205\276\252\232\320\363+\203/\326\204\300HD\022"
+ 2877      AA9AD0F3 
+ 2877      2B832FD6 
+ 2877      84C04844 
+ 2877      12
+ 2878 048d 81FAA8B3 		.ascii	"\201\372\250\263>\320\270>\024OD\215\372h\200\015#\241"
+ 2878      3ED0B83E 
+ 2878      144F448D 
+ 2878      FA68800D 
+ 2878      23A1
+ 2879 049f 16DC2862 		.ascii	"\026\334(bQ]\231\377\003N2K3"
+ 2879      515D99FF 
+ 2879      034E324B 
+ 2879      33
+ 2880              		.text
+ 2881              		.section	.gnu.lto_.symbol_nodes.7155281a,"e",%progbits
+ 2882 0000 789C8B62 		.ascii	"x\234\213bd```\272\300T/\324\000\004,\214\023\31610"
+ 2882      64606060 
+ 2882      BAC0542F 
+ 2882      D400042C 
+ 2882      8C13CE31 
+ 2883 0015 D43330EC 		.ascii	"\32430\354jh\004I\260\236g\342jpb``f\274\312T\317\367"
+ 2883      6A680449 
+ 2883      B09E67E2 
+ 2883      6A706260 
+ 2883      6066BCCA 
+ 2884 002c 1F0AE4C1 		.ascii	"\037\012\344\301\252\030\030\032\0264\200u_d\252\027"
+ 2884      AA18181A 
+ 2884      16348075 
+ 2884      5F64AA17 
+ 2885 003c C6A69BE9 		.ascii	"\306\246\233\351\022S\275\310\2063\2735\321\305/3\325"
+ 2885      1253BDC8 
+ 2885      8633BB35 
+ 2885      D1C52F33 
+ 2885      D5
+ 2886 004d 8BAEFB7D 		.ascii	"\213\256\373}F\031]\374\012S\275\330\207_+,\320\304"
+ 2886      46195DFC 
+ 2886      0A53BDD8 
+ 2886      875F2B2C 
+ 2886      D0C4
+ 2887 005f 19AF31D5 		.ascii	"\031\2571\325\213cX\336\000\266\234\361&S\275\004.\271"
+ 2887      8B6358DE 
+ 2887      00B69CF1 
+ 2887      2653BD04 
+ 2887      2EB9
+ 2888 0071 1B4CF592 		.ascii	"\033L\365\2228\344\230\031\330!Nnacf\2062\227\3603\263"
+ARM GAS  C:\Users\Utente\AppData\Local\Temp\cc5VhcGM.s 			page 83
+
+
+ 2888      38E49819 
+ 2888      D8214E6E 
+ 2888      61636686 
+ 2888      3297F033 
+ 2889 0086 7082DDBB 		.ascii	"p\202\335\273\204\233\231\205\343W\337r^\306'\345@\326"
+ 2889      849B9985 
+ 2889      E357DF72 
+ 2889      5EC627E5 
+ 2889      40D6
+ 2890 0098 8EBD5364 		.ascii	"\216\275Sd\030\227\324\261\260<\333\362[\234\361k=3"
+ 2890      1897D4B1 
+ 2890      B03CDBF2 
+ 2890      5B9CF16B 
+ 2890      3D33
+ 2891 00aa 2B27D8F9 		.ascii	"+'\330\371G\270\231Y9\326\203X-\351\314l\234`\247?a"
+ 2891      47B89959 
+ 2891      39D68358 
+ 2891      2DE9CC6C 
+ 2891      9C60A73F 
+ 2892 00bf 6366E300 		.ascii	"cf\343\000\263\216\3101\000\000\262\310z\310"
+ 2892      B38EC831 
+ 2892      0000B2C8 
+ 2892      7AC8
+ 2893              		.text
+ 2894              		.section	.gnu.lto_.refs.7155281a,"e",%progbits
+ 2895 0000 789C0DC5 		.ascii	"x\234\015\305\301\015\000 \014\304\260\\T\012b\015\366"
+ 2895      C10D0020 
+ 2895      0CC4B05C 
+ 2895      540A620D 
+ 2895      F6
+ 2896 0011 DF913E2C 		.ascii	"\337\221>,?`\221\210:\327h\314!e.i\263\341\003\012)"
+ 2896      3F609188 
+ 2896      3AD768CC 
+ 2896      21652E69 
+ 2896      B3E1030A 
+ 2897 0026 006F     		.ascii	"\000o"
+ 2898              		.text
+ 2899              		.section	.gnu.lto_.decls.7155281a,"e",%progbits
+ 2900 0000 789C9D56 		.ascii	"x\234\235V{PS\331\031?\347\344\022.\004\201\370\330"
+ 2900      7B5053D9 
+ 2900      193FE7E4 
+ 2900      122E0481 
+ 2900      F8D8
+ 2901 0012 056767DC 		.ascii	"\005gg\334\231mg,[E\264[\234\366\217u\307\231m;\335"
+ 2901      996D672C 
+ 2901      5B45B45B 
+ 2901      9CF68F75 
+ 2901      C7996D3B 
+ 2902 0027 DACE58FF 		.ascii	"\332\316X\377\350\326\231\024\303U\322\005\302\206\213"
+ 2902      E8D69914 
+ 2902      C355D205 
+ 2902      C2868B
+ 2903 0036 6B3BD399 		.ascii	"k;\323\231\023\022!\242\262\011V\345U\011A\213\326W"
+ 2903      131221A2 
+ 2903      B20956E5 
+ 2903      5509418B 
+ 2903      D657
+ARM GAS  C:\Users\Utente\AppData\Local\Temp\cc5VhcGM.s 			page 84
+
+
+ 2904 0048 141544C4 		.ascii	"\024\025D\304 \021EEQ\327\027`\227\342\013|\224\307"
+ 2904      20114545 
+ 2904      51D71760 
+ 2904      97E20B7C 
+ 2904      94C7
+ 2905 005a A222A8F4 		.ascii	"\242\"\250\364;\367\236@\302\354\364\305\360%\347\234"
+ 2905      3BF79E40 
+ 2905      C2ECF4C5 
+ 2905      F025E79C 
+ 2906 006a EFFB7EBF 		.ascii	"\357\373~\277\357\367\235sO\356{:\204n\022\204(\330"
+ 2906      EFF79D73 
+ 2906      4FEE7B3A 
+ 2906      846E1284 
+ 2906      28D8
+ 2907 007c 38FC6911 		.ascii	"8\374i\021B\327\300f\203\235\001\213\304\010\351\300"
+ 2907      42D7C066 
+ 2907      839D018B 
+ 2907      C408E9C0 
+ 2908 008c A6814583 		.ascii	"\246\201E\203\305\200\245\301\372I\260O\301\036\200"
+ 2908      C580A5C1 
+ 2908      FA49B04F 
+ 2908      C11E80
+ 2909 009b E9614D04 		.ascii	"\351aM\004\323\200\371a>\003\276g\202E\201!\260x\260"
+ 2909      D380F961 
+ 2909      3E03BE67 
+ 2909      82458121 
+ 2909      B078B0
+ 2910 00ae 3960DF05 		.ascii	"9`\337\005\373\036X\"\330\"\260\017\300\222\331\030"
+ 2910      FB1E5822 
+ 2910      D822B00F 
+ 2910      C092D918 
+ 2911 00be B8DF426A 		.ascii	"\270\337Bj\034\343\321\363\\\206\027\036\204\311\260"
+ 2911      1CE3D1F3 
+ 2911      5C86171E 
+ 2911      84C9B0
+ 2912 00cd B4608330 		.ascii	"\264`\2030|\215\324z\372y-\003`\2139.\253I\3445,\004"
+ 2912      7C8DD47A 
+ 2912      FA792D03 
+ 2912      608B392E 
+ 2912      AB49E435 
+ 2913 00e3 FB90E3CF 		.ascii	"\373\220\343\317\341\370\201\372Y>\323\360[4Yo\200s"
+ 2913      E1F881FA 
+ 2913      593ED3F0 
+ 2913      5B34596F 
+ 2913      8073
+ 2914 00f5 2A573FE7 		.ascii	"*W?\347\010`\007\270\030\376\317\001\177\016R\3651\374"
+ 2914      086007B8 
+ 2914      18FECF01 
+ 2914      7F0E52F5 
+ 2914      31FC
+ 2915 0107 406FA239 		.ascii	"@o\2429\027\303\236\316y\374hR_0V2\307\232\312;\300"
+ 2915      17C39ECE 
+ 2915      79FC6852 
+ 2915      5F305632 
+ 2915      C79ACA3B 
+ 2916 011c B95F818D 		.ascii	"\271_\201\215\203\215\202\215!\265w\201Z\233a\276\034"
+ 2916      838D828D 
+ARM GAS  C:\Users\Utente\AppData\Local\Temp\cc5VhcGM.s 			page 85
+
+
+ 2916      21B57781 
+ 2916      5A9B61BE 
+ 2916      1C
+ 2917 012d 6A88476A 		.ascii	"j\210Gj\177\031g`\277>\015\342g\330\001\034\206\021"
+ 2917      7F196760 
+ 2917      BF3E0DE2 
+ 2917      67D8011C 
+ 2917      8611
+ 2918 013f C5B94E72 		.ascii	"\305\271Nr\334`\316o\253\255\237\363\032\200k\026\357"
+ 2918      DC60CE6F 
+ 2918      ABAD9FF3 
+ 2918      1A806B16 
+ 2918      EF
+ 2919 0150 6122D71C 		.ascii	"a\"\327\034\303\371fr\316\377G#\303\326\316\300\202"
+ 2919      C3F96672 
+ 2919      CEFF4723 
+ 2919      C3D6CEC0 
+ 2919      82
+ 2920 0161 76167E57 		.ascii	"v\026~W$\350\003\252\374\235~\033\035gI\220\037\245"
+ 2920      24E803AA 
+ 2920      FC9D7E1B 
+ 2920      1D674990 
+ 2920      1FA5
+ 2921 0173 ED44989D 		.ascii	"\355D\230\235\322\0306@\3422$\220\006\307\243\313\321"
+ 2921      D2183640 
+ 2921      E2322490 
+ 2921      06C7A3CB 
+ 2921      D1
+ 2922 0184 313E4A07 		.ascii	"1>J\007\250\317\036\201\352p-F'q'\252\307\015\370\004"
+ 2922      A8CF1E81 
+ 2922      EA702D46 
+ 2922      277127AA 
+ 2922      C70DF804 
+ 2923 0198 16C85849 		.ascii	"\026\310XI\355Fm\004d7\342A\010\377\362\326\263\023"
+ 2923      ED466D04 
+ 2923      6437E241 
+ 2923      08FFF2D6 
+ 2923      B313
+ 2924 01aa 1A36ED44 		.ascii	"\0326\355D\247\300{\252\361\350\335(\325\353\303\300"
+ 2924      A7C07BAA 
+ 2924      F1E8DD28 
+ 2924      D5EBC3C0 
+ 2925 01ba 4D803B56 		.ascii	"M\200;V \256\002O\231\356\035 \177B\351\314>\324\214"
+ 2925      20AE024F 
+ 2925      99EE1D20 
+ 2925      7F42E9CC 
+ 2925      3ED48C
+ 2926 01cd 4FB36388 		.ascii	"O\263c\210Q\023|\011\244\334[\361B\320+\224\356\323"
+ 2926      51137C09 
+ 2926      A4DC5BF1 
+ 2926      42D02B94 
+ 2926      EED3
+ 2927 01df 821F2B9C 		.ascii	"\202\037+\234\350\014\256\307\340\244\033v4\304L8\317"
+ 2927      E80CAEC7 
+ 2927      E0A41B76 
+ 2927      34C44C38 
+ 2927      CF
+ARM GAS  C:\Users\Utente\AppData\Local\Temp\cc5VhcGM.s 			page 86
+
+
+ 2928 01f0 70678B2A 		.ascii	"pg\213*M\004\213\005\012\212\305\025H\374\015\022\015"
+ 2928      4D048B05 
+ 2928      0A8AC515 
+ 2928      48FC0D12 
+ 2928      0D
+ 2929 0201 9061CF2F 		.ascii	"\220a\317/i%q\252X\237\242\364\"nc`\3209\023\363?\253"
+ 2929      692571AA 
+ 2929      589FA2F4 
+ 2929      226E6360 
+ 2929      D03913F3 
+ 2930 0217 781E16E2 		.ascii	"x\036\026\342\277\024\360\013\344l\337_\373t\023t\227"
+ 2930      BF14F00B 
+ 2930      E46CDF5F 
+ 2930      FB741374 
+ 2930      97
+ 2931 0228 395D3BA3 		.ascii	"9];\243\233\205}H\264 q\035\022\377\004\221=\303\373"
+ 2931      9B857D48 
+ 2931      B420711D 
+ 2931      12FF0491 
+ 2931      3DC3FB
+ 2932 023b AB4369BE 		.ascii	"\253Ci\276\302\3279M\036\253|\313\371\015\217#C\002"
+ 2932      C2D7394D 
+ 2932      1EAB7CCB 
+ 2932      F90D8F23 
+ 2932      4302
+ 2933 024d 6E040204 		.ascii	"n\004\002\004R\262\276\262\177R\326M\316s\213=\371."
+ 2933      52B2BEB2 
+ 2933      7F52D64D 
+ 2933      CE738B3D 
+ 2933      F92E
+ 2934 025f 48D63ACA 		.ascii	"H\326:\312j\353\302\343\022\022 \327\016\351\002\272"
+ 2934      6AEBC2E3 
+ 2934      121220D7 
+ 2934      0EE902BA 
+ 2935 026f 82CF6260 		.ascii	"\202\317b`\350\000\200.\334\311@ y\344N\301\365\273"
+ 2935      E800802E 
+ 2935      DCC94020 
+ 2935      79E44EC1 
+ 2935      F5BB
+ 2936 0281 EF55E6E7 		.ascii	"\357U\346\347S\247Us\013\337\006\267\012\224\204`\347"
+ 2936      53A75573 
+ 2936      0BDF06B7 
+ 2936      0A948460 
+ 2936      E7
+ 2937 0292 5884B7D0 		.ascii	"X\204\267\320\226Oc\355Q\267\360\265`\347\"(\241}xl"
+ 2937      964F63ED 
+ 2937      51B7F0B5 
+ 2937      60E72228 
+ 2937      A17D786C 
+ 2938 02a6 54E94310 		.ascii	"T\351C\020\301\215`\002\3615\223q\357\233}\3031!2\376"
+ 2938      C18D6002 
+ 2938      F1359371 
+ 2938      EF9B7DC3 
+ 2938      312132FE 
+ 2939 02ba 8EBF0EE8 		.ascii	"\216\277\016\350$\020\320t\344\376\201\350\220\200\356"
+ 2939      2410D074 
+ 2939      E4FE81E8 
+ARM GAS  C:\Users\Utente\AppData\Local\Temp\cc5VhcGM.s 			page 87
+
+
+ 2939      9080EE
+ 2940 02c9 408040DE 		.ascii	"@\200@\336l\272^\031>\241\363\037\274\202\036\266\357"
+ 2940      6CBA5E19 
+ 2940      3EA1F31F 
+ 2940      BC821EB6 
+ 2940      EF
+ 2941 02da 6253EBB8 		.ascii	"bS\353\270m\032h\234\024\331\212\317a\200\277\013\331"
+ 2941      6D1A689C 
+ 2941      14D98ACF 
+ 2941      6180BF0B 
+ 2941      D9
+ 2942 02eb F7F07DFC 		.ascii	"\367\360}\374\200a\200s\244\241h\324b\205\363\030u\007"
+ 2942      80618073 
+ 2942      A4A168D4 
+ 2942      6285F318 
+ 2942      7507
+ 2943 02fd 5F05AF52 		.ascii	"_\005\257R\252*\203!\277\032\316:\347\303\355\370\002"
+ 2943      AA2A8321 
+ 2943      BF1ACE3A 
+ 2943      E7C3EDF8 
+ 2943      02
+ 2944 030e B8547CE6 		.ascii	"\270T|\346V|\3367u\224FD\365\200\372`_\035\023\326Q"
+ 2944      567CDE37 
+ 2944      75944644 
+ 2944      F580FA60 
+ 2944      5F1D13D6 
+ 2945 0323 D9F0203A 		.ascii	"\331\360 :.\224\273;\224[\254%Hl\004k\006kebo\014^<"
+ 2945      2E94BB3B 
+ 2945      945BAC25 
+ 2945      486C046B 
+ 2945      066B6562 
+ 2946 033b A6890F16 		.ascii	"\246\211\017\026\373\030?\341\335\270\316\002.\327\267"
+ 2946      FB183FE1 
+ 2946      DDB8CE02 
+ 2946      2ED7B7
+ 2947 034a 76868704 		.ascii	"v\206\207\004<\015\004@/\367\237\275\206'\272\361O^"
+ 2947      3C0D0440 
+ 2947      2FF79FBD 
+ 2947      8627BAF1 
+ 2947      4F5E
+ 2948 035c 513FEB86 		.ascii	"Q?\353\206vOQ\241+\"!!\016\274u\333\266\357\263\205"
+ 2948      764F51A1 
+ 2948      2B222121 
+ 2948      0EBC75DB 
+ 2948      B6EFB385 
+ 2949 0370 5310D50F 		.ascii	"S\020\325\017\205\017\005o\033\313\335_U\030\015\373"
+ 2949      850F056F 
+ 2949      1BCBDD5F 
+ 2949      55180DFB 
+ 2950 0380 DD881F05 		.ascii	"\335\210\037\005\373@S\350^\242!\240\035\300\203Jm\177"
+ 2950      FB4053E8 
+ 2950      5EA221A0 
+ 2950      1DC0834A 
+ 2950      6D7F
+ 2951 0392 D620B104 		.ascii	"\326 \261\004l\007X\225\006J\251|:\334\206Cv\3559~\301"
+ 2951      6C075895 
+ 2951      064AA97C 
+ARM GAS  C:\Users\Utente\AppData\Local\Temp\cc5VhcGM.s 			page 88
+
+
+ 2951      3ADC8643 
+ 2951      76ED397E 
+ 2952 03a7 851C6401 		.ascii	"\205\034d\001\371\005\265\035\232\220\200\221@\200@"
+ 2952      F905B51D 
+ 2952      9A908091 
+ 2952      408040
+ 2953 03b6 6A2ED415 		.ascii	"j.\324\025M\012y\311\253\030U\204\034\036\262\227G\251"
+ 2953      4D0A79C9 
+ 2953      AB185584 
+ 2953      1C1EB297 
+ 2953      47A9
+ 2954 03c8 42BCC7D5 		.ascii	"B\274\307\325\323\327\210\207\361\353\251Gs\240\256"
+ 2954      D3D78887 
+ 2954      F1EBA947 
+ 2954      73A0AE
+ 2955 03d7 59D1318A 		.ascii	"Y\3211\212\237\005;\027M\225\361\032H_\3411\205X\373"
+ 2955      9F053B17 
+ 2955      4D95F11A 
+ 2955      485FE131 
+ 2955      8558FB
+ 2956 03ea B4F08637 		.ascii	"\264\360\2067:!\236\035\231\201\003Ua\320\242!\334\207"
+ 2956      3A219E1D 
+ 2956      99810355 
+ 2956      61D0A221 
+ 2956      DC87
+ 2957 03fc C7838F44 		.ascii	"\307\203\217Dh\372cp\326\3437\230\375 3\227\267\276"
+ 2957      68FA6370 
+ 2957      D6E33798 
+ 2957      FD203397 
+ 2957      B7BE
+ 2958 040e 8AB2925E 		.ascii	"\212\262\222^\343oB\323\004r\276\357\024\025\343C\323"
+ 2958      E36F42D3 
+ 2958      0472BEEF 
+ 2958      1415E343 
+ 2958      D3
+ 2959 041f 9F06A78B 		.ascii	"\237\006\247\213'\241{-\2549\345\245W:4S\257,\033Q\356"
+ 2959      27A17B2D 
+ 2959      AC39E5A5 
+ 2959      573A3453 
+ 2959      AF2C1B51 
+ 2960 0434 2CB893DE 		.ascii	",\270\223\336\201\313\242\033\013\342XKY\32348\340\254"
+ 2960      81CBA21B 
+ 2960      0BE2584B 
+ 2960      59D33438 
+ 2960      E0AC
+ 2961 0446 8D0317AA 		.ascii	"\215\003\027\252\226\201Z+\351\305\005d\202\227?\245"
+ 2961      96815A2B 
+ 2961      E9C50564 
+ 2961      82973FA5 
+ 2962 0456 AD6A9FEC 		.ascii	"\255j\237\354$\227\024\220\320Vx\333\324\202\037\342"
+ 2962      24971490 
+ 2962      D05678DB 
+ 2962      D4821FE2 
+ 2963 0466 F390A89C 		.ascii	"\363\220\250\234\322\300\031\236(5\217\254'\260\177"
+ 2963      D2C0199E 
+ 2963      28358FAC 
+ 2963      27B07F
+ARM GAS  C:\Users\Utente\AppData\Local\Temp\cc5VhcGM.s 			page 89
+
+
+ 2964 0475 05A41E3B 		.ascii	"\005\244\036;H>\331@\224M:\260\317\327\030=Qd\000w#"
+ 2964      483ED940 
+ 2964      944D3AB0 
+ 2964      CFD7183D 
+ 2964      51640077 
+ 2965 048a 61BE270D 		.ascii	"a\276'\015{\356L\336\271\343\274\375\233\024\337\325"
+ 2965      7BEE4CDE 
+ 2965      B9E3BCFD 
+ 2965      9B14DFD5 
+ 2966 049a 0B4D6542 		.ascii	"\013MeB\\(\370\310T\360\036\307\235\274\310\011\200"
+ 2966      5C28F8C8 
+ 2966      54F01EC7 
+ 2966      9DBCC809 
+ 2966      80
+ 2967 04ab CD1CBC50 		.ascii	"\315\034\274P\001\270\365\354\353\017'\\V\356\372Rq"
+ 2967      01B8F5EC 
+ 2967      EB0F275C 
+ 2967      56EEFA52 
+ 2967      71
+ 2968 04bc 6DE9B78E 		.ascii	"m\351\267\216N\2465r^'\370\304\2574\350}\247\223\216"
+ 2968      4EA63572 
+ 2968      5E27F8C4 
+ 2968      AF34E87D 
+ 2968      A7938E
+ 2969 04cf 14553434 		.ascii	"\024U44\353\340i\007P\027p*\364\310EP\362^\275X(\000"
+ 2969      EBE06907 
+ 2969      5017702A 
+ 2969      F4C84550 
+ 2969      F25EBD58 
+ 2970 04e5 C6CD61EB 		.ascii	"\306\315a\353c2\267\030\356\205\242\273\003\247\276"
+ 2970      6332B718 
+ 2970      EE85A2BB 
+ 2970      03A7BE
+ 2971 04f4 D36473CF 		.ascii	"\323ds\317\365\343-D9\232h\013+/\371\201\036~\213\266"
+ 2971      F5E32D44 
+ 2971      399A680B 
+ 2971      2B2FF981 
+ 2971      1E7E8BB6 
+ 2972 0508 3E993DC1 		.ascii	">\231=\301\364\2203mU\252\270}\251\3728\031\304 \321"
+ 2972      F490336D 
+ 2972      55AAB87D 
+ 2972      A9FA3819 
+ 2972      C420D1
+ 2973 051b 417D56BF 		.ascii	"A}V\277\350\364\364R/\245Y\264\245\267\2704\257\327"
+ 2973      E8F4F452 
+ 2973      2FA559B4 
+ 2973      A5B7B834 
+ 2973      AFD7
+ 2974 052d A177E5B2 		.ascii	"\241w\345\262\316;\350\354bX.-\355v\022\267\206\265"
+ 2974      CE3BE8EC 
+ 2974      62582E2D 
+ 2974      ED7612B7 
+ 2974      86B5
+ 2975 053f 83525B14 		.ascii	"\203R[\024=\002_\271i\324\226\307\346\233\342\3346\365"
+ 2975      3D025FB9 
+ 2975      69D496C7 
+ 2975      E69BE2DC 
+ARM GAS  C:\Users\Utente\AppData\Local\Temp\cc5VhcGM.s 			page 90
+
+
+ 2975      36F5
+ 2976 0551 2169C7D4 		.ascii	"!i\307\324\227G\275>\255\247\231\346\025\323OJK{\317"
+ 2976      9747BD3E 
+ 2976      ADA799E6 
+ 2976      15D34F4A 
+ 2976      4B7BCF
+ 2977 0564 310A5AD4 		.ascii	"1\012Z\324]\236\037\343\266u9\334\3154\336\015(\305"
+ 2977      5D9E1FE3 
+ 2977      B67539DC 
+ 2977      CD34DE0D 
+ 2977      28C5
+ 2978 0576 D4EE7361 		.ascii	"\324\356sa+\244X}\324\345\303Nw\371\346B\273\377\\)"
+ 2978      2BA4587D 
+ 2978      D4E5C34E 
+ 2978      77F9E642 
+ 2978      BBFF5C29 
+ 2979 058a 76B97DD4 		.ascii	"v\271}\324\352\3669\260\325\343sX!\366mW\256\037~\263"
+ 2979      EAF639B0 
+ 2979      D5E37358 
+ 2979      21F66D57 
+ 2979      AE1F7EB3 
+ 2980 059e EDA295FA 		.ascii	"\355\242\225\372\035.\267\337\241wz\374\324\345\361"
+ 2980      1D2EB7DF 
+ 2980      A1777AFC 
+ 2980      D4E5F1
+ 2981 05ad 3B62DD2C 		.ascii	";b\335,Dp\346\372\250\323m\027\235\271]\354Au\304\262"
+ 2981      4470E6FA 
+ 2981      A8D36D17 
+ 2981      9DB95DEC 
+ 2981      4175C4B2 
+ 2982 05c1 74F08B4E 		.ascii	"t\360\213NH\200\005\252wB\341V\017u\352\255\036\273"
+ 2982      488005AA 
+ 2982      7742E156 
+ 2982      0F75EAAD 
+ 2982      1EBB
+ 2983 05d3 D50A997A 		.ascii	"\325\012\231zp\323\355\036\352\210uy\354\020+P \372"
+ 2983      70D3ED1E 
+ 2983      EA887579 
+ 2983      EC102B50 
+ 2983      20FA
+ 2984 05e5 9DF24A00 		.ascii	"\235\362J\000\020\004>\226\010\244\336y\266S;\304\352"
+ 2984      10043E96 
+ 2984      08A4DE79 
+ 2984      B6533BC4 
+ 2984      EA
+ 2985 05f6 3FD23658 		.ascii	"?\3226X\253\305\263\234K\020^\020+>b;\260g\244\253Y"
+ 2985      ABC5B39C 
+ 2985      4B105E10 
+ 2985      2B3E623B 
+ 2985      B067A4AB 
+ 2986 060b 13F83D7F 		.ascii	"\023\370=\177\304\177\317K\210\362\006\"\220\201\312"
+ 2986      C47FCF4B 
+ 2986      88F20622 
+ 2986      9081CA
+ 2987 061a EE7AD89F 		.ascii	"\356z\330\237b\266\225\235\315\270\234\372X7\205\022"
+ 2987      62B6959D 
+ 2987      CDB89CFA 
+ARM GAS  C:\Users\Utente\AppData\Local\Temp\cc5VhcGM.s 			page 91
+
+
+ 2987      58378512 
+ 2988 062a 52CCF7A8 		.ascii	"R\314\367\250\230\240\355d\033In\235%>gpS\336)\252w"
+ 2988      98A0ED64 
+ 2988      1B496E9D 
+ 2988      253E6770 
+ 2988      53DE29AA 
+ 2989 063f DA360B6C 		.ascii	"\3326\013l\332\207\312\211@\034'\032_*\257\030\243\370"
+ 2989      DA87CA89 
+ 2989      401C271A 
+ 2989      5F2AAF18 
+ 2989      A3F8
+ 2990 0651 2F301DAD 		.ascii	"/0\035\255ni\013\237\312]A\320\016eg\313\372\256\266"
+ 2990      6E690B9F 
+ 2990      CA5D41D0 
+ 2990      0E6567CB 
+ 2990      FAAEB6
+ 2991 0664 63C6EDDD 		.ascii	"c\306\355\335\270\036\036)\205\270\202\224q\3422N<4"
+ 2991      B81E1E29 
+ 2991      85B88294 
+ 2991      71E2324E 
+ 2991      3C34
+ 2992 0676 53CC0F83 		.ascii	"S\314\017\203\350\241\335\025\303\021\352\333\013#~"
+ 2992      E8A1DD15 
+ 2992      C311EADB 
+ 2992      0B237E
+ 2993 0685 76B0A35B 		.ascii	"v\260\243[\247\326\341\001\246G\373\007{\"T\342*\230"
+ 2993      A7D6E101 
+ 2993      A647FB07 
+ 2993      7B2254E2 
+ 2993      2A98
+ 2994 0697 EEBC7EED 		.ascii	"\356\274~\355t\364\324\227\230]\004\355T\210\235\267"
+ 2994      74F4D497 
+ 2994      985D04ED 
+ 2994      54889DB7 
+ 2995 06a7 DFEC1418 		.ascii	"\337\354\024\030\361@\327\375\317wC\324\222]\244\222"
+ 2995      F140D7FD 
+ 2995      CF7743D4 
+ 2995      925DA492 
+ 2996 06b7 D35672DA 		.ascii	"\323Vr\332\3133\304RF\333E\207okU\201\214\366\332E\367"
+ 2996      CB33C452 
+ 2996      46DB4587 
+ 2996      6F6B5581 
+ 2996      8CF6DA45 
+ 2997 06cc 053255D1 		.ascii	"\0052U\321\036\202v+\300\177\253\241;\"\024\340\266"
+ 2997      1E82762B 
+ 2997      C07FABA1 
+ 2997      3B2214E0 
+ 2997      B6
+ 2998 06dd 5615780F 		.ascii	"V\025x\017\251\346\300\325\034\370\371tq\027\003~\363"
+ 2998      A9E6C0D5 
+ 2998      1CF8F974 
+ 2998      7117037E 
+ 2998      F3
+ 2999 06ee F0D85305 		.ascii	"\360\330S\005\330I\030\260\247\312\335\021\251N\367"
+ 2999      D84918B0 
+ 2999      A7CADD11 
+ 2999      A94EF7
+ARM GAS  C:\Users\Utente\AppData\Local\Temp\cc5VhcGM.s 			page 92
+
+
+ 3000 06fd 8180DD63 		.ascii	"\201\200\335c\003\207t\252\236\3750\265\367\226:'\032"
+ 3000      038774AA 
+ 3000      9EFD30B5 
+ 3000      F7963A27 
+ 3000      1A
+ 3001 070e D98855DA 		.ascii	"\331\210U\332\203\004\035P/\201\275\015%\032\225vc^"
+ 3001      83041D50 
+ 3001      2F81BD0D 
+ 3001      251A9576 
+ 3001      635E
+ 3002 0720 743B3BC7 		.ascii	"t;;\307\370 \331\313\211\367r\342\274\351\342aF\\\220"
+ 3002      F820D9CB 
+ 3002      89F772E2 
+ 3002      BCE9E261 
+ 3002      465C90
+ 3003 0733 BBF1A402 		.ascii	"\273\361\244\002\335\243\354\340\266\307\376S\302TE"
+ 3003      DDA3ECE0 
+ 3003      B6C7FE53 
+ 3003      C25445
+ 3004 0742 35041D56 		.ascii	"5\004\035V\240G\333\217<\307\354\371\255k(\272d\013"
+ 3004      A047DB8F 
+ 3004      3CC7ECF9 
+ 3004      AD6B28BA 
+ 3004      640B
+ 3005 0754 77CFAD21 		.ascii	"w\317\255!\2078\356!\345\351\275\241\027O3\324\227["
+ 3005      8738EE21 
+ 3005      E5E9BDA1 
+ 3005      174F33D4 
+ 3005      975B
+ 3006 0766 5F8CEB58 		.ascii	"_\214\353X\240\267\323\226\357\213%5\344(\217;\252\304"
+ 3006      A0B7D396 
+ 3006      EF8B2535 
+ 3006      E4288F3B 
+ 3006      AAC4
+ 3007 0778 1DD38B97 		.ascii	"\035\323\213\227X\334\231{\347\232\302\225\270\313<"
+ 3007      58DC997B 
+ 3007      E79AC295 
+ 3007      B8CB3C
+ 3008 0787 AE96C7D5 		.ascii	"\256\226\307\325*q-p\033\\\351\033\255\234\274\360j"
+ 3008      2A712D70 
+ 3008      1B5CE91B 
+ 3008      AD9CBCF0 
+ 3008      6A
+ 3009 0798 F8A5749C 		.ascii	"\370\245t\234\371\337\237??\021\376\215i\246U&s\366"
+ 3009      F9DF9F3F 
+ 3009      3F11FE8D 
+ 3009      69A65526 
+ 3009      73F6
+ 3010 07aa C2A4A4A4 		.ascii	"\302\244\244\244Ds6\374\247\233V%f[\214\340\310\220"
+ 3010      447336FC 
+ 3010      A79B5625 
+ 3010      665B8CE0 
+ 3010      C890
+ 3011 07bc 32D2A494 		.ascii	"2\322\244\224\254\354\371F\361'\313V\274\2734)\031\275"
+ 3011      ACECF946 
+ 3011      F127CB56 
+ 3011      BCBB3429 
+ARM GAS  C:\Users\Utente\AppData\Local\Temp\cc5VhcGM.s 			page 93
+
+
+ 3011      19BD
+ 3012 07ce 15BC     		.ascii	"\025\274"
+ 3013 07d0 3A7FB1B4 		.ascii	":\177\261\264 \331\270h\261\204\264\331\246?J\006Y\223"
+ 3013      20D9B868 
+ 3013      B184B4D9 
+ 3013      A63F4A06 
+ 3013      5993
+ 3014 07e2 21AF0B33 		.ascii	"!\257\0133\177\221)Y\"\214i\0069\315\"\245\244\212\352"
+ 3014      7F912959 
+ 3014      228C6906 
+ 3014      39CD22A5 
+ 3014      A48AEA
+ 3015 07f5 97410EFB 		.ascii	"\227A\016\373<G\312\221\204Li\235,\202W\231E\006\006"
+ 3015      3C47CA91 
+ 3015      844C699D 
+ 3015      2C825799 
+ 3015      450606
+ 3016 0808 0659C8B2 		.ascii	"\006Y\310\262Hk\177\274\364G+\227\262\202\226\3139\251"
+ 3016      486B7FBC 
+ 3016      F4472B97 
+ 3016      B28296CB 
+ 3016      39A9
+ 3017 081a 26F3CA2F 		.ascii	"&\363\312/\314\226\317\262\263R\214\222!'[\262\254\374"
+ 3017      CC96CFB2 
+ 3017      B3528C92 
+ 3017      21275BB2 
+ 3017      ACFC
+ 3018 082c 95C5BC46 		.ascii	"\225\305\274F\222e\363<\230\2545g\230e\263\305\304\306"
+ 3018      9265F33C 
+ 3018      98AC3567 
+ 3018      9865B3C5 
+ 3018      C4C6
+ 3019 083e A6947409 		.ascii	"\246\224t\011%|\253\036\213\234h\3124\246\347\244J\340"
+ 3019      257CAB1E 
+ 3019      8B9C68CA 
+ 3019      34A6E7A4 
+ 3019      4AE0
+ 3020 0850 493765CB 		.ascii	"I7e\313\331\363\323\020\343\317\310\221\245u\341\312"
+ 3020      D9F3D310 
+ 3020      E3CFC891 
+ 3020      A575E1CA 
+ 3021 0860 A7419EFB 		.ascii	"\247A\236\373\237sA\032djAz\252d\021V[$),+e\215\224"
+ 3021      9F73411A 
+ 3021      646A417A 
+ 3021      AA641156 
+ 3021      5B24292C 
+ 3022 0878 AD63CD30 		.ascii	"\255c\3150\250\313\323\202\306\006y\301\277ip\020n\240"
+ 3022      A8CBD382 
+ 3022      C60679C1 
+ 3022      BF697010 
+ 3022      6EA0
+ 3023 088a 9D694800 		.ascii	"\235iH\000\221\251\002k\245\300\226t\3402[\376\300\360"
+ 3023      91A9026B 
+ 3023      A5C09674 
+ 3023      E0325BFE 
+ 3023      C0F0
+ 3024 089c B2A6058D 		.ascii	"\262\246\005\215\015\262\230e1\25751BX\206\216\254\316"
+ARM GAS  C:\Users\Utente\AppData\Local\Temp\cc5VhcGM.s 			page 94
+
+
+ 3024      0DB29865 
+ 3024      31AF3531 
+ 3024      4258868E 
+ 3024      ACCE
+ 3025 08ae C9342E34 		.ascii	"\3114.4\310Q\251\322\352\224\234tY\211\372\376\377\260"
+ 3025      C851A9D2 
+ 3025      EA949C74 
+ 3025      5989FAFE 
+ 3025      FFB0
+ 3026 08c0 BD68BA31 		.ascii	"\275h\2721m\251\331\"}\224\236n6~l1g\374\332\234\225"
+ 3026      6DA9D922 
+ 3026      7D949E6E 
+ 3026      367E6C31 
+ 3026      67FCDA9C 
+ 3027 08d5 F8DF566F 		.ascii	"\370\337Vo\204D(^\223\364C\024\221b\311X\233,\315\313"
+ 3027      8444285E 
+ 3027      93F44314 
+ 3027      9162C958 
+ 3027      9B2CCDCB 
+ 3028 08e9 4091B00A 		.ascii	"@\221\260\012\235\235\227\361\003\2443\250U\2332Mr\254"
+ 3028      9D9D97F1 
+ 3028      03A433A8 
+ 3028      559B324D 
+ 3028      72AC
+ 3029 08fb 31EDA730 		.ascii	"1\355\2470\376\345\252\337KF\371g\2600]]P\210?J7\255"
+ 3029      FEE5AADF 
+ 3029      4B46F967 
+ 3029      B0305D5D 
+ 3029      50883F4A 
+ 3030 0911 C9945223 		.ascii	"\311\224R#\325\245\217\241\303Q\352p\271\234\"\347d"
+ 3030      D5A58FA1 
+ 3030      C351EA70 
+ 3030      B99C22E7 
+ 3030      64
+ 3031 0922 C718D37E 		.ascii	"\307\030\323~!\257\233L\325)\363\025\231\220\371Y\204"
+ 3031      21AF9B4C 
+ 3031      D529F315 
+ 3031      9990F959 
+ 3031      84
+ 3032 0933 32FE0446 		.ascii	"2\376\004F\377\002\213%8\266"
+ 3032      FF028B25 
+ 3032      38B6
+ 3033              		.text
+ 3034              		.section	.gnu.lto_.symtab.7155281a,"e",%progbits
+ 3035 0000 5F5F6865 		.ascii	"__heap_init\000"
+ 3035      61705F69 
+ 3035      6E697400 
+ 3036 000c 00       		.ascii	"\000"
+ 3037 000d 00       		.ascii	"\000"
+ 3038 000e 00       		.ascii	"\000"
+ 3039 000f 00000000 		.ascii	"\000\000\000\000\000\000\000\000"
+ 3039      00000000 
+ 3040 0017 19010000 		.ascii	"\031\001\000\000"
+ 3041 001b 63684865 		.ascii	"chHeapObjectInit\000"
+ 3041      61704F62 
+ 3041      6A656374 
+ 3041      496E6974 
+ARM GAS  C:\Users\Utente\AppData\Local\Temp\cc5VhcGM.s 			page 95
+
+
+ 3041      00
+ 3042 002c 00       		.ascii	"\000"
+ 3043 002d 00       		.ascii	"\000"
+ 3044 002e 00       		.ascii	"\000"
+ 3045 002f 00000000 		.ascii	"\000\000\000\000\000\000\000\000"
+ 3045      00000000 
+ 3046 0037 1F010000 		.ascii	"\037\001\000\000"
+ 3047 003b 63684865 		.ascii	"chHeapAllocAligned\000"
+ 3047      6170416C 
+ 3047      6C6F6341 
+ 3047      6C69676E 
+ 3047      656400
+ 3048 004e 00       		.ascii	"\000"
+ 3049 004f 00       		.ascii	"\000"
+ 3050 0050 00       		.ascii	"\000"
+ 3051 0051 00000000 		.ascii	"\000\000\000\000\000\000\000\000"
+ 3051      00000000 
+ 3052 0059 25010000 		.ascii	"%\001\000\000"
+ 3053 005d 63684865 		.ascii	"chHeapFree\000"
+ 3053      61704672 
+ 3053      656500
+ 3054 0068 00       		.ascii	"\000"
+ 3055 0069 00       		.ascii	"\000"
+ 3056 006a 00       		.ascii	"\000"
+ 3057 006b 00000000 		.ascii	"\000\000\000\000\000\000\000\000"
+ 3057      00000000 
+ 3058 0073 29010000 		.ascii	")\001\000\000"
+ 3059 0077 63684865 		.ascii	"chHeapStatus\000"
+ 3059      61705374 
+ 3059      61747573 
+ 3059      00
+ 3060 0084 00       		.ascii	"\000"
+ 3061 0085 00       		.ascii	"\000"
+ 3062 0086 00       		.ascii	"\000"
+ 3063 0087 00000000 		.ascii	"\000\000\000\000\000\000\000\000"
+ 3063      00000000 
+ 3064 008f 2F010000 		.ascii	"/\001\000\000"
+ 3065 0093 6368436F 		.ascii	"chCoreAllocFromTop\000"
+ 3065      7265416C 
+ 3065      6C6F6346 
+ 3065      726F6D54 
+ 3065      6F7000
+ 3066 00a6 00       		.ascii	"\000"
+ 3067 00a7 02       		.ascii	"\002"
+ 3068 00a8 00       		.ascii	"\000"
+ 3069 00a9 00000000 		.ascii	"\000\000\000\000\000\000\000\000"
+ 3069      00000000 
+ 3070 00b1 13010000 		.ascii	"\023\001\000\000"
+ 3071 00b5 63684D74 		.ascii	"chMtxObjectInit\000"
+ 3071      784F626A 
+ 3071      65637449 
+ 3071      6E697400 
+ 3072 00c5 00       		.ascii	"\000"
+ 3073 00c6 02       		.ascii	"\002"
+ 3074 00c7 00       		.ascii	"\000"
+ 3075 00c8 00000000 		.ascii	"\000\000\000\000\000\000\000\000"
+ 3075      00000000 
+ARM GAS  C:\Users\Utente\AppData\Local\Temp\cc5VhcGM.s 			page 96
+
+
+ 3076 00d0 33010000 		.ascii	"3\001\000\000"
+ 3077 00d4 63684D74 		.ascii	"chMtxUnlock\000"
+ 3077      78556E6C 
+ 3077      6F636B00 
+ 3078 00e0 00       		.ascii	"\000"
+ 3079 00e1 02       		.ascii	"\002"
+ 3080 00e2 00       		.ascii	"\000"
+ 3081 00e3 00000000 		.ascii	"\000\000\000\000\000\000\000\000"
+ 3081      00000000 
+ 3082 00eb 35010000 		.ascii	"5\001\000\000"
+ 3083 00ef 63684D74 		.ascii	"chMtxLock\000"
+ 3083      784C6F63 
+ 3083      6B00
+ 3084 00f9 00       		.ascii	"\000"
+ 3085 00fa 02       		.ascii	"\002"
+ 3086 00fb 00       		.ascii	"\000"
+ 3087 00fc 00000000 		.ascii	"\000\000\000\000\000\000\000\000"
+ 3087      00000000 
+ 3088 0104 37010000 		.ascii	"7\001\000\000"
+ 3089              		.text
+ 3090              		.section	.gnu.lto_.ext_symtab.7155281a,"e",%progbits
+ 3091 0000 01       		.ascii	"\001"
+ 3092 0001 01       		.ascii	"\001"
+ 3093 0002 00       		.ascii	"\000"
+ 3094 0003 01       		.ascii	"\001"
+ 3095 0004 00       		.ascii	"\000"
+ 3096 0005 01       		.ascii	"\001"
+ 3097 0006 00       		.ascii	"\000"
+ 3098 0007 01       		.ascii	"\001"
+ 3099 0008 00       		.ascii	"\000"
+ 3100 0009 01       		.ascii	"\001"
+ 3101 000a 00       		.ascii	"\000"
+ 3102 000b 01       		.ascii	"\001"
+ 3103 000c 00       		.ascii	"\000"
+ 3104 000d 01       		.ascii	"\001"
+ 3105 000e 00       		.ascii	"\000"
+ 3106 000f 01       		.ascii	"\001"
+ 3107 0010 00       		.ascii	"\000"
+ 3108 0011 01       		.ascii	"\001"
+ 3109 0012 00       		.ascii	"\000"
+ 3110              		.text
+ 3111              		.section	.gnu.lto_.opts,"e",%progbits
+ 3112 0000 272D666E 		.ascii	"'-fno-openmp' '-fno-openacc' '-fno-pie' '-fcf-prote"
+ 3112      6F2D6F70 
+ 3112      656E6D70 
+ 3112      2720272D 
+ 3112      666E6F2D 
+ 3113 0033 6374696F 		.ascii	"ction=none' '-g' '-mcpu=cortex-m4' '-mthumb' '-mflo"
+ 3113      6E3D6E6F 
+ 3113      6E652720 
+ 3113      272D6727 
+ 3113      20272D6D 
+ 3114 0066 61742D61 		.ascii	"at-abi=soft' '-mlibarch=armv7e-m' '-march=armv7e-m'"
+ 3114      62693D73 
+ 3114      6F667427 
+ 3114      20272D6D 
+ 3114      6C696261 
+ARM GAS  C:\Users\Utente\AppData\Local\Temp\cc5VhcGM.s 			page 97
+
+
+ 3115 0099 20272D4F 		.ascii	" '-O2' '-fomit-frame-pointer' '-falign-functions=16"
+ 3115      32272027 
+ 3115      2D666F6D 
+ 3115      69742D66 
+ 3115      72616D65 
+ 3116 00cc 2720272D 		.ascii	"' '-ffunction-sections' '-fdata-sections' '-fno-com"
+ 3116      6666756E 
+ 3116      6374696F 
+ 3116      6E2D7365 
+ 3116      6374696F 
+ 3117 00ff 6D6F6E27 		.ascii	"mon' '-flto' '-Xassembler' '-alms=./build/lst/chmem"
+ 3117      20272D66 
+ 3117      6C746F27 
+ 3117      20272D58 
+ 3117      61737365 
+ 3118 0132 68656170 		.ascii	"heaps.lst'\000"
+ 3118      732E6C73 
+ 3118      742700
+ 3119              		.text
+ 3120              		.comm	__gnu_lto_slim,1,1
+ 3121              		.ident	"GCC: (Arm GNU Toolchain 11.3.Rel1) 11.3.1 20220712"
+ARM GAS  C:\Users\Utente\AppData\Local\Temp\cc5VhcGM.s 			page 98
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 chmemheaps.c
+C:\Users\Utente\AppData\Local\Temp\cc5VhcGM.s:34     .gnu.debuglto_.debug_info:00000000 chmemheaps.c.8e07c38e
+                            *COM*:00000001 __gnu_lto_slim
+
+NO UNDEFINED SYMBOLS
